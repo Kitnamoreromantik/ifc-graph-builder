@@ -1,0 +1,10 @@
+Type: RELATEDOBJECTS
+  - (:IfcBuildingStorey)-[:RELATEDOBJECTS]->(:IfcRelAggregates)
+  - (:IfcRelDefinesByType)-[:RELATEDOBJECTS]->(:IfcWallStandardCase)
+  - (:IfcWallStandardCase)-[:RELATEDOBJECTS]->(:IfcRelDefinesByType)
+
+Type: RELATEDELEMENTS
+  - (:IfcWallStandardCase)-[:RELATEDELEMENTS]->(:IfcRelContainedInSpatialStructure)
+
+Type: RELATINGSTRUCTURE
+  - (:IfcRelContainedInSpatialStructure)-[:RELATINGSTRUCTURE]->(:IfcBuildingStorey)

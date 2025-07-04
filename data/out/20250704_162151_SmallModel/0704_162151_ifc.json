@@ -1,0 +1,472 @@
+[
+  {
+    "id": 383,
+    "labels": [
+      "IfcWallStandardCase"
+    ],
+    "type": "node",
+    "properties": {
+      "GlobalId": "3PB9xD$H12d9JE$nx254ai",
+      "Name": "Basic Wall:Cav - 102 75i 100 p - Lwt:217231",
+      "ObjectType": "Basic Wall:Cav - 102 75i 100 p - Lwt:45419",
+      "Tag": "217231",
+      "Constraints": {
+        "Top_Offset": 0.0,
+        "Base_Offset": 0.0,
+        "Related_to_Mass": false,
+        "Unconnected_Height": 3000.0,
+        "Top_Extension_Distance": 0.0,
+        "Top_is_Attached": false,
+        "Base_is_Attached": false,
+        "Base_Extension_Distance": 0.0,
+        "Base_Constraint": "Level: Level 0",
+        "Top_Constraint": "Level: Level 1",
+        "Room_Bounding": true,
+        "Location_Line": "Wall Centerline",
+        "id": 390
+      },
+      "Structural": {
+        "Structural": false,
+        "Structural_Usage": "Non-bearing",
+        "Enable_Analytical_Model": false,
+        "id": 396
+      },
+      "Dimensions": {
+        "Volume": 9.0,
+        "Area": 30.0,
+        "Length": 10000.0,
+        "id": 401
+      },
+      "Phasing": {
+        "Phase_Created": "New Construction",
+        "id": 406
+      },
+      "Pset_WallCommon": {
+        "Reference": "Cav - 102 75i 100 p - Lwt",
+        "LoadBearing": false,
+        "ExtendToStructure": false,
+        "IsExternal": true,
+        "ThermalTransmittance": 0.235791810928132,
+        "id": 413
+      },
+      "Identity_Data": {
+        "Assembly_Description": "",
+        "Assembly_Code": "",
+        "Keynote": "F10",
+        "id": 209
+      },
+      "Construction": {
+        "Wrapping_at_Inserts": "Both",
+        "Function": "Exterior",
+        "Wrapping_at_Ends": "None",
+        "Width": 300.0,
+        "id": 211
+      },
+      "Materials_and_Finishes": {
+        "Structural_Material": "Concrete Masonry Units",
+        "id": 213
+      },
+      "Graphics": {
+        "Coarse_Scale_Fill_Pattern": "Solid fill",
+        "Coarse_Scale_Fill_Color": 12632256,
+        "id": 215
+      },
+      "Analytical_Properties": {
+        "Absorptance": 0.7,
+        "Roughness": 3,
+        "Heat_Transfer_Coefficient_(U)": 0.235791810928132,
+        "Thermal_mass": 313533.0,
+        "Thermal_Resistance_(R)": 4.2410293897136,
+        "id": 217
+      }
+    }
+  },
+  {
+    "id": 963,
+    "labels": [
+      "IfcRelDefinesByType"
+    ],
+    "type": "node",
+    "properties": {
+      "GlobalId": "0cwRWA0Jb2iBLR71f4hCfZ"
+    }
+  },
+  {
+    "id": 142,
+    "labels": [
+      "IfcWallStandardCase"
+    ],
+    "type": "node",
+    "properties": {
+      "GlobalId": "3PB9xD$H12d9JE$nx254cN",
+      "Name": "Basic Wall:Cav - 102 75i 100 p - Lwt:217140",
+      "ObjectType": "Basic Wall:Cav - 102 75i 100 p - Lwt:45419",
+      "Tag": "217140",
+      "Constraints": {
+        "Base_is_Attached": false,
+        "Related_to_Mass": false,
+        "Base_Constraint": "Level: Level 0",
+        "Top_is_Attached": false,
+        "Base_Extension_Distance": 0.0,
+        "Base_Offset": 0.0,
+        "Top_Offset": 0.0,
+        "Top_Extension_Distance": 0.0,
+        "Location_Line": "Wall Centerline",
+        "Unconnected_Height": 3000.0,
+        "Top_Constraint": "Level: Level 1",
+        "Room_Bounding": true,
+        "id": 185
+      },
+      "Structural": {
+        "Enable_Analytical_Model": false,
+        "Structural": false,
+        "Structural_Usage": "Non-bearing",
+        "id": 194
+      },
+      "Dimensions": {
+        "Area": 15.9,
+        "Volume": 4.77,
+        "Length": 5000.0,
+        "id": 199
+      },
+      "Phasing": {
+        "Phase_Created": "New Construction",
+        "id": 204
+      },
+      "Pset_WallCommon": {
+        "Reference": "Cav - 102 75i 100 p - Lwt",
+        "LoadBearing": false,
+        "ExtendToStructure": false,
+        "IsExternal": true,
+        "ThermalTransmittance": 0.235791810928132,
+        "id": 355
+      }
+    }
+  },
+  {
+    "id": 441,
+    "labels": [
+      "IfcWallStandardCase"
+    ],
+    "type": "node",
+    "properties": {
+      "GlobalId": "3PB9xD$H12d9JE$nx254aQ",
+      "Name": "Basic Wall:Cav - 102 75i 100 p - Lwt:217273",
+      "ObjectType": "Basic Wall:Cav - 102 75i 100 p - Lwt:45419",
+      "Tag": "217273",
+      "Dimensions": {
+        "Area": 15.0,
+        "Volume": 4.5,
+        "Length": 5000.0,
+        "id": 448
+      },
+      "Constraints": {
+        "Base_Constraint": "Level: Level 0",
+        "Base_Extension_Distance": 0.0,
+        "Top_Extension_Distance": 0.0,
+        "Top_Offset": 0.0,
+        "Base_Offset": 0.0,
+        "Location_Line": "Wall Centerline",
+        "Top_Constraint": "Level: Level 1",
+        "Top_is_Attached": false,
+        "Base_is_Attached": false,
+        "Unconnected_Height": 3000.0,
+        "Related_to_Mass": false,
+        "Room_Bounding": true,
+        "id": 454
+      },
+      "Structural": {
+        "Structural": false,
+        "Enable_Analytical_Model": false,
+        "Structural_Usage": "Non-bearing",
+        "id": 459
+      },
+      "Phasing": {
+        "Phase_Created": "New Construction",
+        "id": 464
+      },
+      "Pset_WallCommon": {
+        "Reference": "Cav - 102 75i 100 p - Lwt",
+        "LoadBearing": false,
+        "ExtendToStructure": false,
+        "IsExternal": true,
+        "ThermalTransmittance": 0.235791810928132,
+        "id": 471
+      },
+      "Identity_Data": {
+        "Assembly_Description": "",
+        "Assembly_Code": "",
+        "Keynote": "F10",
+        "id": 209
+      },
+      "Construction": {
+        "Wrapping_at_Inserts": "Both",
+        "Function": "Exterior",
+        "Wrapping_at_Ends": "None",
+        "Width": 300.0,
+        "id": 211
+      },
+      "Materials_and_Finishes": {
+        "Structural_Material": "Concrete Masonry Units",
+        "id": 213
+      },
+      "Graphics": {
+        "Coarse_Scale_Fill_Pattern": "Solid fill",
+        "Coarse_Scale_Fill_Color": 12632256,
+        "id": 215
+      },
+      "Analytical_Properties": {
+        "Absorptance": 0.7,
+        "Roughness": 3,
+        "Heat_Transfer_Coefficient_(U)": 0.235791810928132,
+        "Thermal_mass": 313533.0,
+        "Thermal_Resistance_(R)": 4.2410293897136,
+        "id": 217
+      }
+    }
+  },
+  {
+    "id": 499,
+    "labels": [
+      "IfcWallStandardCase"
+    ],
+    "type": "node",
+    "properties": {
+      "GlobalId": "3PB9xD$H12d9JE$nx254bC",
+      "Name": "Basic Wall:Cav - 102 75i 100 p - Lwt:217327",
+      "ObjectType": "Basic Wall:Cav - 102 75i 100 p - Lwt:45419",
+      "Tag": "217327",
+      "Constraints": {
+        "Top_Constraint": "Level: Level 1",
+        "Base_Offset": 0.0,
+        "Location_Line": "Wall Centerline",
+        "Related_to_Mass": false,
+        "Base_is_Attached": false,
+        "Top_Offset": 0.0,
+        "Base_Extension_Distance": 0.0,
+        "Room_Bounding": true,
+        "Unconnected_Height": 3000.0,
+        "Top_Extension_Distance": 0.0,
+        "Top_is_Attached": false,
+        "Base_Constraint": "Level: Level 0",
+        "id": 506
+      },
+      "Structural": {
+        "Enable_Analytical_Model": false,
+        "Structural": false,
+        "Structural_Usage": "Non-bearing",
+        "id": 512
+      },
+      "Dimensions": {
+        "Length": 10000.0,
+        "Area": 29.1,
+        "Volume": 8.73000000000001,
+        "id": 517
+      },
+      "Phasing": {
+        "Phase_Created": "New Construction",
+        "id": 522
+      },
+      "Pset_WallCommon": {
+        "Reference": "Cav - 102 75i 100 p - Lwt",
+        "LoadBearing": false,
+        "ExtendToStructure": false,
+        "IsExternal": true,
+        "ThermalTransmittance": 0.235791810928132,
+        "id": 529
+      },
+      "Identity_Data": {
+        "Assembly_Description": "",
+        "Assembly_Code": "",
+        "Keynote": "F10",
+        "id": 209
+      },
+      "Construction": {
+        "Wrapping_at_Inserts": "Both",
+        "Function": "Exterior",
+        "Wrapping_at_Ends": "None",
+        "Width": 300.0,
+        "id": 211
+      },
+      "Materials_and_Finishes": {
+        "Structural_Material": "Concrete Masonry Units",
+        "id": 213
+      },
+      "Graphics": {
+        "Coarse_Scale_Fill_Pattern": "Solid fill",
+        "Coarse_Scale_Fill_Color": 12632256,
+        "id": 215
+      },
+      "Analytical_Properties": {
+        "Absorptance": 0.7,
+        "Roughness": 3,
+        "Heat_Transfer_Coefficient_(U)": 0.235791810928132,
+        "Thermal_mass": 313533.0,
+        "Thermal_Resistance_(R)": 4.2410293897136,
+        "id": 217
+      }
+    }
+  },
+  {
+    "id": 898,
+    "labels": [
+      "IfcRelContainedInSpatialStructure"
+    ],
+    "type": "node",
+    "properties": {
+      "GlobalId": "3Zu5Bv0LOHrPC10066FoQQ"
+    }
+  },
+  {
+    "id": 98,
+    "labels": [
+      "IfcBuildingStorey"
+    ],
+    "type": "node",
+    "properties": {
+      "GlobalId": "1nxaHAOIr7bx3dQkBTHX2B",
+      "Name": "Level 0",
+      "LongName": "Level 0",
+      "CompositionType": "ELEMENT",
+      "Elevation": 0.0,
+      "Pset_BuildingStoreyCommon": {
+        "AboveGround": false,
+        "id": 862
+      },
+      "Dimensions": {
+        "Computation_Height": 0.0,
+        "id": 879
+      },
+      "Identity_Data": {
+        "Building_Story": true,
+        "Name": "Level 0",
+        "Structural": false,
+        "id": 884
+      },
+      "Constraints": {
+        "Elevation": 0.0,
+        "id": 896,
+        "Elevation_Base": "Project Base Point"
+      },
+      "Graphics": {
+        "Symbol_at_End_2_Default": false,
+        "Color": 0,
+        "Line_Pattern": "Centre",
+        "Line_Weight": "1",
+        "Symbol": "Level Head - Circle: Level Head - Circle",
+        "Symbol_at_End_1_Default": true,
+        "id": 894
+      }
+    }
+  },
+  {
+    "id": 906,
+    "labels": [
+      "IfcRelAggregates"
+    ],
+    "type": "node",
+    "properties": {
+      "GlobalId": "291kBmqCf0pRfIsLEwXuM5"
+    }
+  },
+  {
+    "id": 910,
+    "labels": [
+      "IfcRelAggregates"
+    ],
+    "type": "node",
+    "properties": {
+      "GlobalId": "1BVAPxO5r7N9sfTOvhrmn6"
+    }
+  },
+  {
+    "id": 914,
+    "labels": [
+      "IfcRelAggregates"
+    ],
+    "type": "node",
+    "properties": {
+      "GlobalId": "2$1LAsj$T3CPRLiPj39tWH"
+    }
+  },
+  {
+    "start": 383,
+    "end": 963,
+    "id": 4680564448647715470,
+    "label": "RELATEDOBJECTS",
+    "type": "relationship",
+    "properties": {}
+  },
+  {
+    "start": 383,
+    "end": 898,
+    "id": 5516102820062401095,
+    "label": "RELATEDELEMENTS",
+    "type": "relationship",
+    "properties": {}
+  },
+  {
+    "start": 963,
+    "end": 142,
+    "id": 2872139052454342576,
+    "label": "RELATEDOBJECTS",
+    "type": "relationship",
+    "properties": {}
+  },
+  {
+    "start": 963,
+    "end": 441,
+    "id": 7441259883678758232,
+    "label": "RELATEDOBJECTS",
+    "type": "relationship",
+    "properties": {}
+  },
+  {
+    "start": 963,
+    "end": 499,
+    "id": 4042417743704883123,
+    "label": "RELATEDOBJECTS",
+    "type": "relationship",
+    "properties": {}
+  },
+  {
+    "start": 142,
+    "end": 898,
+    "id": 2036600681039656951,
+    "label": "RELATEDELEMENTS",
+    "type": "relationship",
+    "properties": {}
+  },
+  {
+    "start": 441,
+    "end": 898,
+    "id": 2546223057285621155,
+    "label": "RELATEDELEMENTS",
+    "type": "relationship",
+    "properties": {}
+  },
+  {
+    "start": 499,
+    "end": 898,
+    "id": 852619082688253954,
+    "label": "RELATEDELEMENTS",
+    "type": "relationship",
+    "properties": {}
+  },
+  {
+    "start": 898,
+    "end": 98,
+    "id": 3822221946300276948,
+    "label": "RELATINGSTRUCTURE",
+    "type": "relationship",
+    "properties": {}
+  },
+  {
+    "start": 98,
+    "end": 914,
+    "id": 6298868329304398549,
+    "label": "RELATEDOBJECTS",
+    "type": "relationship",
+    "properties": {}
+  }
+]

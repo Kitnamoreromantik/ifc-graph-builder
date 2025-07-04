@@ -1,0 +1,4261 @@
+[
+  {
+    "id": 21827,
+    "labels": [
+      "IfcDoor"
+    ],
+    "type": "node",
+    "properties": {
+      "GlobalId": "3cUkl32yn9qRSPvBJVyWaG",
+      "Name": "Doors_IntSgl:810x2110mm:285959",
+      "ObjectType": "810x2110mm",
+      "Tag": "285959",
+      "OverallHeight": 2110.0,
+      "OverallWidth": 809.999999999999,
+      "PredefinedType": "DOOR",
+      "OperationType": "SINGLE_SWING_RIGHT",
+      "Pset_DoorCommon": {
+        "IsExternal": false,
+        "Reference": "810x2110mm",
+        "ThermalTransmittance": 3.7021,
+        "id": 21834
+      },
+      "Pset_ManufacturerTypeInformation": {
+        "Manufacturer": "Revit",
+        "id": 21839
+      },
+      "BaseQuantities": {
+        "Height": 2110.0,
+        "Width": 810.0,
+        "Area": 2.27347800000496,
+        "id": 21852
+      },
+      "Constraints": {
+        "Level": "Level: Ground Floor",
+        "Sill_Height": 0.0,
+        "id": 21901
+      },
+      "Dimensions": {
+        "Area": 2.27347800000496,
+        "Volume": 0.0756412800001994,
+        "id": 21906
+      },
+      "Identity_Data": {
+        "Mark": "2",
+        "id": 21913
+      },
+      "Other": {
+        "Category": "Doors",
+        "Family": "Doors_IntSgl: 810x2110mm",
+        "Family_and_Type": "Doors_IntSgl: 810x2110mm",
+        "Head_Height": 2110.0,
+        "Host_Id": "Basic Wall: Wall-Partn_12P-70MStd-12P",
+        "Type": "Doors_IntSgl: 810x2110mm",
+        "Type_Id": "Doors_IntSgl: 810x2110mm",
+        "id": 21919
+      },
+      "Phasing": {
+        "Phase_Created": "New Construction",
+        "id": 21930
+      }
+    }
+  },
+  {
+    "id": 21849,
+    "labels": [
+      "IfcQuantityLength"
+    ],
+    "type": "node",
+    "properties": {
+      "Name": "Height",
+      "LengthValue": 2110.0
+    }
+  },
+  {
+    "id": 21850,
+    "labels": [
+      "IfcQuantityLength"
+    ],
+    "type": "node",
+    "properties": {
+      "Name": "Width",
+      "LengthValue": 810.0
+    }
+  },
+  {
+    "id": 21851,
+    "labels": [
+      "IfcQuantityArea"
+    ],
+    "type": "node",
+    "properties": {
+      "Name": "Area",
+      "Description": "area measured in geometry",
+      "AreaValue": 2.27347800000496
+    }
+  },
+  {
+    "id": 21852,
+    "labels": [
+      "IfcElementQuantity"
+    ],
+    "type": "node",
+    "properties": {
+      "GlobalId": "1IZP1ADTL7qfs8Q5WKhFS4",
+      "Name": "BaseQuantities"
+    }
+  },
+  {
+    "id": 36107,
+    "labels": [
+      "IfcWindow"
+    ],
+    "type": "node",
+    "properties": {
+      "GlobalId": "3cUkl32yn9qRSPvBJVyZTO",
+      "Name": "Windows_Sgl_Plain:1810x1210mm:287567",
+      "ObjectType": "1810x1210mm",
+      "Tag": "287567",
+      "OverallHeight": 1210.0,
+      "OverallWidth": 1810.0,
+      "PredefinedType": "WINDOW",
+      "PartitioningType": "NOTDEFINED",
+      "Pset_WindowCommon": {
+        "IsExternal": true,
+        "Reference": "1810x1210mm",
+        "ThermalTransmittance": 5.5617,
+        "id": 36113
+      },
+      "Pset_ManufacturerTypeInformation": {
+        "Manufacturer": "Revit",
+        "id": 36117
+      },
+      "BaseQuantities": {
+        "Height": 1210.0,
+        "Width": 1810.0,
+        "Area": 3.5348570571731,
+        "id": 36130
+      },
+      "Constraints": {
+        "Level": "Level: Ground Floor",
+        "Sill_Height": 899.999999999998,
+        "id": 36140
+      },
+      "Dimensions": {
+        "Area": 3.5348570571731,
+        "Volume": 0.0884818750215249,
+        "id": 36146
+      },
+      "Identity_Data": {
+        "Mark": "4",
+        "id": 36153
+      },
+      "Other": {
+        "Host_Id": "Basic Wall: Wall-Ext_102Bwk-75Ins-100LBlk-12P",
+        "Category": "Windows",
+        "Family": "Windows_Sgl_Plain: 1810x1210mm",
+        "Family_and_Type": "Windows_Sgl_Plain: 1810x1210mm",
+        "Type": "Windows_Sgl_Plain: 1810x1210mm",
+        "Type_Id": "Windows_Sgl_Plain: 1810x1210mm",
+        "Head_Height": 2110.0,
+        "id": 36159
+      },
+      "Phasing": {
+        "Phase_Created": "New Construction",
+        "id": 36165
+      }
+    }
+  },
+  {
+    "id": 36127,
+    "labels": [
+      "IfcQuantityLength"
+    ],
+    "type": "node",
+    "properties": {
+      "Name": "Height",
+      "LengthValue": 1210.0
+    }
+  },
+  {
+    "id": 36128,
+    "labels": [
+      "IfcQuantityLength"
+    ],
+    "type": "node",
+    "properties": {
+      "Name": "Width",
+      "LengthValue": 1810.0
+    }
+  },
+  {
+    "id": 36129,
+    "labels": [
+      "IfcQuantityArea"
+    ],
+    "type": "node",
+    "properties": {
+      "Name": "Area",
+      "Description": "area measured in geometry",
+      "AreaValue": 3.5348570571731
+    }
+  },
+  {
+    "id": 36130,
+    "labels": [
+      "IfcElementQuantity"
+    ],
+    "type": "node",
+    "properties": {
+      "GlobalId": "0k8UP65qv20hxTU74E2Z6B",
+      "Name": "BaseQuantities"
+    }
+  },
+  {
+    "id": 11008,
+    "labels": [
+      "IfcQuantityArea"
+    ],
+    "type": "node",
+    "properties": {
+      "Name": "Area",
+      "Description": "area measured in geometry",
+      "AreaValue": 4.9462127188431
+    }
+  },
+  {
+    "id": 11009,
+    "labels": [
+      "IfcElementQuantity"
+    ],
+    "type": "node",
+    "properties": {
+      "GlobalId": "3SF2DuEhbFIenybITz9hp2",
+      "Name": "BaseQuantities"
+    }
+  },
+  {
+    "id": 11006,
+    "labels": [
+      "IfcQuantityLength"
+    ],
+    "type": "node",
+    "properties": {
+      "Name": "Height",
+      "LengthValue": 2110.0
+    }
+  },
+  {
+    "id": 11007,
+    "labels": [
+      "IfcQuantityLength"
+    ],
+    "type": "node",
+    "properties": {
+      "Name": "Width",
+      "LengthValue": 1810.0
+    }
+  },
+  {
+    "id": 10993,
+    "labels": [
+      "IfcDoor"
+    ],
+    "type": "node",
+    "properties": {
+      "GlobalId": "3cUkl32yn9qRSPvBJVyWYp",
+      "Name": "Doors_ExtDbl_Flush:1810x2110mm:285860",
+      "ObjectType": "1810x2110mm",
+      "Tag": "285860",
+      "OverallHeight": 2110.0,
+      "OverallWidth": 1810.0,
+      "PredefinedType": "DOOR",
+      "OperationType": "DOUBLE_DOOR_SINGLE_SWING",
+      "Pset_DoorCommon": {
+        "IsExternal": true,
+        "Reference": "1810x2110mm",
+        "id": 10999
+      },
+      "BaseQuantities": {
+        "Height": 2110.0,
+        "Width": 1810.0,
+        "Area": 4.9462127188431,
+        "id": 11009
+      },
+      "Constraints": {
+        "Level": "Level: Ground Floor",
+        "Sill_Height": 0.0,
+        "id": 11063
+      },
+      "Dimensions": {
+        "Area": 4.9462127188431,
+        "Volume": 0.193819981582386,
+        "id": 11070
+      },
+      "Identity_Data": {
+        "Mark": "1",
+        "id": 11077
+      },
+      "Other": {
+        "Category": "Doors",
+        "Family": "Doors_ExtDbl_Flush: 1810x2110mm",
+        "Family_and_Type": "Doors_ExtDbl_Flush: 1810x2110mm",
+        "Head_Height": 2110.0,
+        "Host_Id": "Basic Wall: Wall-Ext_102Bwk-75Ins-100LBlk-12P",
+        "Type": "Doors_ExtDbl_Flush: 1810x2110mm",
+        "Type_Id": "Doors_ExtDbl_Flush: 1810x2110mm",
+        "id": 11083
+      },
+      "Phasing": {
+        "Phase_Created": "New Construction",
+        "id": 11095
+      }
+    }
+  },
+  {
+    "id": 59990,
+    "labels": [
+      "IfcClassificationReference"
+    ],
+    "type": "node",
+    "properties": {
+      "Location": "http://www.csiorg.net/uniformat",
+      "Identification": "E2020200",
+      "Name": "Furniture & Accessories"
+    }
+  },
+  {
+    "id": 59995,
+    "labels": [
+      "IfcRelAssociatesClassification"
+    ],
+    "type": "node",
+    "properties": {
+      "GlobalId": "0LwRkiOTv3ZALfxwc8Cyl_",
+      "Name": "Uniformat Classification"
+    }
+  },
+  {
+    "id": 60019,
+    "labels": [
+      "IfcClassificationReference"
+    ],
+    "type": "node",
+    "properties": {
+      "Location": "http://www.csiorg.net/uniformat",
+      "Identification": "E2020200",
+      "Name": "Furniture & Accessories"
+    }
+  },
+  {
+    "id": 60020,
+    "labels": [
+      "IfcRelAssociatesClassification"
+    ],
+    "type": "node",
+    "properties": {
+      "GlobalId": "3EBlSxiln7Z9UvWyLjMc2a",
+      "Name": "Uniformat Classification"
+    }
+  },
+  {
+    "id": 83741,
+    "labels": [
+      "IfcOpeningElement"
+    ],
+    "type": "node",
+    "properties": {
+      "GlobalId": "3cUkl32yn9qRSPvAVVyZTO",
+      "Name": "Windows_Sgl_Plain:1810x1210mm:287567:1",
+      "ObjectType": "Opening",
+      "PredefinedType": "OPENING",
+      "BaseQuantities": {
+        "Depth": 290.0,
+        "Height": 1810.0,
+        "Width": 1210.0,
+        "id": 83749
+      }
+    }
+  },
+  {
+    "id": 83746,
+    "labels": [
+      "IfcQuantityLength"
+    ],
+    "type": "node",
+    "properties": {
+      "Name": "Depth",
+      "LengthValue": 290.0
+    }
+  },
+  {
+    "id": 83747,
+    "labels": [
+      "IfcQuantityLength"
+    ],
+    "type": "node",
+    "properties": {
+      "Name": "Height",
+      "LengthValue": 1810.0
+    }
+  },
+  {
+    "id": 83748,
+    "labels": [
+      "IfcQuantityLength"
+    ],
+    "type": "node",
+    "properties": {
+      "Name": "Width",
+      "LengthValue": 1210.0
+    }
+  },
+  {
+    "id": 83749,
+    "labels": [
+      "IfcElementQuantity"
+    ],
+    "type": "node",
+    "properties": {
+      "GlobalId": "2vnVkxb3zA7Pb_WekJMHGg",
+      "Name": "BaseQuantities"
+    }
+  },
+  {
+    "id": 83762,
+    "labels": [
+      "IfcRelContainedInSpatialStructure"
+    ],
+    "type": "node",
+    "properties": {
+      "GlobalId": "1t8TeHn$T9ax6L5EUhBjqj"
+    }
+  },
+  {
+    "id": 177,
+    "labels": [
+      "IfcSpace"
+    ],
+    "type": "node",
+    "properties": {
+      "GlobalId": "3w0zWKm7n8SB1qbfwUzt0U",
+      "Name": "1 - Living room",
+      "LongName": "Living room",
+      "CompositionType": "ELEMENT",
+      "PredefinedType": "SPACE",
+      "Pset_SpaceCommon": {
+        "Reference": "Living room 1 - Living room",
+        "IsExternal": false,
+        "id": 189
+      },
+      "BaseQuantities": {
+        "NetFloorArea": 51.9948250000001,
+        "Height": 2500.0,
+        "GrossPerimeter": 29925.0,
+        "GrossFloorArea": 51.9948250000001,
+        "GrossVolume": 129987.0625,
+        "id": 209
+      },
+      "Constraints": {
+        "Base_Offset": 0.0,
+        "Level": "Level: Ground Floor",
+        "Limit_Offset": 0.0,
+        "Upper_Limit": "Level: Roof",
+        "id": 246
+      },
+      "Dimensions": {
+        "Area": 51.9948250000001,
+        "Computation_Height": 0.0,
+        "Perimeter": 29925.0,
+        "Unbounded_Height": 2500.0,
+        "id": 255
+      },
+      "Energy_Analysis": {
+        "Actual_Lighting_Load": 0.0,
+        "Actual_Lighting_Load_per_area": 0.0,
+        "Actual_Power_Load": 0.0,
+        "Actual_Power_Load_per_area": 0.0,
+        "Area_per_Person": 28.5714285714286,
+        "Base_Lighting_Load_on": "<Default>",
+        "Base_Power_Load_on": "<Default>",
+        "Heat_Load_Values": "<Default>",
+        "Latent_Heat_Gain_per_person": 630.91814901261,
+        "Lighting_Load_Units": "Power Density",
+        "Number_of_People": 0.0,
+        "Plenum_Lighting_Contribution": 0.2,
+        "Power_Load_Units": "Power Density",
+        "Sensible_Heat_Gain_per_person": 788.647686265762,
+        "Specified_Lighting_Load": 0.0,
+        "Specified_Lighting_Load_per_area": 10.7639104167097,
+        "Specified_Power_Load": 0.0,
+        "Specified_Power_Load_per_area": 13.9930835417226,
+        "Total_Heat_Gain_per_person": 1419.56583527837,
+        "id": 264
+      },
+      "Identity_Data": {
+        "Name": "Living room",
+        "Number": "1 - Living room",
+        "id": 288
+      },
+      "Other": {
+        "Category": "Rooms",
+        "Phase_Id": "New Construction",
+        "id": 295
+      },
+      "Phasing": {
+        "Phase": "New Construction",
+        "id": 302
+      }
+    }
+  },
+  {
+    "id": 83777,
+    "labels": [
+      "IfcRelContainedInSpatialStructure"
+    ],
+    "type": "node",
+    "properties": {
+      "GlobalId": "0laxYw82f0mxC_aVWBov2h"
+    }
+  },
+  {
+    "id": 323,
+    "labels": [
+      "IfcSpace"
+    ],
+    "type": "node",
+    "properties": {
+      "GlobalId": "3w0zWKm7n8SB1qbfwUzt0J",
+      "Name": "2 - Bedroom",
+      "LongName": "Bedroom",
+      "CompositionType": "ELEMENT",
+      "PredefinedType": "SPACE",
+      "Pset_SpaceCommon": {
+        "IsExternal": false,
+        "Reference": "Bedroom 2 - Bedroom",
+        "id": 327
+      },
+      "BaseQuantities": {
+        "NetFloorArea": 15.41678125,
+        "Height": 2500.0,
+        "GrossPerimeter": 15830.0,
+        "GrossFloorArea": 15.41678125,
+        "GrossVolume": 38541.9531250001,
+        "id": 339
+      },
+      "Constraints": {
+        "Base_Offset": 0.0,
+        "Level": "Level: Ground Floor",
+        "Limit_Offset": 0.0,
+        "Upper_Limit": "Level: Roof",
+        "id": 360
+      },
+      "Dimensions": {
+        "Computation_Height": 0.0,
+        "Area": 15.41678125,
+        "Perimeter": 15830.0,
+        "Unbounded_Height": 2500.0,
+        "id": 365
+      },
+      "Energy_Analysis": {
+        "Actual_Lighting_Load_per_area": 0.0,
+        "Actual_Power_Load_per_area": 0.0,
+        "Base_Lighting_Load_on": "<Default>",
+        "Base_Power_Load_on": "<Default>",
+        "Heat_Load_Values": "<Default>",
+        "Lighting_Load_Units": "Power Density",
+        "Number_of_People": 0.0,
+        "Power_Load_Units": "Power Density",
+        "Actual_Lighting_Load": 0.0,
+        "Actual_Power_Load": 0.0,
+        "Area_per_Person": 28.5714285714286,
+        "Latent_Heat_Gain_per_person": 630.91814901261,
+        "Plenum_Lighting_Contribution": 0.2,
+        "Sensible_Heat_Gain_per_person": 788.647686265762,
+        "Specified_Lighting_Load": 0.0,
+        "Specified_Lighting_Load_per_area": 10.7639104167097,
+        "Specified_Power_Load": 0.0,
+        "Specified_Power_Load_per_area": 13.9930835417226,
+        "Total_Heat_Gain_per_person": 1419.56583527837,
+        "id": 373
+      },
+      "Identity_Data": {
+        "Name": "Bedroom",
+        "Number": "2 - Bedroom",
+        "id": 389
+      },
+      "Other": {
+        "Category": "Rooms",
+        "Phase_Id": "New Construction",
+        "id": 396
+      },
+      "Phasing": {
+        "Phase": "New Construction",
+        "id": 401
+      }
+    }
+  },
+  {
+    "id": 83669,
+    "labels": [
+      "IfcOpeningElement"
+    ],
+    "type": "node",
+    "properties": {
+      "GlobalId": "3cUkl32yn9qRSPvAVVyWdx",
+      "Name": "Windows_Sgl_Plain:1810x1210mm:286188:1",
+      "ObjectType": "Opening",
+      "PredefinedType": "OPENING",
+      "BaseQuantities": {
+        "Depth": 290.0,
+        "Height": 1810.0,
+        "Width": 1210.0,
+        "id": 83677
+      }
+    }
+  },
+  {
+    "id": 83674,
+    "labels": [
+      "IfcQuantityLength"
+    ],
+    "type": "node",
+    "properties": {
+      "Name": "Depth",
+      "LengthValue": 290.0
+    }
+  },
+  {
+    "id": 83675,
+    "labels": [
+      "IfcQuantityLength"
+    ],
+    "type": "node",
+    "properties": {
+      "Name": "Height",
+      "LengthValue": 1810.0
+    }
+  },
+  {
+    "id": 83676,
+    "labels": [
+      "IfcQuantityLength"
+    ],
+    "type": "node",
+    "properties": {
+      "Name": "Width",
+      "LengthValue": 1210.0
+    }
+  },
+  {
+    "id": 83677,
+    "labels": [
+      "IfcElementQuantity"
+    ],
+    "type": "node",
+    "properties": {
+      "GlobalId": "3RJQww1vD3pw0RPDi7otaJ",
+      "Name": "BaseQuantities"
+    }
+  },
+  {
+    "id": 83705,
+    "labels": [
+      "IfcOpeningElement"
+    ],
+    "type": "node",
+    "properties": {
+      "GlobalId": "3cUkl32yn9qRSPvAVVyWe9",
+      "Name": "Windows_Sgl_Plain:1810x1210mm:286238:1",
+      "ObjectType": "Opening",
+      "PredefinedType": "OPENING",
+      "BaseQuantities": {
+        "Depth": 290.0,
+        "Height": 1810.0,
+        "Width": 1210.0,
+        "id": 83713
+      }
+    }
+  },
+  {
+    "id": 83710,
+    "labels": [
+      "IfcQuantityLength"
+    ],
+    "type": "node",
+    "properties": {
+      "Name": "Depth",
+      "LengthValue": 290.0
+    }
+  },
+  {
+    "id": 83711,
+    "labels": [
+      "IfcQuantityLength"
+    ],
+    "type": "node",
+    "properties": {
+      "Name": "Height",
+      "LengthValue": 1810.0
+    }
+  },
+  {
+    "id": 83712,
+    "labels": [
+      "IfcQuantityLength"
+    ],
+    "type": "node",
+    "properties": {
+      "Name": "Width",
+      "LengthValue": 1210.0
+    }
+  },
+  {
+    "id": 83713,
+    "labels": [
+      "IfcElementQuantity"
+    ],
+    "type": "node",
+    "properties": {
+      "GlobalId": "3qFV3_d7H7lxwdgkCtD0vQ",
+      "Name": "BaseQuantities"
+    }
+  },
+  {
+    "id": 83592,
+    "labels": [
+      "IfcOpeningElement"
+    ],
+    "type": "node",
+    "properties": {
+      "GlobalId": "3cUkl32yn9qRSPvAVVyWYp",
+      "Name": "Doors_ExtDbl_Flush:1810x2110mm:285860:1",
+      "ObjectType": "Opening",
+      "PredefinedType": "OPENING",
+      "BaseQuantities": {
+        "Depth": 290.0,
+        "Height": 1810.0,
+        "Width": 2110.0,
+        "id": 83601
+      }
+    }
+  },
+  {
+    "id": 83598,
+    "labels": [
+      "IfcQuantityLength"
+    ],
+    "type": "node",
+    "properties": {
+      "Name": "Depth",
+      "LengthValue": 290.0
+    }
+  },
+  {
+    "id": 83599,
+    "labels": [
+      "IfcQuantityLength"
+    ],
+    "type": "node",
+    "properties": {
+      "Name": "Height",
+      "LengthValue": 1810.0
+    }
+  },
+  {
+    "id": 83600,
+    "labels": [
+      "IfcQuantityLength"
+    ],
+    "type": "node",
+    "properties": {
+      "Name": "Width",
+      "LengthValue": 2110.0
+    }
+  },
+  {
+    "id": 83601,
+    "labels": [
+      "IfcElementQuantity"
+    ],
+    "type": "node",
+    "properties": {
+      "GlobalId": "0SPLHdGmb9OOXHir5ksB6m",
+      "Name": "BaseQuantities"
+    }
+  },
+  {
+    "id": 83632,
+    "labels": [
+      "IfcOpeningElement"
+    ],
+    "type": "node",
+    "properties": {
+      "GlobalId": "3cUkl32yn9qRSPvAVVyWcE",
+      "Name": "Windows_Sgl_Plain:1810x1210mm:286105:1",
+      "ObjectType": "Opening",
+      "PredefinedType": "OPENING",
+      "BaseQuantities": {
+        "Depth": 290.0,
+        "Height": 1810.0,
+        "Width": 1210.0,
+        "id": 83641
+      }
+    }
+  },
+  {
+    "id": 83638,
+    "labels": [
+      "IfcQuantityLength"
+    ],
+    "type": "node",
+    "properties": {
+      "Name": "Depth",
+      "LengthValue": 290.0
+    }
+  },
+  {
+    "id": 83639,
+    "labels": [
+      "IfcQuantityLength"
+    ],
+    "type": "node",
+    "properties": {
+      "Name": "Height",
+      "LengthValue": 1810.0
+    }
+  },
+  {
+    "id": 83640,
+    "labels": [
+      "IfcQuantityLength"
+    ],
+    "type": "node",
+    "properties": {
+      "Name": "Width",
+      "LengthValue": 1210.0
+    }
+  },
+  {
+    "id": 83641,
+    "labels": [
+      "IfcElementQuantity"
+    ],
+    "type": "node",
+    "properties": {
+      "GlobalId": "16$gnt5ub3lhmt7XVyxyyc",
+      "Name": "BaseQuantities"
+    }
+  },
+  {
+    "id": 83525,
+    "labels": [
+      "IfcQuantityLength"
+    ],
+    "type": "node",
+    "properties": {
+      "Name": "Height",
+      "LengthValue": 810.0
+    }
+  },
+  {
+    "id": 83526,
+    "labels": [
+      "IfcQuantityLength"
+    ],
+    "type": "node",
+    "properties": {
+      "Name": "Width",
+      "LengthValue": 2110.0
+    }
+  },
+  {
+    "id": 83527,
+    "labels": [
+      "IfcElementQuantity"
+    ],
+    "type": "node",
+    "properties": {
+      "GlobalId": "37Jvwp4sn4YRmgV9HfvqIw",
+      "Name": "BaseQuantities"
+    }
+  },
+  {
+    "id": 83524,
+    "labels": [
+      "IfcQuantityLength"
+    ],
+    "type": "node",
+    "properties": {
+      "Name": "Depth",
+      "LengthValue": 95.0
+    }
+  },
+  {
+    "id": 83555,
+    "labels": [
+      "IfcOpeningElement"
+    ],
+    "type": "node",
+    "properties": {
+      "GlobalId": "3cUkl32yn9qRSPvAVVyWax",
+      "Name": "Doors_IntSgl:810x2110mm:285996:1",
+      "ObjectType": "Opening",
+      "PredefinedType": "OPENING",
+      "BaseQuantities": {
+        "Depth": 95.0,
+        "Height": 809.999999999999,
+        "Width": 2110.0,
+        "id": 83563
+      }
+    }
+  },
+  {
+    "id": 83560,
+    "labels": [
+      "IfcQuantityLength"
+    ],
+    "type": "node",
+    "properties": {
+      "Name": "Depth",
+      "LengthValue": 95.0
+    }
+  },
+  {
+    "id": 83561,
+    "labels": [
+      "IfcQuantityLength"
+    ],
+    "type": "node",
+    "properties": {
+      "Name": "Height",
+      "LengthValue": 809.999999999999
+    }
+  },
+  {
+    "id": 83562,
+    "labels": [
+      "IfcQuantityLength"
+    ],
+    "type": "node",
+    "properties": {
+      "Name": "Width",
+      "LengthValue": 2110.0
+    }
+  },
+  {
+    "id": 83563,
+    "labels": [
+      "IfcElementQuantity"
+    ],
+    "type": "node",
+    "properties": {
+      "GlobalId": "0zUXWu5nH0Qf9tUDt_WWUu",
+      "Name": "BaseQuantities"
+    }
+  },
+  {
+    "id": 83516,
+    "labels": [
+      "IfcOpeningElement"
+    ],
+    "type": "node",
+    "properties": {
+      "GlobalId": "3cUkl32yn9qRSPvAVVyWaG",
+      "Name": "Doors_IntSgl:810x2110mm:285959:1",
+      "ObjectType": "Opening",
+      "PredefinedType": "OPENING",
+      "BaseQuantities": {
+        "Depth": 95.0,
+        "Height": 810.0,
+        "Width": 2110.0,
+        "id": 83527
+      }
+    }
+  },
+  {
+    "id": 83333,
+    "labels": [
+      "IfcRelDefinesByType"
+    ],
+    "type": "node",
+    "properties": {
+      "GlobalId": "1vyecrlqjEpvb1IPM9e65k"
+    }
+  },
+  {
+    "id": 83337,
+    "labels": [
+      "IfcRelDefinesByType"
+    ],
+    "type": "node",
+    "properties": {
+      "GlobalId": "0LYkEj29X3fPV9Ka5sGace"
+    }
+  },
+  {
+    "id": 83344,
+    "labels": [
+      "IfcRelDefinesByType"
+    ],
+    "type": "node",
+    "properties": {
+      "GlobalId": "3wzZ$x$w90FPs8ZfxT3fB8"
+    }
+  },
+  {
+    "id": 83349,
+    "labels": [
+      "IfcRelDefinesByType"
+    ],
+    "type": "node",
+    "properties": {
+      "GlobalId": "2q$mOTJM1F2wepsOS6zXVy"
+    }
+  },
+  {
+    "id": 83353,
+    "labels": [
+      "IfcRelDefinesByType"
+    ],
+    "type": "node",
+    "properties": {
+      "GlobalId": "1LKLfQ6_D9Qf07zaKiorBb"
+    }
+  },
+  {
+    "id": 83358,
+    "labels": [
+      "IfcRelDefinesByType"
+    ],
+    "type": "node",
+    "properties": {
+      "GlobalId": "2r4nEp91T9z8xvODl34nx$"
+    }
+  },
+  {
+    "id": 83362,
+    "labels": [
+      "IfcRelDefinesByType"
+    ],
+    "type": "node",
+    "properties": {
+      "GlobalId": "2OGH_lcMX1zOTEoeiEvv31"
+    }
+  },
+  {
+    "id": 83366,
+    "labels": [
+      "IfcRelDefinesByType"
+    ],
+    "type": "node",
+    "properties": {
+      "GlobalId": "0r9Wj93ej9HAvvvBxKskQy"
+    }
+  },
+  {
+    "id": 83276,
+    "labels": [
+      "IfcRelDefinesByType"
+    ],
+    "type": "node",
+    "properties": {
+      "GlobalId": "33fAS3hfj6N8CjSy9j30gP"
+    }
+  },
+  {
+    "id": 1229,
+    "labels": [
+      "IfcWall"
+    ],
+    "type": "node",
+    "properties": {
+      "GlobalId": "3cUkl32yn9qRSPvBJVyWw5",
+      "Name": "Basic Wall:Wall-Ext_102Bwk-75Ins-100LBlk-12P:285330",
+      "ObjectType": "Basic Wall:Wall-Ext_102Bwk-75Ins-100LBlk-12P:45419",
+      "Tag": "285330",
+      "PredefinedType": "NOTDEFINED",
+      "Constraints": {
+        "Base_Offset": 0.0,
+        "Base_Constraint": "Level: Ground Floor",
+        "Base_Extension_Distance": 0.0,
+        "Base_is_Attached": false,
+        "Location_Line": "Wall Centerline",
+        "Related_to_Mass": false,
+        "Room_Bounding": true,
+        "Top_Extension_Distance": 0.0,
+        "Top_is_Attached": true,
+        "Top_Offset": 0.0,
+        "Unconnected_Height": 8000.0,
+        "id": 1351
+      },
+      "Dimensions": {
+        "Area": 26.4828947113889,
+        "Length": 14000.0,
+        "Volume": 7.69014560122734,
+        "id": 1367
+      },
+      "Other": {
+        "Category": "Walls",
+        "Family": "Basic Wall: Wall-Ext_102Bwk-75Ins-100LBlk-12P",
+        "Family_and_Type": "Basic Wall: Wall-Ext_102Bwk-75Ins-100LBlk-12P",
+        "Type": "Basic Wall: Wall-Ext_102Bwk-75Ins-100LBlk-12P",
+        "Type_Id": "Basic Wall: Wall-Ext_102Bwk-75Ins-100LBlk-12P",
+        "id": 1375
+      },
+      "Phasing": {
+        "Phase_Created": "New Construction",
+        "id": 1385
+      },
+      "Structural": {
+        "Enable_Analytical_Model": false,
+        "Structural": false,
+        "Structural_Usage": "Non-bearing",
+        "id": 1391
+      },
+      "Pset_WallCommon": {
+        "Reference": "Wall-Ext_102Bwk-75Ins-100LBlk-12P",
+        "LoadBearing": false,
+        "ExtendToStructure": true,
+        "IsExternal": true,
+        "ThermalTransmittance": 0.235926059936681,
+        "id": 1440
+      }
+    }
+  },
+  {
+    "id": 1752,
+    "labels": [
+      "IfcWall"
+    ],
+    "type": "node",
+    "properties": {
+      "GlobalId": "3cUkl32yn9qRSPvBJVyWx4",
+      "Name": "Basic Wall:Wall-Ext_102Bwk-75Ins-100LBlk-12P:285395",
+      "ObjectType": "Basic Wall:Wall-Ext_102Bwk-75Ins-100LBlk-12P:45419",
+      "Tag": "285395",
+      "PredefinedType": "NOTDEFINED",
+      "Constraints": {
+        "Base_Offset": 0.0,
+        "Base_Constraint": "Level: Ground Floor",
+        "Base_Extension_Distance": 0.0,
+        "Base_is_Attached": false,
+        "Location_Line": "Wall Centerline",
+        "Related_to_Mass": false,
+        "Room_Bounding": true,
+        "Top_Extension_Distance": 0.0,
+        "Top_is_Attached": true,
+        "Top_Offset": 0.0,
+        "Unconnected_Height": 8000.0,
+        "id": 1761
+      },
+      "Dimensions": {
+        "Area": 17.9995085686486,
+        "Length": 5800.0,
+        "Volume": 5.11547042910549,
+        "id": 1768
+      },
+      "Other": {
+        "Category": "Walls",
+        "Family": "Basic Wall: Wall-Ext_102Bwk-75Ins-100LBlk-12P",
+        "Family_and_Type": "Basic Wall: Wall-Ext_102Bwk-75Ins-100LBlk-12P",
+        "Type": "Basic Wall: Wall-Ext_102Bwk-75Ins-100LBlk-12P",
+        "Type_Id": "Basic Wall: Wall-Ext_102Bwk-75Ins-100LBlk-12P",
+        "id": 1776
+      },
+      "Phasing": {
+        "Phase_Created": "New Construction",
+        "id": 1781
+      },
+      "Structural": {
+        "Enable_Analytical_Model": false,
+        "Structural": false,
+        "Structural_Usage": "Non-bearing",
+        "id": 1786
+      },
+      "Pset_WallCommon": {
+        "Reference": "Wall-Ext_102Bwk-75Ins-100LBlk-12P",
+        "LoadBearing": false,
+        "ExtendToStructure": true,
+        "IsExternal": true,
+        "ThermalTransmittance": 0.235926059936681,
+        "id": 1792
+      }
+    }
+  },
+  {
+    "id": 2327,
+    "labels": [
+      "IfcWall"
+    ],
+    "type": "node",
+    "properties": {
+      "GlobalId": "3cUkl32yn9qRSPvBJVyWy4",
+      "Name": "Basic Wall:Wall-Ext_102Bwk-75Ins-100LBlk-12P:285459",
+      "ObjectType": "Basic Wall:Wall-Ext_102Bwk-75Ins-100LBlk-12P:45419",
+      "Tag": "285459",
+      "PredefinedType": "NOTDEFINED",
+      "Constraints": {
+        "Base_Offset": 0.0,
+        "Base_Constraint": "Level: Ground Floor",
+        "Base_Extension_Distance": 0.0,
+        "Base_is_Attached": false,
+        "Location_Line": "Wall Centerline",
+        "Related_to_Mass": false,
+        "Room_Bounding": true,
+        "Top_Extension_Distance": 0.0,
+        "Top_is_Attached": true,
+        "Top_Offset": 0.0,
+        "Unconnected_Height": 8000.0,
+        "id": 2336
+      },
+      "Dimensions": {
+        "Area": 17.9584901917951,
+        "Length": 9100.0,
+        "Volume": 5.23393063112682,
+        "id": 2343
+      },
+      "Other": {
+        "Category": "Walls",
+        "Family": "Basic Wall: Wall-Ext_102Bwk-75Ins-100LBlk-12P",
+        "Family_and_Type": "Basic Wall: Wall-Ext_102Bwk-75Ins-100LBlk-12P",
+        "Type": "Basic Wall: Wall-Ext_102Bwk-75Ins-100LBlk-12P",
+        "Type_Id": "Basic Wall: Wall-Ext_102Bwk-75Ins-100LBlk-12P",
+        "id": 2351
+      },
+      "Phasing": {
+        "Phase_Created": "New Construction",
+        "id": 2356
+      },
+      "Structural": {
+        "Enable_Analytical_Model": false,
+        "Structural": false,
+        "Structural_Usage": "Non-bearing",
+        "id": 2361
+      },
+      "Pset_WallCommon": {
+        "Reference": "Wall-Ext_102Bwk-75Ins-100LBlk-12P",
+        "LoadBearing": false,
+        "ExtendToStructure": true,
+        "IsExternal": true,
+        "ThermalTransmittance": 0.235926059936681,
+        "id": 2367
+      }
+    }
+  },
+  {
+    "id": 83282,
+    "labels": [
+      "IfcRelDefinesByType"
+    ],
+    "type": "node",
+    "properties": {
+      "GlobalId": "243DJ0MO50DhpLW2AMdzTG"
+    }
+  },
+  {
+    "id": 83286,
+    "labels": [
+      "IfcRelDefinesByType"
+    ],
+    "type": "node",
+    "properties": {
+      "GlobalId": "2kjn1shiTDxA3WDN56uVdC"
+    }
+  },
+  {
+    "id": 83290,
+    "labels": [
+      "IfcRelDefinesByType"
+    ],
+    "type": "node",
+    "properties": {
+      "GlobalId": "0RGf3ior99HBgsBb$wm5I_"
+    }
+  },
+  {
+    "id": 83294,
+    "labels": [
+      "IfcRelDefinesByType"
+    ],
+    "type": "node",
+    "properties": {
+      "GlobalId": "1XI4LeJ2T30hGm7Kml$VSC"
+    }
+  },
+  {
+    "id": 83299,
+    "labels": [
+      "IfcRelDefinesByType"
+    ],
+    "type": "node",
+    "properties": {
+      "GlobalId": "111aD8RBz0KuACFdTbuMqD"
+    }
+  },
+  {
+    "id": 83305,
+    "labels": [
+      "IfcRelDefinesByType"
+    ],
+    "type": "node",
+    "properties": {
+      "GlobalId": "1PZkUUbUb0P8zhPzjZI5NP"
+    }
+  },
+  {
+    "id": 4705,
+    "labels": [
+      "IfcWallStandardCase"
+    ],
+    "type": "node",
+    "properties": {
+      "GlobalId": "3cUkl32yn9qRSPvBJVyWXt",
+      "Name": "Basic Wall:Wall-Partn_12P-70MStd-12P:285792",
+      "ObjectType": "Basic Wall:Wall-Partn_12P-70MStd-12P:45397",
+      "Tag": "285792",
+      "PredefinedType": "NOTDEFINED",
+      "BaseQuantities": {
+        "Height": 2335.0,
+        "Length": 5510.00000000001,
+        "Width": 95.0,
+        "GrossFootprintArea": 0.523450000000001,
+        "GrossSideArea": 9.44765000000002,
+        "GrossVolume": 0.897526750000003,
+        "id": 4714
+      },
+      "Constraints": {
+        "Base_Offset": 0.0,
+        "Base_Constraint": "Level: Ground Floor",
+        "Base_Extension_Distance": 0.0,
+        "Base_is_Attached": false,
+        "Location_Line": "Wall Centerline",
+        "Related_to_Mass": false,
+        "Room_Bounding": true,
+        "Top_Extension_Distance": 0.0,
+        "Top_is_Attached": true,
+        "Top_Offset": 0.0,
+        "Top_Constraint": "Level: Roof",
+        "Unconnected_Height": 2500.0,
+        "id": 4766
+      },
+      "Dimensions": {
+        "Area": 9.44765000000002,
+        "Length": 5800.00000000001,
+        "Volume": 0.897526750000003,
+        "id": 4773
+      },
+      "Other": {
+        "Category": "Walls",
+        "Family": "Basic Wall: Wall-Partn_12P-70MStd-12P",
+        "Family_and_Type": "Basic Wall: Wall-Partn_12P-70MStd-12P",
+        "Type": "Basic Wall: Wall-Partn_12P-70MStd-12P",
+        "Type_Id": "Basic Wall: Wall-Partn_12P-70MStd-12P",
+        "id": 4781
+      },
+      "Phasing": {
+        "Phase_Created": "New Construction",
+        "id": 4790
+      },
+      "Structural": {
+        "Enable_Analytical_Model": false,
+        "Structural": false,
+        "Structural_Usage": "Non-bearing",
+        "id": 4795
+      },
+      "Pset_WallCommon": {
+        "IsExternal": false,
+        "LoadBearing": false,
+        "ExtendToStructure": true,
+        "Reference": "Wall-Partn_12P-70MStd-12P",
+        "ThermalTransmittance": 0.350997935306263,
+        "id": 4831
+      }
+    }
+  },
+  {
+    "id": 4880,
+    "labels": [
+      "IfcWallStandardCase"
+    ],
+    "type": "node",
+    "properties": {
+      "GlobalId": "3cUkl32yn9qRSPvBJVyWY1",
+      "Name": "Basic Wall:Wall-Partn_12P-70MStd-12P:285846",
+      "ObjectType": "Basic Wall:Wall-Partn_12P-70MStd-12P:45397",
+      "Tag": "285846",
+      "PredefinedType": "NOTDEFINED",
+      "BaseQuantities": {
+        "Height": 2335.0,
+        "Length": 4452.5,
+        "Width": 95.0,
+        "GrossFootprintArea": 0.4229875,
+        "GrossSideArea": 10.3965875,
+        "GrossVolume": 0.987675812500001,
+        "id": 4889
+      },
+      "Constraints": {
+        "Base_Offset": 0.0,
+        "Base_Constraint": "Level: Ground Floor",
+        "Base_Extension_Distance": 0.0,
+        "Base_is_Attached": false,
+        "Location_Line": "Wall Centerline",
+        "Related_to_Mass": false,
+        "Room_Bounding": true,
+        "Top_Extension_Distance": 0.0,
+        "Top_is_Attached": true,
+        "Top_Offset": 0.0,
+        "Top_Constraint": "Level: Roof",
+        "Unconnected_Height": 2500.0,
+        "id": 4900
+      },
+      "Dimensions": {
+        "Area": 10.3965875,
+        "Length": 4645.0,
+        "Volume": 0.987675812500001,
+        "id": 4906
+      },
+      "Other": {
+        "Category": "Walls",
+        "Family": "Basic Wall: Wall-Partn_12P-70MStd-12P",
+        "Family_and_Type": "Basic Wall: Wall-Partn_12P-70MStd-12P",
+        "Type": "Basic Wall: Wall-Partn_12P-70MStd-12P",
+        "Type_Id": "Basic Wall: Wall-Partn_12P-70MStd-12P",
+        "id": 4914
+      },
+      "Phasing": {
+        "Phase_Created": "New Construction",
+        "id": 4919
+      },
+      "Structural": {
+        "Enable_Analytical_Model": false,
+        "Structural": false,
+        "Structural_Usage": "Non-bearing",
+        "id": 4924
+      },
+      "Pset_WallCommon": {
+        "IsExternal": false,
+        "LoadBearing": false,
+        "ExtendToStructure": true,
+        "Reference": "Wall-Partn_12P-70MStd-12P",
+        "ThermalTransmittance": 0.350997935306263,
+        "id": 4930
+      }
+    }
+  },
+  {
+    "id": 83310,
+    "labels": [
+      "IfcRelDefinesByType"
+    ],
+    "type": "node",
+    "properties": {
+      "GlobalId": "1$$PSD9l156PBmbmMo3bO5"
+    }
+  },
+  {
+    "id": 83314,
+    "labels": [
+      "IfcRelDefinesByType"
+    ],
+    "type": "node",
+    "properties": {
+      "GlobalId": "3Q6oc7YpDAsBNqvEf7hJMz"
+    }
+  },
+  {
+    "id": 83318,
+    "labels": [
+      "IfcRelDefinesByType"
+    ],
+    "type": "node",
+    "properties": {
+      "GlobalId": "07$_VFvFL0OxRyqGmkx6gS"
+    }
+  },
+  {
+    "id": 32626,
+    "labels": [
+      "IfcDoor"
+    ],
+    "type": "node",
+    "properties": {
+      "GlobalId": "3cUkl32yn9qRSPvBJVyWax",
+      "Name": "Doors_IntSgl:810x2110mm:285996",
+      "ObjectType": "810x2110mm",
+      "Tag": "285996",
+      "OverallHeight": 2110.0,
+      "OverallWidth": 809.999999999999,
+      "PredefinedType": "DOOR",
+      "OperationType": "SINGLE_SWING_RIGHT",
+      "Pset_DoorCommon": {
+        "IsExternal": false,
+        "Reference": "810x2110mm",
+        "ThermalTransmittance": 3.7021,
+        "id": 32632
+      },
+      "Pset_ManufacturerTypeInformation": {
+        "Manufacturer": "Revit",
+        "id": 32636
+      },
+      "BaseQuantities": {
+        "Height": 2110.0,
+        "Width": 810.0,
+        "Area": 2.27347800000496,
+        "id": 32649
+      },
+      "Constraints": {
+        "Level": "Level: Ground Floor",
+        "Sill_Height": 0.0,
+        "id": 32658
+      },
+      "Dimensions": {
+        "Area": 2.27347800000496,
+        "Volume": 0.0756412800001994,
+        "id": 32663
+      },
+      "Identity_Data": {
+        "Mark": "3",
+        "id": 32670
+      },
+      "Other": {
+        "Category": "Doors",
+        "Family": "Doors_IntSgl: 810x2110mm",
+        "Family_and_Type": "Doors_IntSgl: 810x2110mm",
+        "Host_Id": "Basic Wall: Wall-Partn_12P-70MStd-12P",
+        "Type": "Doors_IntSgl: 810x2110mm",
+        "Type_Id": "Doors_IntSgl: 810x2110mm",
+        "Head_Height": 2110.0,
+        "id": 32676
+      },
+      "Phasing": {
+        "Phase_Created": "New Construction",
+        "id": 32682
+      }
+    }
+  },
+  {
+    "id": 83322,
+    "labels": [
+      "IfcRelDefinesByType"
+    ],
+    "type": "node",
+    "properties": {
+      "GlobalId": "3s0nqzSTvEVRSrtYC84HRb"
+    }
+  },
+  {
+    "id": 33350,
+    "labels": [
+      "IfcWindow"
+    ],
+    "type": "node",
+    "properties": {
+      "GlobalId": "3cUkl32yn9qRSPvBJVyWcE",
+      "Name": "Windows_Sgl_Plain:1810x1210mm:286105",
+      "ObjectType": "1810x1210mm",
+      "Tag": "286105",
+      "OverallHeight": 1210.0,
+      "OverallWidth": 1810.0,
+      "PredefinedType": "WINDOW",
+      "PartitioningType": "NOTDEFINED",
+      "Pset_WindowCommon": {
+        "IsExternal": true,
+        "Reference": "1810x1210mm",
+        "ThermalTransmittance": 5.5617,
+        "id": 33357
+      },
+      "Pset_ManufacturerTypeInformation": {
+        "Manufacturer": "Revit",
+        "id": 33362
+      },
+      "BaseQuantities": {
+        "Height": 1210.0,
+        "Width": 1810.0,
+        "Area": 3.5348570571731,
+        "id": 33375
+      },
+      "Constraints": {
+        "Level": "Level: Ground Floor",
+        "Sill_Height": 899.999999999998,
+        "id": 33419
+      },
+      "Dimensions": {
+        "Area": 3.5348570571731,
+        "Volume": 0.0884818750215249,
+        "id": 33425
+      },
+      "Identity_Data": {
+        "Mark": "1",
+        "id": 33432
+      },
+      "Other": {
+        "Host_Id": "Basic Wall: Wall-Ext_102Bwk-75Ins-100LBlk-12P",
+        "Category": "Windows",
+        "Family": "Windows_Sgl_Plain: 1810x1210mm",
+        "Family_and_Type": "Windows_Sgl_Plain: 1810x1210mm",
+        "Head_Height": 2110.0,
+        "Type": "Windows_Sgl_Plain: 1810x1210mm",
+        "Type_Id": "Windows_Sgl_Plain: 1810x1210mm",
+        "id": 33438
+      },
+      "Phasing": {
+        "Phase_Created": "New Construction",
+        "id": 33449
+      }
+    }
+  },
+  {
+    "id": 33515,
+    "labels": [
+      "IfcWindow"
+    ],
+    "type": "node",
+    "properties": {
+      "GlobalId": "3cUkl32yn9qRSPvBJVyWdx",
+      "Name": "Windows_Sgl_Plain:1810x1210mm:286188",
+      "ObjectType": "1810x1210mm",
+      "Tag": "286188",
+      "OverallHeight": 1210.0,
+      "OverallWidth": 1810.0,
+      "PredefinedType": "WINDOW",
+      "PartitioningType": "NOTDEFINED",
+      "Pset_WindowCommon": {
+        "IsExternal": true,
+        "Reference": "1810x1210mm",
+        "ThermalTransmittance": 5.5617,
+        "id": 33521
+      },
+      "Pset_ManufacturerTypeInformation": {
+        "Manufacturer": "Revit",
+        "id": 33525
+      },
+      "BaseQuantities": {
+        "Height": 1210.0,
+        "Width": 1810.0,
+        "Area": 3.5348570571731,
+        "id": 33538
+      },
+      "Constraints": {
+        "Level": "Level: Ground Floor",
+        "Sill_Height": 899.999999999998,
+        "id": 33548
+      },
+      "Dimensions": {
+        "Area": 3.5348570571731,
+        "Volume": 0.0884818750215249,
+        "id": 33554
+      },
+      "Identity_Data": {
+        "Mark": "2",
+        "id": 33561
+      },
+      "Other": {
+        "Host_Id": "Basic Wall: Wall-Ext_102Bwk-75Ins-100LBlk-12P",
+        "Category": "Windows",
+        "Family": "Windows_Sgl_Plain: 1810x1210mm",
+        "Family_and_Type": "Windows_Sgl_Plain: 1810x1210mm",
+        "Type": "Windows_Sgl_Plain: 1810x1210mm",
+        "Type_Id": "Windows_Sgl_Plain: 1810x1210mm",
+        "Head_Height": 2110.0,
+        "id": 33567
+      },
+      "Phasing": {
+        "Phase_Created": "New Construction",
+        "id": 33573
+      }
+    }
+  },
+  {
+    "id": 33588,
+    "labels": [
+      "IfcWindow"
+    ],
+    "type": "node",
+    "properties": {
+      "GlobalId": "3cUkl32yn9qRSPvBJVyWe9",
+      "Name": "Windows_Sgl_Plain:1810x1210mm:286238",
+      "ObjectType": "1810x1210mm",
+      "Tag": "286238",
+      "OverallHeight": 1210.0,
+      "OverallWidth": 1810.0,
+      "PredefinedType": "WINDOW",
+      "PartitioningType": "NOTDEFINED",
+      "Pset_WindowCommon": {
+        "IsExternal": true,
+        "Reference": "1810x1210mm",
+        "ThermalTransmittance": 5.5617,
+        "id": 33594
+      },
+      "Pset_ManufacturerTypeInformation": {
+        "Manufacturer": "Revit",
+        "id": 33598
+      },
+      "BaseQuantities": {
+        "Height": 1210.0,
+        "Width": 1810.0,
+        "Area": 3.5348570571731,
+        "id": 33611
+      },
+      "Constraints": {
+        "Level": "Level: Ground Floor",
+        "Sill_Height": 899.999999999998,
+        "id": 33621
+      },
+      "Dimensions": {
+        "Area": 3.5348570571731,
+        "Volume": 0.0884818750215249,
+        "id": 33627
+      },
+      "Identity_Data": {
+        "Mark": "3",
+        "id": 33634
+      },
+      "Other": {
+        "Host_Id": "Basic Wall: Wall-Ext_102Bwk-75Ins-100LBlk-12P",
+        "Category": "Windows",
+        "Family": "Windows_Sgl_Plain: 1810x1210mm",
+        "Family_and_Type": "Windows_Sgl_Plain: 1810x1210mm",
+        "Type": "Windows_Sgl_Plain: 1810x1210mm",
+        "Type_Id": "Windows_Sgl_Plain: 1810x1210mm",
+        "Head_Height": 2110.0,
+        "id": 33640
+      },
+      "Phasing": {
+        "Phase_Created": "New Construction",
+        "id": 33646
+      }
+    }
+  },
+  {
+    "id": 83329,
+    "labels": [
+      "IfcRelDefinesByType"
+    ],
+    "type": "node",
+    "properties": {
+      "GlobalId": "1W5UWk7f1CPvtObqKhF3Qx"
+    }
+  },
+  {
+    "id": 34084,
+    "labels": [
+      "IfcQuantityArea"
+    ],
+    "type": "node",
+    "properties": {
+      "Name": "GrossArea",
+      "AreaValue": 146.19905625
+    }
+  },
+  {
+    "id": 34085,
+    "labels": [
+      "IfcQuantityVolume"
+    ],
+    "type": "node",
+    "properties": {
+      "Name": "GrossVolume",
+      "VolumeValue": 68713.5564375001
+    }
+  },
+  {
+    "id": 34086,
+    "labels": [
+      "IfcQuantityLength"
+    ],
+    "type": "node",
+    "properties": {
+      "Name": "Perimeter",
+      "LengthValue": 51070.0
+    }
+  },
+  {
+    "id": 34087,
+    "labels": [
+      "IfcQuantityLength"
+    ],
+    "type": "node",
+    "properties": {
+      "Name": "Width",
+      "LengthValue": 470.0
+    }
+  },
+  {
+    "id": 34088,
+    "labels": [
+      "IfcElementQuantity"
+    ],
+    "type": "node",
+    "properties": {
+      "GlobalId": "0HCNfOkM97BRsLha_BBNa3",
+      "Name": "BaseQuantities"
+    }
+  },
+  {
+    "id": 33881,
+    "labels": [
+      "IfcCovering"
+    ],
+    "type": "node",
+    "properties": {
+      "GlobalId": "3cUkl32yn9qRSPvBJVyWgM",
+      "Name": "Compound Ceiling:Plain:286337",
+      "ObjectType": "Compound Ceiling:Plain",
+      "Tag": "286337",
+      "PredefinedType": "CEILING",
+      "Pset_CoveringCommon": {
+        "IsExternal": false,
+        "Reference": "Plain",
+        "ThermalTransmittance": 0.549915397631134,
+        "id": 33886
+      },
+      "BaseQuantities": {
+        "GrossCeilingArea": 8.69350624999999,
+        "id": 33894
+      },
+      "Constraints": {
+        "Room_Bounding": true,
+        "Level": "Level: Ground Floor",
+        "Height_Offset_From_Level": 2200.0,
+        "id": 33903
+      },
+      "Dimensions": {
+        "Area": 8.69350624999999,
+        "Perimeter": 12810.0,
+        "Volume": 0.49552985625,
+        "id": 33909
+      },
+      "Other": {
+        "Category": "Ceilings",
+        "Family": "Compound Ceiling: Plain",
+        "Family_and_Type": "Compound Ceiling: Plain",
+        "Type": "Compound Ceiling: Plain",
+        "Type_Id": "Compound Ceiling: Plain",
+        "id": 33792,
+        "Family_Name": "Compound Ceiling"
+      },
+      "Phasing": {
+        "Phase_Created": "New Construction",
+        "id": 33922
+      },
+      "Analytical_Properties": {
+        "Roughness": 3,
+        "Absorptance": 0.7,
+        "Heat_Transfer_Coefficient_(U)": 0.549915397631134,
+        "Thermal_mass": 11142.189,
+        "Thermal_Resistance_(R)": 1.81846153846154,
+        "id": 33776
+      },
+      "Construction": {
+        "Thickness": 57.0,
+        "id": 33782
+      },
+      "Graphics": {
+        "Coarse_Scale_Fill_Color": 0,
+        "id": 33785
+      },
+      "Identity_Data": {
+        "Assembly_Code": "",
+        "Assembly_Description": "",
+        "Keynote": "K40",
+        "Type_Name": "Plain",
+        "id": 33788
+      }
+    }
+  },
+  {
+    "id": 83046,
+    "labels": [
+      "IfcRelContainedInSpatialStructure"
+    ],
+    "type": "node",
+    "properties": {
+      "GlobalId": "15Z0v90RiHrPC20066FoKR"
+    }
+  },
+  {
+    "id": 137,
+    "labels": [
+      "IfcBuildingStorey"
+    ],
+    "type": "node",
+    "properties": {
+      "GlobalId": "1o0c33arXF9AEePDYchj2Z",
+      "Name": "Roof",
+      "LongName": "Roof",
+      "CompositionType": "ELEMENT",
+      "Elevation": 2500.0,
+      "Pset_BuildingStoreyCommon": {
+        "AboveGround": false,
+        "id": 83016
+      },
+      "Constraints": {
+        "Elevation": 2500.0,
+        "id": 82978,
+        "Elevation_Base": "Project Base Point"
+      },
+      "Dimensions": {
+        "Computation_Height": 0.0,
+        "id": 83030
+      },
+      "Identity_Data": {
+        "Structural": false,
+        "Building_Story": true,
+        "Name": "Roof",
+        "id": 82989,
+        "Type_Name": "Circle Head - Project Datum"
+      },
+      "Other": {
+        "Category": "Levels",
+        "Family": "Level: Circle Head - Project Datum",
+        "Family_and_Type": "Level: Circle Head - Project Datum",
+        "Type": "Level: Circle Head - Project Datum",
+        "Type_Id": "Level: Circle Head - Project Datum",
+        "id": 82992,
+        "Family_Name": "Level"
+      },
+      "Graphics": {
+        "Color": 0,
+        "Line_Pattern": "Centre",
+        "Line_Weight": "1",
+        "Symbol": "Anno_Level_Head_Circle: Standard",
+        "Symbol_at_End_1_Default": true,
+        "Symbol_at_End_2_Default": false,
+        "id": 82981
+      }
+    }
+  },
+  {
+    "id": 33893,
+    "labels": [
+      "IfcQuantityArea"
+    ],
+    "type": "node",
+    "properties": {
+      "Name": "GrossCeilingArea",
+      "AreaValue": 8.69350624999999
+    }
+  },
+  {
+    "id": 83051,
+    "labels": [
+      "IfcRelAggregates"
+    ],
+    "type": "node",
+    "properties": {
+      "GlobalId": "3ccjyPAoj5dB6yvuLFhu$6"
+    }
+  },
+  {
+    "id": 33894,
+    "labels": [
+      "IfcElementQuantity"
+    ],
+    "type": "node",
+    "properties": {
+      "GlobalId": "2GYJ71m8z2g82Tsd_IMcYq",
+      "Name": "BaseQuantities"
+    }
+  },
+  {
+    "id": 83055,
+    "labels": [
+      "IfcRelAggregates"
+    ],
+    "type": "node",
+    "properties": {
+      "GlobalId": "1s70IU8qzCLwjTi8v7zc07"
+    }
+  },
+  {
+    "id": 83059,
+    "labels": [
+      "IfcRelAggregates"
+    ],
+    "type": "node",
+    "properties": {
+      "GlobalId": "3Zu5Bv0LOHrPC100A6FoQQ"
+    }
+  },
+  {
+    "id": 131,
+    "labels": [
+      "IfcBuildingStorey"
+    ],
+    "type": "node",
+    "properties": {
+      "GlobalId": "1o0c33arXF9AEePDYchjCY",
+      "Name": "Ground Floor",
+      "LongName": "Ground Floor",
+      "CompositionType": "ELEMENT",
+      "Elevation": 0.0,
+      "Pset_BuildingStoreyCommon": {
+        "AboveGround": false,
+        "id": 82926
+      },
+      "Constraints": {
+        "Elevation": 0.0,
+        "id": 82978,
+        "Elevation_Base": "Project Base Point"
+      },
+      "Dimensions": {
+        "Computation_Height": 0.0,
+        "id": 82956
+      },
+      "Identity_Data": {
+        "Structural": false,
+        "Building_Story": true,
+        "Name": "Ground Floor",
+        "id": 82989,
+        "Type_Name": "Circle Head - Project Datum"
+      },
+      "Other": {
+        "Category": "Levels",
+        "Family": "Level: Circle Head - Project Datum",
+        "Family_and_Type": "Level: Circle Head - Project Datum",
+        "Type": "Level: Circle Head - Project Datum",
+        "Type_Id": "Level: Circle Head - Project Datum",
+        "id": 82992,
+        "Family_Name": "Level"
+      },
+      "Graphics": {
+        "Color": 0,
+        "Line_Pattern": "Centre",
+        "Line_Weight": "1",
+        "Symbol": "Anno_Level_Head_Circle: Standard",
+        "Symbol_at_End_1_Default": true,
+        "Symbol_at_End_2_Default": false,
+        "id": 82981
+      }
+    }
+  },
+  {
+    "id": 421,
+    "labels": [
+      "IfcSpace"
+    ],
+    "type": "node",
+    "properties": {
+      "GlobalId": "3w0zWKm7n8SB1qbfwUzt0G",
+      "Name": "3 - Entrance hall",
+      "LongName": "Entrance hall",
+      "CompositionType": "ELEMENT",
+      "PredefinedType": "SPACE",
+      "Pset_SpaceCommon": {
+        "IsExternal": false,
+        "Reference": "Entrance hall 3 - Entrance hall",
+        "id": 425
+      },
+      "BaseQuantities": {
+        "NetFloorArea": 8.69350624999999,
+        "Height": 2500.0,
+        "GrossPerimeter": 12810.0,
+        "GrossFloorArea": 8.69350624999999,
+        "GrossVolume": 21733.765625,
+        "id": 437
+      },
+      "Constraints": {
+        "Base_Offset": 0.0,
+        "Level": "Level: Ground Floor",
+        "Limit_Offset": 0.0,
+        "Upper_Limit": "Level: Roof",
+        "id": 458
+      },
+      "Dimensions": {
+        "Computation_Height": 0.0,
+        "Area": 8.69350624999999,
+        "Perimeter": 12810.0,
+        "Unbounded_Height": 2500.0,
+        "id": 463
+      },
+      "Energy_Analysis": {
+        "Actual_Lighting_Load_per_area": 0.0,
+        "Actual_Power_Load_per_area": 0.0,
+        "Base_Lighting_Load_on": "<Default>",
+        "Base_Power_Load_on": "<Default>",
+        "Heat_Load_Values": "<Default>",
+        "Lighting_Load_Units": "Power Density",
+        "Number_of_People": 0.0,
+        "Power_Load_Units": "Power Density",
+        "Actual_Lighting_Load": 0.0,
+        "Actual_Power_Load": 0.0,
+        "Area_per_Person": 28.5714285714286,
+        "Latent_Heat_Gain_per_person": 630.91814901261,
+        "Plenum_Lighting_Contribution": 0.2,
+        "Sensible_Heat_Gain_per_person": 788.647686265762,
+        "Specified_Lighting_Load": 0.0,
+        "Specified_Lighting_Load_per_area": 10.7639104167097,
+        "Specified_Power_Load": 0.0,
+        "Specified_Power_Load_per_area": 13.9930835417226,
+        "Total_Heat_Gain_per_person": 1419.56583527837,
+        "id": 471
+      },
+      "Identity_Data": {
+        "Name": "Entrance hall",
+        "Number": "3 - Entrance hall",
+        "id": 487
+      },
+      "Other": {
+        "Category": "Rooms",
+        "Phase_Id": "New Construction",
+        "id": 494
+      },
+      "Phasing": {
+        "Phase": "New Construction",
+        "id": 499
+      }
+    }
+  },
+  {
+    "id": 83065,
+    "labels": [
+      "IfcRelAggregates"
+    ],
+    "type": "node",
+    "properties": {
+      "GlobalId": "15Z0v90RiHrPC200A6FoKR"
+    }
+  },
+  {
+    "id": 531,
+    "labels": [
+      "IfcSpace"
+    ],
+    "type": "node",
+    "properties": {
+      "GlobalId": "09J5N7xMHBfQZeQGAEMota",
+      "Name": "4 - Roof",
+      "LongName": "Roof",
+      "CompositionType": "ELEMENT",
+      "PredefinedType": "SPACE",
+      "Pset_SpaceCommon": {
+        "IsExternal": false,
+        "Reference": "Roof 4 - Roof",
+        "id": 535
+      },
+      "BaseQuantities": {
+        "NetFloorArea": 76.46551559765,
+        "Height": 1000.0,
+        "GrossPerimeter": 38935.404633367,
+        "GrossFloorArea": 76.46551559765,
+        "GrossVolume": 76465.51559765,
+        "id": 547
+      },
+      "Constraints": {
+        "Base_Offset": 0.0,
+        "Upper_Limit": "Level: Roof",
+        "Level": "Roof",
+        "Limit_Offset": 1000.0,
+        "id": 570
+      },
+      "Dimensions": {
+        "Computation_Height": 0.0,
+        "Area": 76.46551559765,
+        "Perimeter": 38935.404633367,
+        "Unbounded_Height": 1000.0,
+        "id": 577
+      },
+      "Energy_Analysis": {
+        "Actual_Lighting_Load_per_area": 0.0,
+        "Actual_Power_Load_per_area": 0.0,
+        "Base_Lighting_Load_on": "<Default>",
+        "Base_Power_Load_on": "<Default>",
+        "Heat_Load_Values": "<Default>",
+        "Lighting_Load_Units": "Power Density",
+        "Number_of_People": 0.0,
+        "Power_Load_Units": "Power Density",
+        "Actual_Lighting_Load": 0.0,
+        "Actual_Power_Load": 0.0,
+        "Area_per_Person": 28.5714285714286,
+        "Latent_Heat_Gain_per_person": 630.91814901261,
+        "Plenum_Lighting_Contribution": 0.2,
+        "Sensible_Heat_Gain_per_person": 788.647686265762,
+        "Specified_Lighting_Load": 0.0,
+        "Specified_Lighting_Load_per_area": 10.7639104167097,
+        "Specified_Power_Load": 0.0,
+        "Specified_Power_Load_per_area": 13.9930835417226,
+        "Total_Heat_Gain_per_person": 1419.56583527837,
+        "id": 585
+      },
+      "Identity_Data": {
+        "Name": "Roof",
+        "Number": "4 - Roof",
+        "id": 601
+      },
+      "Other": {
+        "Category": "Rooms",
+        "Phase_Id": "New Construction",
+        "id": 608
+      },
+      "Phasing": {
+        "Phase": "New Construction",
+        "id": 613
+      }
+    }
+  },
+  {
+    "id": 83069,
+    "labels": [
+      "IfcRelAggregates"
+    ],
+    "type": "node",
+    "properties": {
+      "GlobalId": "2$1LAsj$T3CPRLiPj39tWH"
+    }
+  },
+  {
+    "id": 33815,
+    "labels": [
+      "IfcCovering"
+    ],
+    "type": "node",
+    "properties": {
+      "GlobalId": "3cUkl32yn9qRSPvBJVyWfk",
+      "Name": "Compound Ceiling:Plain:286329",
+      "ObjectType": "Compound Ceiling:Plain",
+      "Tag": "286329",
+      "PredefinedType": "CEILING",
+      "Pset_CoveringCommon": {
+        "IsExternal": false,
+        "Reference": "Plain",
+        "ThermalTransmittance": 0.549915397631134,
+        "id": 33820
+      },
+      "BaseQuantities": {
+        "GrossCeilingArea": 15.41678125,
+        "id": 33828
+      },
+      "Constraints": {
+        "Room_Bounding": true,
+        "Level": "Level: Ground Floor",
+        "Height_Offset_From_Level": 2200.0,
+        "id": 33837
+      },
+      "Dimensions": {
+        "Area": 15.41678125,
+        "Perimeter": 15830.0,
+        "Volume": 0.878756531250002,
+        "id": 33843
+      },
+      "Other": {
+        "Category": "Ceilings",
+        "Family": "Compound Ceiling: Plain",
+        "Family_and_Type": "Compound Ceiling: Plain",
+        "Type": "Compound Ceiling: Plain",
+        "Type_Id": "Compound Ceiling: Plain",
+        "id": 33792,
+        "Family_Name": "Compound Ceiling"
+      },
+      "Phasing": {
+        "Phase_Created": "New Construction",
+        "id": 33856
+      },
+      "Analytical_Properties": {
+        "Roughness": 3,
+        "Absorptance": 0.7,
+        "Heat_Transfer_Coefficient_(U)": 0.549915397631134,
+        "Thermal_mass": 11142.189,
+        "Thermal_Resistance_(R)": 1.81846153846154,
+        "id": 33776
+      },
+      "Construction": {
+        "Thickness": 57.0,
+        "id": 33782
+      },
+      "Graphics": {
+        "Coarse_Scale_Fill_Color": 0,
+        "id": 33785
+      },
+      "Identity_Data": {
+        "Assembly_Code": "",
+        "Assembly_Description": "",
+        "Keynote": "K40",
+        "Type_Name": "Plain",
+        "id": 33788
+      }
+    }
+  },
+  {
+    "id": 33827,
+    "labels": [
+      "IfcQuantityArea"
+    ],
+    "type": "node",
+    "properties": {
+      "Name": "GrossCeilingArea",
+      "AreaValue": 15.41678125
+    }
+  },
+  {
+    "id": 33828,
+    "labels": [
+      "IfcElementQuantity"
+    ],
+    "type": "node",
+    "properties": {
+      "GlobalId": "1uKX8HgJj5WeBJHboN6Qc5",
+      "Name": "BaseQuantities"
+    }
+  },
+  {
+    "id": 82995,
+    "labels": [
+      "IfcRelContainedInSpatialStructure"
+    ],
+    "type": "node",
+    "properties": {
+      "GlobalId": "3Zu5Bv0LOHrPC10066FoQQ"
+    }
+  },
+  {
+    "id": 33688,
+    "labels": [
+      "IfcCovering"
+    ],
+    "type": "node",
+    "properties": {
+      "GlobalId": "3cUkl32yn9qRSPvBJVyWfu",
+      "Name": "Compound Ceiling:Plain:286319",
+      "ObjectType": "Compound Ceiling:Plain",
+      "Tag": "286319",
+      "PredefinedType": "CEILING",
+      "Pset_CoveringCommon": {
+        "IsExternal": false,
+        "Reference": "Plain",
+        "ThermalTransmittance": 0.549915397631134,
+        "id": 33713
+      },
+      "BaseQuantities": {
+        "GrossCeilingArea": 51.9948250000001,
+        "id": 33722
+      },
+      "Constraints": {
+        "Room_Bounding": true,
+        "Height_Offset_From_Level": 2200.0,
+        "Level": "Level: Ground Floor",
+        "id": 33746
+      },
+      "Dimensions": {
+        "Area": 51.9948250000001,
+        "Perimeter": 29925.0,
+        "Volume": 2.96370502500001,
+        "id": 33753
+      },
+      "Other": {
+        "Category": "Ceilings",
+        "Family": "Compound Ceiling: Plain",
+        "Family_and_Type": "Compound Ceiling: Plain",
+        "Type": "Compound Ceiling: Plain",
+        "Type_Id": "Compound Ceiling: Plain",
+        "id": 33792,
+        "Family_Name": "Compound Ceiling"
+      },
+      "Phasing": {
+        "Phase_Created": "New Construction",
+        "id": 33771
+      },
+      "Analytical_Properties": {
+        "Roughness": 3,
+        "Absorptance": 0.7,
+        "Heat_Transfer_Coefficient_(U)": 0.549915397631134,
+        "Thermal_mass": 11142.189,
+        "Thermal_Resistance_(R)": 1.81846153846154,
+        "id": 33776
+      },
+      "Construction": {
+        "Thickness": 57.0,
+        "id": 33782
+      },
+      "Graphics": {
+        "Coarse_Scale_Fill_Color": 0,
+        "id": 33785
+      },
+      "Identity_Data": {
+        "Assembly_Code": "",
+        "Assembly_Description": "",
+        "Keynote": "K40",
+        "Type_Name": "Plain",
+        "id": 33788
+      }
+    }
+  },
+  {
+    "id": 33721,
+    "labels": [
+      "IfcQuantityArea"
+    ],
+    "type": "node",
+    "properties": {
+      "Name": "GrossCeilingArea",
+      "AreaValue": 51.9948250000001
+    }
+  },
+  {
+    "id": 33722,
+    "labels": [
+      "IfcElementQuantity"
+    ],
+    "type": "node",
+    "properties": {
+      "GlobalId": "38sCjY6PT6Yxy5HIXojaH2",
+      "Name": "BaseQuantities"
+    }
+  },
+  {
+    "id": 33608,
+    "labels": [
+      "IfcQuantityLength"
+    ],
+    "type": "node",
+    "properties": {
+      "Name": "Height",
+      "LengthValue": 1210.0
+    }
+  },
+  {
+    "id": 33609,
+    "labels": [
+      "IfcQuantityLength"
+    ],
+    "type": "node",
+    "properties": {
+      "Name": "Width",
+      "LengthValue": 1810.0
+    }
+  },
+  {
+    "id": 33610,
+    "labels": [
+      "IfcQuantityArea"
+    ],
+    "type": "node",
+    "properties": {
+      "Name": "Area",
+      "Description": "area measured in geometry",
+      "AreaValue": 3.5348570571731
+    }
+  },
+  {
+    "id": 33611,
+    "labels": [
+      "IfcElementQuantity"
+    ],
+    "type": "node",
+    "properties": {
+      "GlobalId": "1aWIrsEQzFog6rlXsf4S$F",
+      "Name": "BaseQuantities"
+    }
+  },
+  {
+    "id": 33536,
+    "labels": [
+      "IfcQuantityLength"
+    ],
+    "type": "node",
+    "properties": {
+      "Name": "Width",
+      "LengthValue": 1810.0
+    }
+  },
+  {
+    "id": 33537,
+    "labels": [
+      "IfcQuantityArea"
+    ],
+    "type": "node",
+    "properties": {
+      "Name": "Area",
+      "Description": "area measured in geometry",
+      "AreaValue": 3.5348570571731
+    }
+  },
+  {
+    "id": 33538,
+    "labels": [
+      "IfcElementQuantity"
+    ],
+    "type": "node",
+    "properties": {
+      "GlobalId": "1ryNsc4AbAOOcF$kghzOXn",
+      "Name": "BaseQuantities"
+    }
+  },
+  {
+    "id": 33535,
+    "labels": [
+      "IfcQuantityLength"
+    ],
+    "type": "node",
+    "properties": {
+      "Name": "Height",
+      "LengthValue": 1210.0
+    }
+  },
+  {
+    "id": 33372,
+    "labels": [
+      "IfcQuantityLength"
+    ],
+    "type": "node",
+    "properties": {
+      "Name": "Height",
+      "LengthValue": 1210.0
+    }
+  },
+  {
+    "id": 33373,
+    "labels": [
+      "IfcQuantityLength"
+    ],
+    "type": "node",
+    "properties": {
+      "Name": "Width",
+      "LengthValue": 1810.0
+    }
+  },
+  {
+    "id": 33374,
+    "labels": [
+      "IfcQuantityArea"
+    ],
+    "type": "node",
+    "properties": {
+      "Name": "Area",
+      "Description": "area measured in geometry",
+      "AreaValue": 3.5348570571731
+    }
+  },
+  {
+    "id": 33375,
+    "labels": [
+      "IfcElementQuantity"
+    ],
+    "type": "node",
+    "properties": {
+      "GlobalId": "1GEeUPhg58OOFlgpmVIH4F",
+      "Name": "BaseQuantities"
+    }
+  },
+  {
+    "id": 32646,
+    "labels": [
+      "IfcQuantityLength"
+    ],
+    "type": "node",
+    "properties": {
+      "Name": "Height",
+      "LengthValue": 2110.0
+    }
+  },
+  {
+    "id": 32647,
+    "labels": [
+      "IfcQuantityLength"
+    ],
+    "type": "node",
+    "properties": {
+      "Name": "Width",
+      "LengthValue": 810.0
+    }
+  },
+  {
+    "id": 32648,
+    "labels": [
+      "IfcQuantityArea"
+    ],
+    "type": "node",
+    "properties": {
+      "Name": "Area",
+      "Description": "area measured in geometry",
+      "AreaValue": 2.27347800000496
+    }
+  },
+  {
+    "id": 32649,
+    "labels": [
+      "IfcElementQuantity"
+    ],
+    "type": "node",
+    "properties": {
+      "GlobalId": "351hQIg_j87evrnWFNwjUg",
+      "Name": "BaseQuantities"
+    }
+  },
+  {
+    "id": 4883,
+    "labels": [
+      "IfcQuantityLength"
+    ],
+    "type": "node",
+    "properties": {
+      "Name": "Height",
+      "LengthValue": 2335.0
+    }
+  },
+  {
+    "id": 4884,
+    "labels": [
+      "IfcQuantityLength"
+    ],
+    "type": "node",
+    "properties": {
+      "Name": "Length",
+      "LengthValue": 4452.5
+    }
+  },
+  {
+    "id": 4885,
+    "labels": [
+      "IfcQuantityLength"
+    ],
+    "type": "node",
+    "properties": {
+      "Name": "Width",
+      "LengthValue": 95.0
+    }
+  },
+  {
+    "id": 4886,
+    "labels": [
+      "IfcQuantityArea"
+    ],
+    "type": "node",
+    "properties": {
+      "Name": "GrossFootprintArea",
+      "AreaValue": 0.4229875
+    }
+  },
+  {
+    "id": 4887,
+    "labels": [
+      "IfcQuantityArea"
+    ],
+    "type": "node",
+    "properties": {
+      "Name": "GrossSideArea",
+      "AreaValue": 10.3965875
+    }
+  },
+  {
+    "id": 4888,
+    "labels": [
+      "IfcQuantityVolume"
+    ],
+    "type": "node",
+    "properties": {
+      "Name": "GrossVolume",
+      "VolumeValue": 0.987675812500001
+    }
+  },
+  {
+    "id": 4889,
+    "labels": [
+      "IfcElementQuantity"
+    ],
+    "type": "node",
+    "properties": {
+      "GlobalId": "04gSUVO1X1$Poo$$Kovzj1",
+      "Name": "BaseQuantities"
+    }
+  },
+  {
+    "id": 4708,
+    "labels": [
+      "IfcQuantityLength"
+    ],
+    "type": "node",
+    "properties": {
+      "Name": "Height",
+      "LengthValue": 2335.0
+    }
+  },
+  {
+    "id": 4709,
+    "labels": [
+      "IfcQuantityLength"
+    ],
+    "type": "node",
+    "properties": {
+      "Name": "Length",
+      "LengthValue": 5510.00000000001
+    }
+  },
+  {
+    "id": 4710,
+    "labels": [
+      "IfcQuantityLength"
+    ],
+    "type": "node",
+    "properties": {
+      "Name": "Width",
+      "LengthValue": 95.0
+    }
+  },
+  {
+    "id": 4711,
+    "labels": [
+      "IfcQuantityArea"
+    ],
+    "type": "node",
+    "properties": {
+      "Name": "GrossFootprintArea",
+      "AreaValue": 0.523450000000001
+    }
+  },
+  {
+    "id": 4712,
+    "labels": [
+      "IfcQuantityArea"
+    ],
+    "type": "node",
+    "properties": {
+      "Name": "GrossSideArea",
+      "AreaValue": 9.44765000000002
+    }
+  },
+  {
+    "id": 4713,
+    "labels": [
+      "IfcQuantityVolume"
+    ],
+    "type": "node",
+    "properties": {
+      "Name": "GrossVolume",
+      "VolumeValue": 0.897526750000003
+    }
+  },
+  {
+    "id": 4714,
+    "labels": [
+      "IfcElementQuantity"
+    ],
+    "type": "node",
+    "properties": {
+      "GlobalId": "1qYMaJ9uH14BnK4j166OW7",
+      "Name": "BaseQuantities"
+    }
+  },
+  {
+    "id": 4503,
+    "labels": [
+      "IfcRelAggregates"
+    ],
+    "type": "node",
+    "properties": {
+      "GlobalId": "3cUkl32yn9qRSPuBJVyW$Z"
+    }
+  },
+  {
+    "id": 78165,
+    "labels": [
+      "IfcQuantityArea"
+    ],
+    "type": "node",
+    "properties": {
+      "Name": "GrossArea",
+      "AreaValue": 80.2628625000001
+    }
+  },
+  {
+    "id": 78166,
+    "labels": [
+      "IfcQuantityVolume"
+    ],
+    "type": "node",
+    "properties": {
+      "Name": "GrossVolume",
+      "VolumeValue": 13243.3723125
+    }
+  },
+  {
+    "id": 78167,
+    "labels": [
+      "IfcQuantityLength"
+    ],
+    "type": "node",
+    "properties": {
+      "Name": "Perimeter",
+      "LengthValue": 39470.0
+    }
+  },
+  {
+    "id": 78168,
+    "labels": [
+      "IfcQuantityLength"
+    ],
+    "type": "node",
+    "properties": {
+      "Name": "Width",
+      "LengthValue": 165.0
+    }
+  },
+  {
+    "id": 78169,
+    "labels": [
+      "IfcElementQuantity"
+    ],
+    "type": "node",
+    "properties": {
+      "GlobalId": "1dkzQplCv5UhxOKGsk6WjP",
+      "Name": "BaseQuantities"
+    }
+  },
+  {
+    "id": 77407,
+    "labels": [
+      "IfcClassificationReference"
+    ],
+    "type": "node",
+    "properties": {
+      "Location": "http://www.csiorg.net/uniformat",
+      "Identification": "E2020200",
+      "Name": "Furniture & Accessories"
+    }
+  },
+  {
+    "id": 77408,
+    "labels": [
+      "IfcRelAssociatesClassification"
+    ],
+    "type": "node",
+    "properties": {
+      "GlobalId": "3Ta7j6ZhLC6QZ8tSrVj$LR",
+      "Name": "Uniformat Classification"
+    }
+  },
+  {
+    "id": 3585,
+    "labels": [
+      "IfcRelAggregates"
+    ],
+    "type": "node",
+    "properties": {
+      "GlobalId": "3cUkl32yn9qRSPuBJVyW_P"
+    }
+  },
+  {
+    "id": 77376,
+    "labels": [
+      "IfcClassificationReference"
+    ],
+    "type": "node",
+    "properties": {
+      "Location": "http://www.csiorg.net/uniformat",
+      "Identification": "E2020200",
+      "Name": "Furniture & Accessories"
+    }
+  },
+  {
+    "id": 77377,
+    "labels": [
+      "IfcRelAssociatesClassification"
+    ],
+    "type": "node",
+    "properties": {
+      "GlobalId": "2BKuE8mWvDqh1_ZWtEtPSs",
+      "Name": "Uniformat Classification"
+    }
+  },
+  {
+    "id": 77278,
+    "labels": [
+      "IfcClassificationReference"
+    ],
+    "type": "node",
+    "properties": {
+      "Location": "http://www.csiorg.net/uniformat",
+      "Identification": "E2020200",
+      "Name": "Furniture & Accessories"
+    }
+  },
+  {
+    "id": 77279,
+    "labels": [
+      "IfcRelAssociatesClassification"
+    ],
+    "type": "node",
+    "properties": {
+      "GlobalId": "1cp3i8UOz1EBJ8cNvdXRTx",
+      "Name": "Uniformat Classification"
+    }
+  },
+  {
+    "id": 77191,
+    "labels": [
+      "IfcClassificationReference"
+    ],
+    "type": "node",
+    "properties": {
+      "Location": "http://www.csiorg.net/uniformat",
+      "Identification": "E2020200",
+      "Name": "Furniture & Accessories"
+    }
+  },
+  {
+    "id": 77192,
+    "labels": [
+      "IfcRelAssociatesClassification"
+    ],
+    "type": "node",
+    "properties": {
+      "GlobalId": "0RnFHpvb96_u$cxIRRq3TB",
+      "Name": "Uniformat Classification"
+    }
+  },
+  {
+    "id": 77162,
+    "labels": [
+      "IfcClassificationReference"
+    ],
+    "type": "node",
+    "properties": {
+      "Location": "http://www.csiorg.net/uniformat",
+      "Identification": "E2020200",
+      "Name": "Furniture & Accessories"
+    }
+  },
+  {
+    "id": 77163,
+    "labels": [
+      "IfcRelAssociatesClassification"
+    ],
+    "type": "node",
+    "properties": {
+      "GlobalId": "3yxfeSDh1Du8O6QQT9DVD$",
+      "Name": "Uniformat Classification"
+    }
+  },
+  {
+    "id": 542,
+    "labels": [
+      "IfcQuantityArea"
+    ],
+    "type": "node",
+    "properties": {
+      "Name": "NetFloorArea",
+      "Description": "area measured in geometry",
+      "AreaValue": 76.46551559765
+    }
+  },
+  {
+    "id": 543,
+    "labels": [
+      "IfcQuantityLength"
+    ],
+    "type": "node",
+    "properties": {
+      "Name": "Height",
+      "Description": "length measured in geometry",
+      "LengthValue": 1000.0
+    }
+  },
+  {
+    "id": 544,
+    "labels": [
+      "IfcQuantityLength"
+    ],
+    "type": "node",
+    "properties": {
+      "Name": "GrossPerimeter",
+      "Description": "length measured in geometry",
+      "LengthValue": 38935.404633367
+    }
+  },
+  {
+    "id": 545,
+    "labels": [
+      "IfcQuantityArea"
+    ],
+    "type": "node",
+    "properties": {
+      "Name": "GrossFloorArea",
+      "Description": "area measured in geometry",
+      "AreaValue": 76.46551559765
+    }
+  },
+  {
+    "id": 546,
+    "labels": [
+      "IfcQuantityVolume"
+    ],
+    "type": "node",
+    "properties": {
+      "Name": "GrossVolume",
+      "Description": "volume measured in geometry",
+      "VolumeValue": 76465.51559765
+    }
+  },
+  {
+    "id": 547,
+    "labels": [
+      "IfcElementQuantity"
+    ],
+    "type": "node",
+    "properties": {
+      "GlobalId": "3$CKgV3Sj8GPzGazybsWDt",
+      "Name": "BaseQuantities"
+    }
+  },
+  {
+    "id": 432,
+    "labels": [
+      "IfcQuantityArea"
+    ],
+    "type": "node",
+    "properties": {
+      "Name": "NetFloorArea",
+      "Description": "area measured in geometry",
+      "AreaValue": 8.69350624999999
+    }
+  },
+  {
+    "id": 433,
+    "labels": [
+      "IfcQuantityLength"
+    ],
+    "type": "node",
+    "properties": {
+      "Name": "Height",
+      "Description": "length measured in geometry",
+      "LengthValue": 2500.0
+    }
+  },
+  {
+    "id": 434,
+    "labels": [
+      "IfcQuantityLength"
+    ],
+    "type": "node",
+    "properties": {
+      "Name": "GrossPerimeter",
+      "Description": "length measured in geometry",
+      "LengthValue": 12810.0
+    }
+  },
+  {
+    "id": 435,
+    "labels": [
+      "IfcQuantityArea"
+    ],
+    "type": "node",
+    "properties": {
+      "Name": "GrossFloorArea",
+      "Description": "area measured in geometry",
+      "AreaValue": 8.69350624999999
+    }
+  },
+  {
+    "id": 436,
+    "labels": [
+      "IfcQuantityVolume"
+    ],
+    "type": "node",
+    "properties": {
+      "Name": "GrossVolume",
+      "Description": "volume measured in geometry",
+      "VolumeValue": 21733.765625
+    }
+  },
+  {
+    "id": 437,
+    "labels": [
+      "IfcElementQuantity"
+    ],
+    "type": "node",
+    "properties": {
+      "GlobalId": "3iNOrPcAn089_$upb0C1Ku",
+      "Name": "BaseQuantities"
+    }
+  },
+  {
+    "id": 334,
+    "labels": [
+      "IfcQuantityArea"
+    ],
+    "type": "node",
+    "properties": {
+      "Name": "NetFloorArea",
+      "Description": "area measured in geometry",
+      "AreaValue": 15.41678125
+    }
+  },
+  {
+    "id": 335,
+    "labels": [
+      "IfcQuantityLength"
+    ],
+    "type": "node",
+    "properties": {
+      "Name": "Height",
+      "Description": "length measured in geometry",
+      "LengthValue": 2500.0
+    }
+  },
+  {
+    "id": 336,
+    "labels": [
+      "IfcQuantityLength"
+    ],
+    "type": "node",
+    "properties": {
+      "Name": "GrossPerimeter",
+      "Description": "length measured in geometry",
+      "LengthValue": 15830.0
+    }
+  },
+  {
+    "id": 337,
+    "labels": [
+      "IfcQuantityArea"
+    ],
+    "type": "node",
+    "properties": {
+      "Name": "GrossFloorArea",
+      "Description": "area measured in geometry",
+      "AreaValue": 15.41678125
+    }
+  },
+  {
+    "id": 338,
+    "labels": [
+      "IfcQuantityVolume"
+    ],
+    "type": "node",
+    "properties": {
+      "Name": "GrossVolume",
+      "Description": "volume measured in geometry",
+      "VolumeValue": 38541.9531250001
+    }
+  },
+  {
+    "id": 339,
+    "labels": [
+      "IfcElementQuantity"
+    ],
+    "type": "node",
+    "properties": {
+      "GlobalId": "0AYsS9j95708bcHpeloUtq",
+      "Name": "BaseQuantities"
+    }
+  },
+  {
+    "id": 202,
+    "labels": [
+      "IfcQuantityArea"
+    ],
+    "type": "node",
+    "properties": {
+      "Name": "NetFloorArea",
+      "Description": "area measured in geometry",
+      "AreaValue": 51.9948250000001
+    }
+  },
+  {
+    "id": 205,
+    "labels": [
+      "IfcQuantityLength"
+    ],
+    "type": "node",
+    "properties": {
+      "Name": "Height",
+      "Description": "length measured in geometry",
+      "LengthValue": 2500.0
+    }
+  },
+  {
+    "id": 206,
+    "labels": [
+      "IfcQuantityLength"
+    ],
+    "type": "node",
+    "properties": {
+      "Name": "GrossPerimeter",
+      "Description": "length measured in geometry",
+      "LengthValue": 29925.0
+    }
+  },
+  {
+    "id": 207,
+    "labels": [
+      "IfcQuantityArea"
+    ],
+    "type": "node",
+    "properties": {
+      "Name": "GrossFloorArea",
+      "Description": "area measured in geometry",
+      "AreaValue": 51.9948250000001
+    }
+  },
+  {
+    "id": 208,
+    "labels": [
+      "IfcQuantityVolume"
+    ],
+    "type": "node",
+    "properties": {
+      "Name": "GrossVolume",
+      "Description": "volume measured in geometry",
+      "VolumeValue": 129987.0625
+    }
+  },
+  {
+    "id": 209,
+    "labels": [
+      "IfcElementQuantity"
+    ],
+    "type": "node",
+    "properties": {
+      "GlobalId": "0YFsqt_Oz3SexqX3g$DJVK",
+      "Name": "BaseQuantities"
+    }
+  },
+  {
+    "start": 21827,
+    "end": 83314,
+    "id": 6322148419859678255,
+    "label": "RELATEDOBJECTS",
+    "type": "relationship",
+    "properties": {}
+  },
+  {
+    "start": 21827,
+    "end": 82995,
+    "id": 2920252658687929005,
+    "label": "RELATEDELEMENTS",
+    "type": "relationship",
+    "properties": {}
+  },
+  {
+    "start": 21849,
+    "end": 21852,
+    "id": 8485976343722170638,
+    "label": "QUANTITIES",
+    "type": "relationship",
+    "properties": {}
+  },
+  {
+    "start": 21850,
+    "end": 21852,
+    "id": 1364172308242217414,
+    "label": "QUANTITIES",
+    "type": "relationship",
+    "properties": {}
+  },
+  {
+    "start": 21851,
+    "end": 21852,
+    "id": 1072885538498028279,
+    "label": "QUANTITIES",
+    "type": "relationship",
+    "properties": {}
+  },
+  {
+    "start": 36107,
+    "end": 83322,
+    "id": 6716193366595826195,
+    "label": "RELATEDOBJECTS",
+    "type": "relationship",
+    "properties": {}
+  },
+  {
+    "start": 36107,
+    "end": 82995,
+    "id": 3102915479470535602,
+    "label": "RELATEDELEMENTS",
+    "type": "relationship",
+    "properties": {}
+  },
+  {
+    "start": 36127,
+    "end": 36130,
+    "id": 4873346989868270978,
+    "label": "QUANTITIES",
+    "type": "relationship",
+    "properties": {}
+  },
+  {
+    "start": 36128,
+    "end": 36130,
+    "id": 2912047453624148543,
+    "label": "QUANTITIES",
+    "type": "relationship",
+    "properties": {}
+  },
+  {
+    "start": 36129,
+    "end": 36130,
+    "id": 5349105300364394236,
+    "label": "QUANTITIES",
+    "type": "relationship",
+    "properties": {}
+  },
+  {
+    "start": 11008,
+    "end": 11009,
+    "id": 3454511991459238333,
+    "label": "QUANTITIES",
+    "type": "relationship",
+    "properties": {}
+  },
+  {
+    "start": 11009,
+    "end": 11006,
+    "id": 1848566079218348222,
+    "label": "QUANTITIES",
+    "type": "relationship",
+    "properties": {}
+  },
+  {
+    "start": 11009,
+    "end": 11007,
+    "id": 5415811527703360768,
+    "label": "QUANTITIES",
+    "type": "relationship",
+    "properties": {}
+  },
+  {
+    "start": 10993,
+    "end": 83310,
+    "id": 3871829969212993099,
+    "label": "RELATEDOBJECTS",
+    "type": "relationship",
+    "properties": {}
+  },
+  {
+    "start": 10993,
+    "end": 82995,
+    "id": 8313911956727476877,
+    "label": "RELATEDELEMENTS",
+    "type": "relationship",
+    "properties": {}
+  },
+  {
+    "start": 59990,
+    "end": 59995,
+    "id": 9073083035281799132,
+    "label": "RELATINGCLASSIFICATION",
+    "type": "relationship",
+    "properties": {}
+  },
+  {
+    "start": 60019,
+    "end": 60020,
+    "id": 1100862024774276258,
+    "label": "RELATINGCLASSIFICATION",
+    "type": "relationship",
+    "properties": {}
+  },
+  {
+    "start": 83746,
+    "end": 83749,
+    "id": 4345127496326711115,
+    "label": "QUANTITIES",
+    "type": "relationship",
+    "properties": {}
+  },
+  {
+    "start": 83747,
+    "end": 83749,
+    "id": 5505021155637676937,
+    "label": "QUANTITIES",
+    "type": "relationship",
+    "properties": {}
+  },
+  {
+    "start": 83748,
+    "end": 83749,
+    "id": 3067963308897431244,
+    "label": "QUANTITIES",
+    "type": "relationship",
+    "properties": {}
+  },
+  {
+    "start": 83762,
+    "end": 177,
+    "id": 1595064692482296523,
+    "label": "RELATINGSTRUCTURE",
+    "type": "relationship",
+    "properties": {}
+  },
+  {
+    "start": 177,
+    "end": 83059,
+    "id": 9039676874887867550,
+    "label": "RELATEDOBJECTS",
+    "type": "relationship",
+    "properties": {}
+  },
+  {
+    "start": 83777,
+    "end": 323,
+    "id": 784842087435661839,
+    "label": "RELATINGSTRUCTURE",
+    "type": "relationship",
+    "properties": {}
+  },
+  {
+    "start": 323,
+    "end": 83059,
+    "id": 1878551996134464917,
+    "label": "RELATEDOBJECTS",
+    "type": "relationship",
+    "properties": {}
+  },
+  {
+    "start": 83674,
+    "end": 83677,
+    "id": 8379603692437378146,
+    "label": "QUANTITIES",
+    "type": "relationship",
+    "properties": {}
+  },
+  {
+    "start": 83675,
+    "end": 83677,
+    "id": 7630082534531927777,
+    "label": "QUANTITIES",
+    "type": "relationship",
+    "properties": {}
+  },
+  {
+    "start": 83676,
+    "end": 83677,
+    "id": 966512887213235787,
+    "label": "QUANTITIES",
+    "type": "relationship",
+    "properties": {}
+  },
+  {
+    "start": 83710,
+    "end": 83713,
+    "id": 2897912531317470792,
+    "label": "QUANTITIES",
+    "type": "relationship",
+    "properties": {}
+  },
+  {
+    "start": 83711,
+    "end": 83713,
+    "id": 460854684577225099,
+    "label": "QUANTITIES",
+    "type": "relationship",
+    "properties": {}
+  },
+  {
+    "start": 83712,
+    "end": 83713,
+    "id": 8135740737167938465,
+    "label": "QUANTITIES",
+    "type": "relationship",
+    "properties": {}
+  },
+  {
+    "start": 83598,
+    "end": 83601,
+    "id": 1501754049077042944,
+    "label": "QUANTITIES",
+    "type": "relationship",
+    "properties": {}
+  },
+  {
+    "start": 83599,
+    "end": 83601,
+    "id": 7094841372668120620,
+    "label": "QUANTITIES",
+    "type": "relationship",
+    "properties": {}
+  },
+  {
+    "start": 83600,
+    "end": 83601,
+    "id": 3801324021600543611,
+    "label": "QUANTITIES",
+    "type": "relationship",
+    "properties": {}
+  },
+  {
+    "start": 83638,
+    "end": 83641,
+    "id": 8040620118000916597,
+    "label": "QUANTITIES",
+    "type": "relationship",
+    "properties": {}
+  },
+  {
+    "start": 83639,
+    "end": 83641,
+    "id": 555975303744246967,
+    "label": "QUANTITIES",
+    "type": "relationship",
+    "properties": {}
+  },
+  {
+    "start": 83640,
+    "end": 83641,
+    "id": 2993033150484492660,
+    "label": "QUANTITIES",
+    "type": "relationship",
+    "properties": {}
+  },
+  {
+    "start": 83525,
+    "end": 83527,
+    "id": 5052890999194231594,
+    "label": "QUANTITIES",
+    "type": "relationship",
+    "properties": {}
+  },
+  {
+    "start": 83526,
+    "end": 83527,
+    "id": 2248771635864700367,
+    "label": "QUANTITIES",
+    "type": "relationship",
+    "properties": {}
+  },
+  {
+    "start": 83527,
+    "end": 83524,
+    "id": 3054306434812886188,
+    "label": "QUANTITIES",
+    "type": "relationship",
+    "properties": {}
+  },
+  {
+    "start": 83560,
+    "end": 83563,
+    "id": 2734210239946643327,
+    "label": "QUANTITIES",
+    "type": "relationship",
+    "properties": {}
+  },
+  {
+    "start": 83561,
+    "end": 83563,
+    "id": 5171268086686889020,
+    "label": "QUANTITIES",
+    "type": "relationship",
+    "properties": {}
+  },
+  {
+    "start": 83562,
+    "end": 83563,
+    "id": 8037288310624229882,
+    "label": "QUANTITIES",
+    "type": "relationship",
+    "properties": {}
+  },
+  {
+    "start": 83276,
+    "end": 1229,
+    "id": 7013571066734303043,
+    "label": "RELATEDOBJECTS",
+    "type": "relationship",
+    "properties": {}
+  },
+  {
+    "start": 83276,
+    "end": 1752,
+    "id": 6986567639710743801,
+    "label": "RELATEDOBJECTS",
+    "type": "relationship",
+    "properties": {}
+  },
+  {
+    "start": 83276,
+    "end": 2327,
+    "id": 197156107947529158,
+    "label": "RELATEDOBJECTS",
+    "type": "relationship",
+    "properties": {}
+  },
+  {
+    "start": 1229,
+    "end": 82995,
+    "id": 533703839330974784,
+    "label": "RELATEDELEMENTS",
+    "type": "relationship",
+    "properties": {}
+  },
+  {
+    "start": 1752,
+    "end": 82995,
+    "id": 7382148703412850075,
+    "label": "RELATEDELEMENTS",
+    "type": "relationship",
+    "properties": {}
+  },
+  {
+    "start": 2327,
+    "end": 82995,
+    "id": 1884353736471430973,
+    "label": "RELATEDELEMENTS",
+    "type": "relationship",
+    "properties": {}
+  },
+  {
+    "start": 83305,
+    "end": 4705,
+    "id": 611834570590391554,
+    "label": "RELATEDOBJECTS",
+    "type": "relationship",
+    "properties": {}
+  },
+  {
+    "start": 83305,
+    "end": 4880,
+    "id": 6853956754835167319,
+    "label": "RELATEDOBJECTS",
+    "type": "relationship",
+    "properties": {}
+  },
+  {
+    "start": 4705,
+    "end": 82995,
+    "id": 4428051134668011148,
+    "label": "RELATEDELEMENTS",
+    "type": "relationship",
+    "properties": {}
+  },
+  {
+    "start": 4880,
+    "end": 82995,
+    "id": 2045995556988942001,
+    "label": "RELATEDELEMENTS",
+    "type": "relationship",
+    "properties": {}
+  },
+  {
+    "start": 83318,
+    "end": 32626,
+    "id": 6458568979722394731,
+    "label": "RELATEDOBJECTS",
+    "type": "relationship",
+    "properties": {}
+  },
+  {
+    "start": 32626,
+    "end": 82995,
+    "id": 7010604962159141121,
+    "label": "RELATEDELEMENTS",
+    "type": "relationship",
+    "properties": {}
+  },
+  {
+    "start": 83322,
+    "end": 33350,
+    "id": 1861670410770054229,
+    "label": "RELATEDOBJECTS",
+    "type": "relationship",
+    "properties": {}
+  },
+  {
+    "start": 83322,
+    "end": 33515,
+    "id": 1310614150849030445,
+    "label": "RELATEDOBJECTS",
+    "type": "relationship",
+    "properties": {}
+  },
+  {
+    "start": 83322,
+    "end": 33588,
+    "id": 5690591627403975221,
+    "label": "RELATEDOBJECTS",
+    "type": "relationship",
+    "properties": {}
+  },
+  {
+    "start": 33350,
+    "end": 82995,
+    "id": 406666441557206551,
+    "label": "RELATEDELEMENTS",
+    "type": "relationship",
+    "properties": {}
+  },
+  {
+    "start": 33515,
+    "end": 82995,
+    "id": 2765618120061878123,
+    "label": "RELATEDELEMENTS",
+    "type": "relationship",
+    "properties": {}
+  },
+  {
+    "start": 33588,
+    "end": 82995,
+    "id": 2747238213632454771,
+    "label": "RELATEDELEMENTS",
+    "type": "relationship",
+    "properties": {}
+  },
+  {
+    "start": 34084,
+    "end": 34088,
+    "id": 7388399626663109181,
+    "label": "QUANTITIES",
+    "type": "relationship",
+    "properties": {}
+  },
+  {
+    "start": 34085,
+    "end": 34088,
+    "id": 7764827095978865426,
+    "label": "QUANTITIES",
+    "type": "relationship",
+    "properties": {}
+  },
+  {
+    "start": 34086,
+    "end": 34088,
+    "id": 2085321555985522626,
+    "label": "QUANTITIES",
+    "type": "relationship",
+    "properties": {}
+  },
+  {
+    "start": 34087,
+    "end": 34088,
+    "id": 351736290754723067,
+    "label": "QUANTITIES",
+    "type": "relationship",
+    "properties": {}
+  },
+  {
+    "start": 33881,
+    "end": 82995,
+    "id": 1956942817270052126,
+    "label": "RELATEDELEMENTS",
+    "type": "relationship",
+    "properties": {}
+  },
+  {
+    "start": 83046,
+    "end": 137,
+    "id": 5402554107885029697,
+    "label": "RELATINGSTRUCTURE",
+    "type": "relationship",
+    "properties": {}
+  },
+  {
+    "start": 137,
+    "end": 83065,
+    "id": 3888100000958065737,
+    "label": "RELATINGOBJECT",
+    "type": "relationship",
+    "properties": {}
+  },
+  {
+    "start": 137,
+    "end": 83069,
+    "id": 5119457828949351212,
+    "label": "RELATEDOBJECTS",
+    "type": "relationship",
+    "properties": {}
+  },
+  {
+    "start": 33893,
+    "end": 33894,
+    "id": 486690691916468355,
+    "label": "QUANTITIES",
+    "type": "relationship",
+    "properties": {}
+  },
+  {
+    "start": 83059,
+    "end": 131,
+    "id": 6054227866432184939,
+    "label": "RELATINGOBJECT",
+    "type": "relationship",
+    "properties": {}
+  },
+  {
+    "start": 83059,
+    "end": 421,
+    "id": 3924360027870586179,
+    "label": "RELATEDOBJECTS",
+    "type": "relationship",
+    "properties": {}
+  },
+  {
+    "start": 131,
+    "end": 83069,
+    "id": 8312523165080381963,
+    "label": "RELATEDOBJECTS",
+    "type": "relationship",
+    "properties": {}
+  },
+  {
+    "start": 131,
+    "end": 82995,
+    "id": 2150266025876858614,
+    "label": "RELATINGSTRUCTURE",
+    "type": "relationship",
+    "properties": {}
+  },
+  {
+    "start": 83065,
+    "end": 531,
+    "id": 8058268317400657087,
+    "label": "RELATEDOBJECTS",
+    "type": "relationship",
+    "properties": {}
+  },
+  {
+    "start": 33815,
+    "end": 82995,
+    "id": 8937663721394206496,
+    "label": "RELATEDELEMENTS",
+    "type": "relationship",
+    "properties": {}
+  },
+  {
+    "start": 33827,
+    "end": 33828,
+    "id": 5874991067060243215,
+    "label": "QUANTITIES",
+    "type": "relationship",
+    "properties": {}
+  },
+  {
+    "start": 82995,
+    "end": 33688,
+    "id": 3936586741041244717,
+    "label": "RELATEDELEMENTS",
+    "type": "relationship",
+    "properties": {}
+  },
+  {
+    "start": 33721,
+    "end": 33722,
+    "id": 7391742855388911874,
+    "label": "QUANTITIES",
+    "type": "relationship",
+    "properties": {}
+  },
+  {
+    "start": 33608,
+    "end": 33611,
+    "id": 6289134832540317249,
+    "label": "QUANTITIES",
+    "type": "relationship",
+    "properties": {}
+  },
+  {
+    "start": 33609,
+    "end": 33611,
+    "id": 3423114608602976387,
+    "label": "QUANTITIES",
+    "type": "relationship",
+    "properties": {}
+  },
+  {
+    "start": 33610,
+    "end": 33611,
+    "id": 986056761862730694,
+    "label": "QUANTITIES",
+    "type": "relationship",
+    "properties": {}
+  },
+  {
+    "start": 33536,
+    "end": 33538,
+    "id": 6603132695626797928,
+    "label": "QUANTITIES",
+    "type": "relationship",
+    "properties": {}
+  },
+  {
+    "start": 33537,
+    "end": 33538,
+    "id": 661244911294911062,
+    "label": "QUANTITIES",
+    "type": "relationship",
+    "properties": {}
+  },
+  {
+    "start": 33538,
+    "end": 33535,
+    "id": 9040190542367043621,
+    "label": "QUANTITIES",
+    "type": "relationship",
+    "properties": {}
+  },
+  {
+    "start": 33372,
+    "end": 33375,
+    "id": 2068274987093736264,
+    "label": "QUANTITIES",
+    "type": "relationship",
+    "properties": {}
+  },
+  {
+    "start": 33373,
+    "end": 33375,
+    "id": 4505332833833981957,
+    "label": "QUANTITIES",
+    "type": "relationship",
+    "properties": {}
+  },
+  {
+    "start": 33374,
+    "end": 33375,
+    "id": 2544033297589859522,
+    "label": "QUANTITIES",
+    "type": "relationship",
+    "properties": {}
+  },
+  {
+    "start": 32646,
+    "end": 32649,
+    "id": 2905441946086711200,
+    "label": "QUANTITIES",
+    "type": "relationship",
+    "properties": {}
+  },
+  {
+    "start": 32647,
+    "end": 32649,
+    "id": 468384099346465507,
+    "label": "QUANTITIES",
+    "type": "relationship",
+    "properties": {}
+  },
+  {
+    "start": 32648,
+    "end": 32649,
+    "id": 8128211322398698057,
+    "label": "QUANTITIES",
+    "type": "relationship",
+    "properties": {}
+  },
+  {
+    "start": 4883,
+    "end": 4889,
+    "id": 9032676401707964784,
+    "label": "QUANTITIES",
+    "type": "relationship",
+    "properties": {}
+  },
+  {
+    "start": 4884,
+    "end": 4889,
+    "id": 6977009825261341139,
+    "label": "QUANTITIES",
+    "type": "relationship",
+    "properties": {}
+  },
+  {
+    "start": 4885,
+    "end": 4889,
+    "id": 1619585596483822425,
+    "label": "QUANTITIES",
+    "type": "relationship",
+    "properties": {}
+  },
+  {
+    "start": 4886,
+    "end": 4889,
+    "id": 4056643443224068118,
+    "label": "QUANTITIES",
+    "type": "relationship",
+    "properties": {}
+  },
+  {
+    "start": 4887,
+    "end": 4889,
+    "id": 2095343906979945683,
+    "label": "QUANTITIES",
+    "type": "relationship",
+    "properties": {}
+  },
+  {
+    "start": 4888,
+    "end": 4889,
+    "id": 9087022559807896943,
+    "label": "QUANTITIES",
+    "type": "relationship",
+    "properties": {}
+  },
+  {
+    "start": 4708,
+    "end": 4714,
+    "id": 8923579438867727823,
+    "label": "QUANTITIES",
+    "type": "relationship",
+    "properties": {}
+  },
+  {
+    "start": 4709,
+    "end": 4714,
+    "id": 6719045271512292566,
+    "label": "QUANTITIES",
+    "type": "relationship",
+    "properties": {}
+  },
+  {
+    "start": 4710,
+    "end": 4714,
+    "id": 9156103118252538259,
+    "label": "QUANTITIES",
+    "type": "relationship",
+    "properties": {}
+  },
+  {
+    "start": 4711,
+    "end": 4714,
+    "id": 6853583108716767664,
+    "label": "QUANTITIES",
+    "type": "relationship",
+    "properties": {}
+  },
+  {
+    "start": 4712,
+    "end": 4714,
+    "id": 7413151900295267989,
+    "label": "QUANTITIES",
+    "type": "relationship",
+    "properties": {}
+  },
+  {
+    "start": 4713,
+    "end": 4714,
+    "id": 8596534326674037934,
+    "label": "QUANTITIES",
+    "type": "relationship",
+    "properties": {}
+  },
+  {
+    "start": 78165,
+    "end": 78169,
+    "id": 3010713185118047537,
+    "label": "QUANTITIES",
+    "type": "relationship",
+    "properties": {}
+  },
+  {
+    "start": 78166,
+    "end": 78169,
+    "id": 282804165949529472,
+    "label": "QUANTITIES",
+    "type": "relationship",
+    "properties": {}
+  },
+  {
+    "start": 78167,
+    "end": 78169,
+    "id": 2244103702193651907,
+    "label": "QUANTITIES",
+    "type": "relationship",
+    "properties": {}
+  },
+  {
+    "start": 78168,
+    "end": 78169,
+    "id": 7695894971173671831,
+    "label": "QUANTITIES",
+    "type": "relationship",
+    "properties": {}
+  },
+  {
+    "start": 77407,
+    "end": 77408,
+    "id": 4176568771562730362,
+    "label": "RELATINGCLASSIFICATION",
+    "type": "relationship",
+    "properties": {}
+  },
+  {
+    "start": 77376,
+    "end": 77377,
+    "id": 2577849147856092579,
+    "label": "RELATINGCLASSIFICATION",
+    "type": "relationship",
+    "properties": {}
+  },
+  {
+    "start": 77278,
+    "end": 77279,
+    "id": 4559525122850059295,
+    "label": "RELATINGCLASSIFICATION",
+    "type": "relationship",
+    "properties": {}
+  },
+  {
+    "start": 77191,
+    "end": 77192,
+    "id": 6625148582546894896,
+    "label": "RELATINGCLASSIFICATION",
+    "type": "relationship",
+    "properties": {}
+  },
+  {
+    "start": 77162,
+    "end": 77163,
+    "id": 5600566730612789658,
+    "label": "RELATINGCLASSIFICATION",
+    "type": "relationship",
+    "properties": {}
+  },
+  {
+    "start": 542,
+    "end": 547,
+    "id": 5278628613834645454,
+    "label": "QUANTITIES",
+    "type": "relationship",
+    "properties": {}
+  },
+  {
+    "start": 543,
+    "end": 547,
+    "id": 7239928150078767889,
+    "label": "QUANTITIES",
+    "type": "relationship",
+    "properties": {}
+  },
+  {
+    "start": 544,
+    "end": 547,
+    "id": 4802870303338522196,
+    "label": "QUANTITIES",
+    "type": "relationship",
+    "properties": {}
+  },
+  {
+    "start": 545,
+    "end": 547,
+    "id": 1936850079401181334,
+    "label": "QUANTITIES",
+    "type": "relationship",
+    "properties": {}
+  },
+  {
+    "start": 546,
+    "end": 547,
+    "id": 500207767339064359,
+    "label": "QUANTITIES",
+    "type": "relationship",
+    "properties": {}
+  },
+  {
+    "start": 432,
+    "end": 437,
+    "id": 8759231639455414456,
+    "label": "QUANTITIES",
+    "type": "relationship",
+    "properties": {}
+  },
+  {
+    "start": 433,
+    "end": 437,
+    "id": 7726212898010014725,
+    "label": "QUANTITIES",
+    "type": "relationship",
+    "properties": {}
+  },
+  {
+    "start": 434,
+    "end": 437,
+    "id": 3456153568777827901,
+    "label": "QUANTITIES",
+    "type": "relationship",
+    "properties": {}
+  },
+  {
+    "start": 435,
+    "end": 437,
+    "id": 1019095722037582208,
+    "label": "QUANTITIES",
+    "type": "relationship",
+    "properties": {}
+  },
+  {
+    "start": 436,
+    "end": 437,
+    "id": 7577499699707581356,
+    "label": "QUANTITIES",
+    "type": "relationship",
+    "properties": {}
+  },
+  {
+    "start": 334,
+    "end": 339,
+    "id": 3570826480948795749,
+    "label": "QUANTITIES",
+    "type": "relationship",
+    "properties": {}
+  },
+  {
+    "start": 335,
+    "end": 339,
+    "id": 7611539985839046877,
+    "label": "QUANTITIES",
+    "type": "relationship",
+    "properties": {}
+  },
+  {
+    "start": 336,
+    "end": 339,
+    "id": 8873904551626382304,
+    "label": "QUANTITIES",
+    "type": "relationship",
+    "properties": {}
+  },
+  {
+    "start": 337,
+    "end": 339,
+    "id": 7978601502428332411,
+    "label": "QUANTITIES",
+    "type": "relationship",
+    "properties": {}
+  },
+  {
+    "start": 338,
+    "end": 339,
+    "id": 8506843035037096770,
+    "label": "QUANTITIES",
+    "type": "relationship",
+    "properties": {}
+  },
+  {
+    "start": 202,
+    "end": 209,
+    "id": 3664918983732895582,
+    "label": "QUANTITIES",
+    "type": "relationship",
+    "properties": {}
+  },
+  {
+    "start": 205,
+    "end": 209,
+    "id": 7041689172558823786,
+    "label": "QUANTITIES",
+    "type": "relationship",
+    "properties": {}
+  },
+  {
+    "start": 206,
+    "end": 209,
+    "id": 1554906249186339778,
+    "label": "QUANTITIES",
+    "type": "relationship",
+    "properties": {}
+  },
+  {
+    "start": 207,
+    "end": 209,
+    "id": 3991964095926585471,
+    "label": "QUANTITIES",
+    "type": "relationship",
+    "properties": {}
+  },
+  {
+    "start": 208,
+    "end": 209,
+    "id": 698446744859008462,
+    "label": "QUANTITIES",
+    "type": "relationship",
+    "properties": {}
+  }
+]

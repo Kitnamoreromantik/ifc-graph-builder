@@ -138,6 +138,7 @@ celerybeat.pid
 .env
 .envrc
 .venv
+.venv-ifc-graph-builder
 env/
 venv/
 ENV/
@@ -205,3 +206,6 @@ cython_debug/
 marimo/_static/
 marimo/_lsp/
 __marimo__/
+src/main.py
+data/out/.DS_Store
+.DS_Store
