@@ -1,0 +1,1357 @@
+Each node type includes properties hierarchy divided by '.' and sampled examples of each property values.
+
+Node Type: IfcApplication
+Properties:
+	.ApplicationFullName: Autodesk Revit 2015 (ENU)
+	.ApplicationIdentifier: Revit
+	.Version: 2015
+
+Node Type: IfcArbitraryClosedProfileDef
+Properties:
+	.ProfileName: Plain
+	.ProfileType: AREA
+
+Node Type: IfcAreaMeasure
+Properties:
+	.wrappedValue: 4.95
+
+Node Type: IfcBoolean
+Properties:
+	.wrappedValue: False
+
+Node Type: IfcBooleanClippingResult
+Properties:
+	.Operator: DIFFERENCE
+
+Node Type: IfcBuilding
+Properties:
+	.CompositionType: ELEMENT
+	.Identity_Data
+		.Author: 
+		.Building_Name: 
+		.Organization_Description: 
+		.Organization_Name: 
+		.id: 83090
+	.Other
+		.Category: Project Information
+		.Client_Name: Owner
+		.Project_Address: Enter address here
+		.Project_Issue_Date: Issue Date
+		.Project_Name: Project Name
+		.Project_Number: Project Number
+		.Project_Status: Project Status
+		.id: 83095
+	.Pset_BuildingCommon
+		.NumberOfStoreys: 2
+		.Reference: Project Information
+		.id: 83076
+
+Node Type: IfcBuildingStorey
+Properties:
+	.CompositionType: ELEMENT
+	.Constraints
+		.Elevation: 0.0
+		.Elevation_Base: Project Base Point
+		.id: 82978
+	.Dimensions
+		.Computation_Height: 0.0
+		.id: 83030
+	.Elevation: 2500.0
+	.Graphics
+		.Color: 0
+		.Line_Pattern: Centre
+		.Line_Weight: 1
+		.Symbol: Anno_Level_Head_Circle: Standard
+		.Symbol_at_End_1_Default: True
+		.Symbol_at_End_2_Default: False
+		.id: 82981
+	.Identity_Data
+		.Building_Story: True
+		.Name: Roof
+		.Structural: False
+		.Type_Name: Circle Head - Project Datum
+		.id: 82989
+	.LongName: Roof
+	.Name: Ground Floor
+	.Other
+		.Category: Levels
+		.Family: Level: Circle Head - Project Datum
+		.Family_Name: Level
+		.Family_and_Type: Level: Circle Head - Project Datum
+		.Type: Level: Circle Head - Project Datum
+		.Type_Id: Level: Circle Head - Project Datum
+		.id: 82992
+	.Pset_BuildingStoreyCommon
+		.AboveGround: False
+		.id: 83016
+
+Node Type: IfcCartesianPoint
+Properties:
+	.Coordinates: (1052.6805028092, -107.913696304976, 12.6699015232082)
+
+Node Type: IfcCartesianTransformationOperator3D
+Properties:
+	.Scale: 1.0
+
+Node Type: IfcCircle
+Properties:
+	.Radius: 5783.5
+
+Node Type: IfcClassification
+Properties:
+	.Edition: 1998
+	.Name: Uniformat
+	.Source: http://www.csiorg.net/uniformat
+
+Node Type: IfcClassificationReference
+Properties:
+	.Identification: E2020200
+	.Location: http://www.csiorg.net/uniformat
+	.Name: Furniture & Accessories
+
+Node Type: IfcColourRgb
+Properties:
+	.Blue: 0.85
+	.Green: 0.34
+	.Red: 1.0
+
+Node Type: IfcCompositeCurve
+Properties:
+	.SelfIntersect: False
+
+Node Type: IfcCompositeCurveSegment
+Properties:
+	.SameSense: False
+	.Transition: CONTINUOUS
+
+Node Type: IfcConversionBasedUnit
+Properties:
+	.Name: DEGREE
+	.UnitType: PLANEANGLEUNIT
+
+Node Type: IfcCovering
+Properties:
+	.Analytical_Properties
+		.Absorptance: 0.7
+		.Heat_Transfer_Coefficient_(U): 0.55
+		.Roughness: 3
+		.Thermal_Resistance_(R): 1.82
+		.Thermal_mass: 11142.19
+		.id: 33776
+	.BaseQuantities
+		.GrossCeilingArea: 15.42
+		.id: 33722
+	.Constraints
+		.Height_Offset_From_Level: 2200.0
+		.Level: Level: Ground Floor
+		.Room_Bounding: True
+		.id: 33837
+	.Construction
+		.Thickness: 57.0
+		.id: 33782
+	.Dimensions
+		.Area: 8.69
+		.Perimeter: 29925.0
+		.Volume: 0.88
+		.id: 33753
+	.Graphics
+		.Coarse_Scale_Fill_Color: 0
+		.id: 33785
+	.Identity_Data
+		.Assembly_Code: 
+		.Assembly_Description: 
+		.Keynote: K40
+		.Type_Name: Plain
+		.id: 33788
+	.Name: Compound Ceiling:Plain:286329
+	.ObjectType: Compound Ceiling:Plain
+	.Other
+		.Category: Ceilings
+		.Family: Compound Ceiling: Plain
+		.Family_Name: Compound Ceiling
+		.Family_and_Type: Compound Ceiling: Plain
+		.Type: Compound Ceiling: Plain
+		.Type_Id: Compound Ceiling: Plain
+		.id: 33792
+	.Phasing
+		.Phase_Created: New Construction
+		.id: 33771
+	.PredefinedType: CEILING
+	.Pset_CoveringCommon
+		.IsExternal: False
+		.Reference: Plain
+		.ThermalTransmittance: 0.55
+		.id: 33713
+	.Tag: 286329
+
+Node Type: IfcCurtainWall
+Properties:
+	.Constraints
+		.Base_Constraint: Level: Ground Floor
+		.Base_Offset: 0.0
+		.Base_is_Attached: False
+		.Related_to_Mass: False
+		.Room_Bounding: True
+		.Top_Offset: 0.0
+		.Top_is_Attached: True
+		.Unconnected_Height: 8000.0
+		.id: 4619
+	.Dimensions
+		.Area: 13.48
+		.Length: 4900.0
+		.id: 4625
+	.Horizontal_Grid
+		.Angle: 0.0
+		.Justification: Beginning
+		.Number: 1
+		.Offset: 0.0
+		.id: 3746
+	.Name: Curtain Wall:Curtain_Wall-Exterior_Glazing:285582
+	.ObjectType: Curtain Wall:Curtain_Wall-Exterior_Glazing:29096
+	.Other
+		.Category: Walls
+		.Family: Curtain Wall: Curtain_Wall-Exterior_Glazing
+		.Family_and_Type: Curtain Wall: Curtain_Wall-Exterior_Glazing
+		.Type: Curtain Wall: Curtain_Wall-Exterior_Glazing
+		.Type_Id: Curtain Wall: Curtain_Wall-Exterior_Glazing
+		.id: 3753
+	.Phasing
+		.Phase_Created: New Construction
+		.id: 3762
+	.Pset_CurtainWallCommon
+		.IsExternal: True
+		.Reference: Curtain_Wall-Exterior_Glazing
+		.id: 3603
+	.Structural
+		.Enable_Analytical_Model: False
+		.Structural: False
+		.Structural_Usage: Non-bearing
+		.id: 3767
+	.Tag: 285582
+	.Vertical_Grid
+		.Angle: 0.0
+		.Justification: Beginning
+		.Number: 2
+		.Offset: 0.0
+		.id: 3772
+
+Node Type: IfcCurtainWallType
+Properties:
+	.Construction
+		.Automatically_Embed: False
+		.Function: Exterior
+		.Join_Condition: Horizontal Grid Continuous
+		.id: 3778
+	.Horizontal_Grid
+		.Adjust_for_Mullion_Size: False
+		.Layout: Fixed Distance
+		.Spacing: 4000.0
+		.id: 3782
+	.Horizontal_Mullions
+		.Border_1_Type: Rectangular Mullion: 30mm_Square
+		.Border_2_Type: Rectangular Mullion: 30mm_Square
+		.Interior_Type: Rectangular Mullion: 30mm_Square
+		.id: 3787
+	.Identity_Data
+		.Assembly_Code: 
+		.Assembly_Description: 
+		.Keynote: H11
+		.Type_Name: Curtain_Wall-Exterior_Glazing
+		.id: 3792
+	.Name: Curtain Wall:Curtain_Wall-Exterior_Glazing
+	.Other
+		.Category: Walls
+		.Family_Name: Curtain Wall
+		.id: 3796
+	.PredefinedType: NOTDEFINED
+	.Tag: 29096
+	.Vertical_Grid
+		.Adjust_for_Mullion_Size: False
+		.Layout: Minimum Spacing
+		.Spacing: 1500.0
+		.id: 3799
+	.Vertical_Mullions
+		.Border_1_Type: Rectangular Mullion: 30mm_Square
+		.Border_2_Type: Rectangular Mullion: 30mm_Square
+		.Interior_Type: Rectangular Mullion: 30mm_Square
+		.id: 3803
+
+Node Type: IfcDerivedUnit
+Properties:
+	.UnitType: VOLUMETRICFLOWRATEUNIT
+	.UserDefinedType: Luminous Efficacy
+
+Node Type: IfcDerivedUnitElement
+Properties:
+	.Exponent: -1
+
+Node Type: IfcDimensionalExponents
+Properties:
+	.AmountOfSubstanceExponent: 0
+	.ElectricCurrentExponent: 0
+	.LengthExponent: 0
+	.LuminousIntensityExponent: 0
+	.MassExponent: 0
+	.ThermodynamicTemperatureExponent: 0
+	.TimeExponent: 0
+
+Node Type: IfcDirection
+Properties:
+	.DirectionRatios: (0.978610838136547, -0.20572026512184)
+
+Node Type: IfcDoor
+Properties:
+	.BaseQuantities
+		.Area: 2.27
+		.Height: 2110.0
+		.Width: 810.0
+		.id: 21852
+	.Constraints
+		.Level: Level: Ground Floor
+		.Sill_Height: 0.0
+		.id: 32658
+	.Dimensions
+		.Area: 2.27
+		.Volume: 0.08
+		.id: 11070
+	.Identity_Data
+		.Mark: 3
+		.id: 11077
+	.Name: Doors_IntSgl:810x2110mm:285996
+	.ObjectType: 810x2110mm
+	.OperationType: DOUBLE_DOOR_SINGLE_SWING
+	.Other
+		.Category: Doors
+		.Family: Doors_ExtDbl_Flush: 1810x2110mm
+		.Family_and_Type: Doors_ExtDbl_Flush: 1810x2110mm
+		.Head_Height: 2110.0
+		.Host_Id: Basic Wall: Wall-Ext_102Bwk-75Ins-100LBlk-12P
+		.Type: Doors_ExtDbl_Flush: 1810x2110mm
+		.Type_Id: Doors_IntSgl: 810x2110mm
+		.id: 11083
+	.OverallHeight: 2110.0
+	.OverallWidth: 810.0
+	.Phasing
+		.Phase_Created: New Construction
+		.id: 11095
+	.PredefinedType: DOOR
+	.Pset_DoorCommon
+		.IsExternal: False
+		.Reference: 1810x2110mm
+		.ThermalTransmittance: 3.7
+		.id: 10999
+	.Pset_ManufacturerTypeInformation
+		.Manufacturer: Revit
+		.id: 21839
+	.Tag: 285996
+
+Node Type: IfcDoorLiningProperties
+Properties:
+	.Name: Doors_ExtDbl_Flush:1810x2110mm:285860
+
+Node Type: IfcDoorPanelProperties
+Properties:
+	.Name: Doors_IntSgl:810x2110mm:285959
+	.PanelOperation: SWINGING
+	.PanelPosition: NOTDEFINED
+
+Node Type: IfcDoorType
+Properties:
+	.Analytical_Properties
+		.Analytic_Construction: <None>
+		.Heat_Transfer_Coefficient_(U): 3.7
+		.Solar_Heat_Gain_Coefficient: 0.0
+		.Thermal_Resistance_(R): 0.27
+		.Visual_Light_Transmittance: 0.0
+		.id: 11100
+	.Constraints
+		.Door_Panel_Height: 2060.0
+		.Door_Panel_Width: 726.0
+		.id: 11103
+	.Construction
+		.Function: Exterior
+		.Wall_Closure: By host
+		.Wrap_Layers_(Ext)_from_Ext: 102.5
+		.Wrap_Layers_(Int)_from_Ext: 177.5
+		.id: 21946
+	.Dimensions
+		.Architrave_Setback: 5.0
+		.Cavity_Closer_Depth: 85.0
+		.Cavity_Closer_Offset_from_Ext: 102.5
+		.Cavity_Closer_Width: 50.0
+		.Cill_Extension: 25.0
+		.Cill_Projection: 30.0
+		.Cill_Thickness: 54.5
+		.Door_Panel_Offset: 0.0
+		.Door_Panel_Thickness: 44.0
+		.FrameOffset_-_External: 25.0
+		.Handle_X_Distance: 75.0
+		.Handle_Z_Distance: 900.0
+		.Height: 2110.0
+		.Height_to_Top_Lock_Rail: 1000.0
+		.Rough_Height: 2110.0
+		.Rough_Width: 810.0
+		.StopDepth: 32.0
+		.Stop_Thickness: 19.0
+		.Structural_Tolerance: 8.0
+		.Thickness: 44.0
+		.Tolerance: 3.0
+		.UnderCut: 8.0
+		.Undercut: 4.0
+		.Width: 810.0
+		.id: 11112
+	.Doors_ExtDbl_Flush:1810x2110mm:285860
+		.PanelOperation: SWINGING
+		.PanelPosition: NOTDEFINED
+		.id: 10941
+	.Doors_IntSgl:810x2110mm:285959
+		.PanelOperation: SWINGING
+		.PanelPosition: NOTDEFINED
+		.id: 21786
+	.Doors_IntSgl:810x2110mm:285996
+		.PanelOperation: SWINGING
+		.PanelPosition: NOTDEFINED
+		.id: 32607
+	.Graphics
+		.Vis_-_Cavity_Closers: True
+		.Vis_-_Ironmongery: True
+		.id: 21966
+	.Identity_Data
+		.Assembly_Code: 
+		.Assembly_Description: 
+		.Description: Internal Single Door
+		.Keynote: L20
+		.Manufacturer: Revit
+		.OmniClass_Number: 
+		.OmniClass_Title: 
+		.Type_Comments: Internal Single
+		.Type_Mark: 44
+		.Type_Name: 810x2110mm
+		.id: 21968
+	.Materials_and_Finishes
+		.Material_Architrave: Door - Architrave
+		.Material_Door: Door - Panel
+		.Material_Frame: Door - Frame/Mullion (1)
+		.Material_Ironmongery: Door - Handle
+		.id: 21976
+	.Name: 810x2110mm
+	.OperationType: SINGLE_SWING_RIGHT
+	.Other
+		.Category: Doors
+		.Family_Name: Doors_IntSgl
+		.FrameDepth: 89.0
+		.FrameWidth: 42.0
+		.Frame_Thickness: 32.0
+		.O/A_Frame_Width: 64.0
+		.id: 21982
+	.ParameterTakesPrecedence: False
+	.PredefinedType: DOOR
+	.Tag: 177724
+
+Node Type: IfcElementQuantity
+Properties:
+	.Name: BaseQuantities
+
+Node Type: IfcExtrudedAreaSolid
+Properties:
+	.Depth: 95.0
+
+Node Type: IfcFaceBound
+Properties:
+	.Orientation: True
+
+Node Type: IfcFaceOuterBound
+Properties:
+	.Orientation: True
+
+Node Type: IfcFurniture
+Properties:
+	.Constraints
+		.Host: Floor : Floor-Grnd-Susp_65Scr-80Ins-100Blk-75PC
+		.Level: Level: Ground Floor
+		.Moves_With_Nearby_Elements: False
+		.Offset: 0.0
+		.id: 38423
+	.Dimensions
+		.Area: 3.17
+		.Volume: 0.79
+		.id: 41612
+	.Name: Chair - Dining:Chair - Dining:289771
+	.ObjectType: 2000x1000x750mm_w-6_Seats
+	.Other
+		.Category: Furniture
+		.Family: Furniture_Desk: 1525x762mm
+		.Family_and_Type: Furniture_Desk: 1525x762mm
+		.Type: Furniture_Table_Coffee_1: 1200x550x450mm
+		.Type_Id: Furniture_Table_Dining_w-Chairs_Rectangular: 2000x1000x750mm_w-6_Seats
+		.id: 40051
+	.Phasing
+		.Phase_Created: New Construction
+		.id: 77456
+	.Pset_ManufacturerTypeInformation
+		.Manufacturer: Revit
+		.id: 77400
+	.Tag: 287689
+
+Node Type: IfcFurnitureType
+Properties:
+	.AssemblyPlace: NOTDEFINED
+	.Constraints
+		.Centre_Piece: 500.0
+		.Chair_Side_Spacing: 700.0
+		.id: 38451
+	.Dimensions
+		.Depth: 600.0
+		.Height: 450.0
+		.Leg_Spacing_Length: 1400.0
+		.Leg_Spacing_Width: 800.0
+		.Leg_Width: 40.0
+		.Length: 2000.0
+		.Table_Height: 750.0
+		.Table_Top_Thickness: 40.0
+		.Width: 1370.0
+		.id: 38455
+	.ElementType: 1370x600x1170mm
+	.Graphics
+		.Vis_-_End_Chairs: True
+		.id: 38464
+	.Identity_Data
+		.Assembly_Code: 
+		.Assembly_Description: Furniture & Accessories
+		.Cost: 0.0
+		.Description: Coffee table
+		.Keynote: N
+		.Manufacturer: Revit
+		.Model: 
+		.OmniClass_Number: 
+		.OmniClass_Title: 
+		.Type_Comments: 
+		.Type_Name: 1200x550x450mm
+		.id: 38467
+	.Materials_and_Finishes
+		.Material: Wood - Birch
+		.Material_Chair_Covering: Fabric - Beige
+		.Material_Chair_Structure: Wood - Birch
+		.Material_Frame: Metal - Chrome
+		.Material_Mattress: Textile - White
+		.Material_Seat: Fabric - Blue, Glossy
+		.Material_Structure: Wood - Birch
+		.Material_Table: Wood - Birch
+		.id: 77478
+	.Name: 2000x1000x750mm_w-6_Seats
+	.Other
+		.Body_Material: Laminate, Ivory, Matte
+		.Category: Furniture
+		.Depth: 762.0
+		.Family_Name: Furniture_Bed_1
+		.Handle/Leg_Material: Steel, Chrome Plated
+		.Height: 762.0
+		.Leg_Height: 152.0
+		.Top_Material: Cherry
+		.Width: 1525.0
+		.id: 38476
+	.PredefinedType: NOTDEFINED
+	.Tag: 293046
+
+Node Type: IfcGeometricRepresentationContext
+Properties:
+	.ContextType: Model
+	.CoordinateSpaceDimension: 3
+	.Precision: 0.01
+
+Node Type: IfcGeometricRepresentationSubContext
+Properties:
+	.ContextIdentifier: Body
+	.ContextType: Model
+	.TargetView: GRAPH_VIEW
+
+Node Type: IfcHalfSpaceSolid
+Properties:
+	.AgreementFlag: False
+
+Node Type: IfcIdentifier
+Properties:
+	.wrappedValue: Glazed
+
+Node Type: IfcInteger
+Properties:
+	.wrappedValue: 1
+
+Node Type: IfcLabel
+Properties:
+	.wrappedValue: New Construction
+
+Node Type: IfcLengthMeasure
+Properties:
+	.wrappedValue: 2000.0
+
+Node Type: IfcLogical
+Properties:
+	.wrappedValue: False
+
+Node Type: IfcMaterial
+Properties:
+	.Name: Textile - White
+
+Node Type: IfcMaterialLayer
+Properties:
+	.LayerThickness: 70.0
+
+Node Type: IfcMaterialLayerSet
+Properties:
+	.LayerSetName: Basic Wall:Wall-Partn_12P-70MStd-12P
+
+Node Type: IfcMaterialLayerSetUsage
+Properties:
+	.DirectionSense: POSITIVE
+	.LayerSetDirection: AXIS3
+	.OffsetFromReferenceLine: 47.5
+
+Node Type: IfcMember
+Properties:
+	.Constraints
+		.Angle: 0.0
+		.Level: Level: Ground Floor
+		.Offset: 0.0
+		.id: 2888
+	.Construction
+		.Corner_Mullion: False
+		.Position: Perpendicular to Face
+		.Thickness: 30.0
+		.id: 2892
+	.Dimensions
+		.Area: 0.11
+		.Length: 1603.33
+		.Volume: 0.0
+		.Width_on_side_1: 15.0
+		.Width_on_side_2: 15.0
+		.id: 2897
+	.Identity_Data
+		.Assembly_Code: 
+		.Assembly_Description: 
+		.Keynote: H11
+		.OmniClass_Number: 
+		.OmniClass_Title: 
+		.Type_Name: 30mm_Square
+		.id: 2901
+	.Materials_and_Finishes
+		.Material: Aluminium
+		.id: 2905
+	.Name: Curtain Wall:Curtain_Wall-Exterior_Glazing:8490
+	.ObjectType: Curtain Wall:Curtain_Wall-Exterior_Glazing:8490
+	.Other
+		.Category: Curtain Wall Mullions
+		.Family: Rectangular Mullion: 30mm_Square
+		.Family_Name: Rectangular Mullion
+		.Family_and_Type: Rectangular Mullion: 30mm_Square
+		.Host_Id: Curtain Wall: Curtain_Wall-Exterior_Glazing
+		.Type: Rectangular Mullion: 30mm_Square
+		.Type_Id: Rectangular Mullion: 30mm_Square
+		.id: 2908
+	.Phasing
+		.Phase_Created: New Construction
+		.id: 3580
+	.PredefinedType: MULLION
+	.Pset_MemberCommon
+		.IsExternal: True
+		.LoadBearing: True
+		.Reference: 30mm_Square
+		.Span: 1977.63
+		.id: 4566
+	.Tag: 294182
+
+Node Type: IfcNormalisedRatioMeasure
+Properties:
+	.wrappedValue: 0.5
+
+Node Type: IfcOpeningElement
+Properties:
+	.BaseQuantities
+		.Depth: 95.0
+		.Height: 810.0
+		.Width: 2110.0
+		.id: 83563
+	.Name: Windows_Sgl_Plain:1810x1210mm:286105:1
+	.ObjectType: Opening
+	.PredefinedType: OPENING
+
+Node Type: IfcOrganization
+Properties:
+	.Name: Autodesk Revit 2015 (ENU)
+
+Node Type: IfcOwnerHistory
+Properties:
+	.ChangeAction: NOCHANGE
+	.CreationDate: 1418982422
+
+Node Type: IfcParameterValue
+Properties:
+	.wrappedValue: 359.81
+
+Node Type: IfcPerson
+Properties:
+	.GivenName: mxfm2
+
+Node Type: IfcPlaneAngleMeasure
+Properties:
+	.wrappedValue: 0.0
+
+Node Type: IfcPlate
+Properties:
+	.Constraints
+		.Level: Level: Ground Floor
+		.id: 3958
+	.Dimensions
+		.Area: 6.27
+		.Height: 2751.31
+		.Volume: 0.11
+		.Width: 1633.33
+		.id: 2741
+	.Name: System Panel:Glazed:285690
+	.ObjectType: Glazed
+	.Other
+		.Category: Curtain Panels
+		.Family: System Panel: Glazed
+		.Family_and_Type: System Panel: Glazed
+		.Host_Id: Curtain Wall: Curtain_Wall-Exterior_Glazing
+		.Type: System Panel: Glazed
+		.Type_Id: System Panel: Glazed
+		.id: 2509
+	.Phasing
+		.Phase_Created: New Construction
+		.id: 2753
+	.PredefinedType: NOTDEFINED
+	.Pset_PlateCommon
+		.IsExternal: True
+		.LoadBearing: True
+		.Reference: Glazed
+		.ThermalTransmittance: 6.71
+		.id: 4522
+	.Tag: 285586
+
+Node Type: IfcPlateType
+Properties:
+	.Analytical_Properties
+		.Analytic_Construction: 1/8 in Pilkington single glazing
+		.Heat_Transfer_Coefficient_(U): 6.71
+		.Solar_Heat_Gain_Coefficient: 0.86
+		.Thermal_Resistance_(R): 0.15
+		.Visual_Light_Transmittance: 0.9
+		.id: 2525
+	.Constraints
+		.Offset: 37.0
+		.id: 2532
+	.Dimensions
+		.Thickness: 25.0
+		.id: 2535
+	.ElementType: Glazed
+	.Identity_Data
+		.Assembly_Code: 
+		.Assembly_Description: 
+		.Keynote: H11
+		.OmniClass_Number: 
+		.OmniClass_Title: 
+		.Type_Name: Glazed
+		.id: 2538
+	.Materials_and_Finishes
+		.Material: Glass
+		.id: 2544
+	.Name: Glazed
+	.Other
+		.Category: Curtain Panels
+		.Family_Name: System Panel
+		.id: 2547
+	.PredefinedType: CURTAIN_PANEL
+	.Tag: 285583
+
+Node Type: IfcPolygonalBoundedHalfSpace
+Properties:
+	.AgreementFlag: True
+
+Node Type: IfcPositiveLengthMeasure
+Properties:
+	.wrappedValue: 1840.0
+
+Node Type: IfcPostalAddress
+Properties:
+	.AddressLines: "(Enter address here,)"
+	.Country: UK
+	.Region: London
+	.Town: Westminster
+
+Node Type: IfcPowerMeasure
+Properties:
+	.wrappedValue: 0.0
+
+Node Type: IfcPresentationLayerAssignment
+Properties:
+	.Name: A-230-M_FLOOR
+
+Node Type: IfcProject
+Properties:
+	.LongName: Project Name
+	.Name: Project Number
+	.Phase: Project Status
+
+Node Type: IfcPropertySet
+Properties:
+	.Name: Pset_CoveringCommon
+
+Node Type: IfcPropertySingleValue
+Properties:
+	.Name: Cavity Closer Width
+
+Node Type: IfcQuantityArea
+Properties:
+	.AreaValue: 80.26
+	.Description: area measured in geometry
+	.Name: GrossFootprintArea
+
+Node Type: IfcQuantityLength
+Properties:
+	.Description: length measured in geometry
+	.LengthValue: 470.0
+	.Name: Depth
+
+Node Type: IfcQuantityVolume
+Properties:
+	.Description: volume measured in geometry
+	.Name: GrossVolume
+	.VolumeValue: 21733.77
+
+Node Type: IfcRatioMeasure
+Properties:
+	.wrappedValue: 0.02
+
+Node Type: IfcReal
+Properties:
+	.wrappedValue: 365549.43
+
+Node Type: IfcRectangleProfileDef
+Properties:
+	.ProfileName: Floor-Grnd-Susp_65Scr-80Ins-100Blk-75PC
+	.ProfileType: AREA
+	.XDim: 1210.0
+	.YDim: 810.0
+
+Node Type: IfcRelAssociatesClassification
+Properties:
+	.Name: Uniformat Classification
+
+Node Type: IfcRelConnectsPathElements
+Properties:
+	.Description: Structural
+	.Name: 3cUkl32yn9qRSPvBJVyWx4|3cUkl32yn9qRSPvBJVyWy4
+	.RelatedConnectionType: ATEND
+	.RelatingConnectionType: ATEND
+
+Node Type: IfcRoof
+Properties:
+	.Analytical_Properties
+		.Absorptance: 0.7
+		.Heat_Transfer_Coefficient_(U): 7.81
+		.Roughness: 3
+		.Thermal_Resistance_(R): 0.13
+		.Thermal_mass: 171350.0
+		.id: 36080
+	.Constraints
+		.Extrusion_End: -14145.0
+		.Extrusion_Start: 695.98
+		.Level_Offset: 0.0
+		.Reference_Level: Level: Roof
+		.Related_to_Mass: False
+		.Room_Bounding: True
+		.Work_Plane: Basic Wall : Wall-Ext_102Bwk-75Ins-100LBlk-12P
+		.id: 36040
+	.Construction
+		.Default_Thickness: 116.5
+		.Fascia_Depth: 0.0
+		.Rafter_Cut: Plumb Cut
+		.id: 36086
+	.Dimensions
+		.Area: 117.43
+		.Thickness: 116.5
+		.Volume: 13.65
+		.id: 36057
+	.Graphics
+		.Coarse_Scale_Fill_Color: 0
+		.id: 36089
+	.Identity_Data
+		.Assembly_Code: 
+		.Assembly_Description: 
+		.Type_Name: Roof_Flat-4Felt-150Ins-50Scr-150Conc-12Plr
+		.id: 36091
+	.Name: Basic Roof:Roof_Flat-4Felt-150Ins-50Scr-150Conc-12Plr:286419
+	.ObjectType: Basic Roof:Roof_Flat-4Felt-150Ins-50Scr-150Conc-12Plr:45441
+	.Other
+		.Category: Roofs
+		.Family: Basic Roof: Roof_Flat-4Felt-150Ins-50Scr-150Conc-12Plr
+		.Family_Name: Basic Roof
+		.Family_and_Type: Basic Roof: Roof_Flat-4Felt-150Ins-50Scr-150Conc-12Plr
+		.Type: Basic Roof: Roof_Flat-4Felt-150Ins-50Scr-150Conc-12Plr
+		.Type_Id: Basic Roof: Roof_Flat-4Felt-150Ins-50Scr-150Conc-12Plr
+		.id: 36094
+	.Phasing
+		.Phase_Created: New Construction
+		.id: 36075
+	.PredefinedType: NOTDEFINED
+	.Pset_RoofCommon
+		.IsExternal: True
+		.ProjectedArea: 108.12
+		.Reference: Roof_Flat-4Felt-150Ins-50Scr-150Conc-12Plr
+		.ThermalTransmittance: 7.81
+		.TotalArea: 117.43
+		.id: 36008
+	.Tag: 286419
+
+Node Type: IfcSIUnit
+Properties:
+	.Name: SECOND
+	.Prefix: KILO
+	.UnitType: ELECTRICVOLTAGEUNIT
+
+Node Type: IfcShapeRepresentation
+Properties:
+	.RepresentationIdentifier: Axis
+	.RepresentationType: Curve2D
+
+Node Type: IfcSite
+Properties:
+	.CompositionType: ELEMENT
+	.Identity_Data
+		.Author: 
+		.Building_Name: 
+		.Organization_Description: 
+		.Organization_Name: 
+		.id: 82902
+	.Name: Default
+	.Other
+		.Category: Project Information
+		.Client_Name: Owner
+		.Project_Address: Enter address here
+		.Project_Issue_Date: Issue Date
+		.Project_Name: Project Name
+		.Project_Number: Project Number
+		.Project_Status: Project Status
+		.id: 82912
+	.RefElevation: 0.0
+	.RefLatitude: (51, 30, 0, 549316)
+	.RefLongitude: (0, -7, -34, -450321)
+
+Node Type: IfcSlab
+Properties:
+	.Analytical_Properties
+		.Absorptance: 0.7
+		.Heat_Transfer_Coefficient_(U): 6.34
+		.Roughness: 3
+		.Thermal_Resistance_(R): 0.16
+		.Thermal_mass: 365549.43
+		.id: 78225
+	.BaseQuantities
+		.GrossArea: 80.26
+		.GrossVolume: 13243.37
+		.Perimeter: 39470.0
+		.Width: 470.0
+		.id: 78169
+	.Constraints
+		.Height_Offset_From_Level: 0.0
+		.Level: Level: Roof
+		.Related_to_Mass: False
+		.Room_Bounding: True
+		.id: 78191
+	.Construction
+		.Default_Thickness: 165.0
+		.Function: Interior
+		.id: 78231
+	.Dimensions
+		.Area: 146.2
+		.Perimeter: 39470.0
+		.Thickness: 165.0
+		.Volume: 68.71
+		.id: 78197
+	.Graphics
+		.Coarse_Scale_Fill_Color: 0
+		.Coarse_Scale_Fill_Pattern: Solid fill
+		.id: 78234
+	.Identity_Data
+		.Assembly_Code: 
+		.Assembly_Description: 
+		.Keynote: E60/130
+		.Type_Name: Floor-Grnd-Susp_65Scr-80Ins-100Blk-75PC
+		.id: 34158
+	.Materials_and_Finishes
+		.Structural_Material: Concrete Masonry, Floor Block
+		.id: 78240
+	.Name: Floor:Simple floor:295048
+	.ObjectType: Floor:Floor-Grnd-Susp_65Scr-80Ins-100Blk-75PC
+	.Other
+		.Category: Floors
+		.Family: Floor: Simple floor
+		.Family_Name: Floor
+		.Family_and_Type: Floor: Floor-Grnd-Susp_65Scr-80Ins-100Blk-75PC
+		.Type: Floor: Floor-Grnd-Susp_65Scr-80Ins-100Blk-75PC
+		.Type_Id: Floor: Simple floor
+		.id: 78242
+	.Phasing
+		.Phase_Created: New Construction
+		.id: 34137
+	.PredefinedType: FLOOR
+	.Pset_SlabCommon
+		.IsExternal: False
+		.LoadBearing: True
+		.PitchAngle: 0.0
+		.Reference: Floor-Grnd-Susp_65Scr-80Ins-100Blk-75PC
+		.ThermalTransmittance: 6.34
+		.id: 34075
+	.Structural
+		.Enable_Analytical_Model: False
+		.Structural: False
+		.id: 34142
+	.Tag: 286349
+
+Node Type: IfcSpace
+Properties:
+	.BaseQuantities
+		.GrossFloorArea: 51.99
+		.GrossPerimeter: 29925.0
+		.GrossVolume: 76465.52
+		.Height: 1000.0
+		.NetFloorArea: 8.69
+		.id: 437
+	.CompositionType: ELEMENT
+	.Constraints
+		.Base_Offset: 0.0
+		.Level: Level: Ground Floor
+		.Limit_Offset: 0.0
+		.Upper_Limit: Level: Roof
+		.id: 246
+	.Dimensions
+		.Area: 51.99
+		.Computation_Height: 0.0
+		.Perimeter: 15830.0
+		.Unbounded_Height: 2500.0
+		.id: 255
+	.Energy_Analysis
+		.Actual_Lighting_Load: 0.0
+		.Actual_Lighting_Load_per_area: 0.0
+		.Actual_Power_Load: 0.0
+		.Actual_Power_Load_per_area: 0.0
+		.Area_per_Person: 28.57
+		.Base_Lighting_Load_on: <Default>
+		.Base_Power_Load_on: <Default>
+		.Heat_Load_Values: <Default>
+		.Latent_Heat_Gain_per_person: 630.92
+		.Lighting_Load_Units: Power Density
+		.Number_of_People: 0.0
+		.Plenum_Lighting_Contribution: 0.2
+		.Power_Load_Units: Power Density
+		.Sensible_Heat_Gain_per_person: 788.65
+		.Specified_Lighting_Load: 0.0
+		.Specified_Lighting_Load_per_area: 10.76
+		.Specified_Power_Load: 0.0
+		.Specified_Power_Load_per_area: 13.99
+		.Total_Heat_Gain_per_person: 1419.57
+		.id: 264
+	.Identity_Data
+		.Name: Bedroom
+		.Number: 3 - Entrance hall
+		.id: 487
+	.LongName: Bedroom
+	.Name: 2 - Bedroom
+	.Other
+		.Category: Rooms
+		.Phase_Id: New Construction
+		.id: 396
+	.Phasing
+		.Phase: New Construction
+		.id: 302
+	.PredefinedType: SPACE
+	.Pset_SpaceCommon
+		.IsExternal: False
+		.Reference: Living room 1 - Living room
+		.id: 327
+
+Node Type: IfcSpecularExponent
+Properties:
+	.wrappedValue: 12.0
+
+Node Type: IfcStyledRepresentation
+Properties:
+	.RepresentationIdentifier: Style
+	.RepresentationType: Material
+
+Node Type: IfcSurfaceStyle
+Properties:
+	.Name: Metal - Chrome
+	.Side: BOTH
+
+Node Type: IfcSurfaceStyleRendering
+Properties:
+	.ReflectanceMethod: NOTDEFINED
+	.Transparency: 0.9
+
+Node Type: IfcText
+Properties:
+	.wrappedValue: 0.0
+
+Node Type: IfcThermalTransmittanceMeasure
+Properties:
+	.wrappedValue: 0.12
+
+Node Type: IfcTrimmedCurve
+Properties:
+	.MasterRepresentation: PARAMETER
+	.SenseAgreement: True
+
+Node Type: IfcVolumeMeasure
+Properties:
+	.wrappedValue: 0.14
+
+Node Type: IfcWall
+Properties:
+	.Constraints
+		.Base_Constraint: Level: Ground Floor
+		.Base_Extension_Distance: 0.0
+		.Base_Offset: 0.0
+		.Base_is_Attached: False
+		.Location_Line: Wall Centerline
+		.Related_to_Mass: False
+		.Room_Bounding: True
+		.Top_Extension_Distance: 0.0
+		.Top_Offset: 0.0
+		.Top_is_Attached: True
+		.Unconnected_Height: 8000.0
+		.id: 1351
+	.Dimensions
+		.Area: 17.96
+		.Length: 5800.0
+		.Volume: 7.69
+		.id: 1367
+	.Name: Basic Wall:Wall-Ext_102Bwk-75Ins-100LBlk-12P:285395
+	.ObjectType: Basic Wall:Wall-Ext_102Bwk-75Ins-100LBlk-12P:45419
+	.Other
+		.Category: Walls
+		.Family: Basic Wall: Wall-Ext_102Bwk-75Ins-100LBlk-12P
+		.Family_and_Type: Basic Wall: Wall-Ext_102Bwk-75Ins-100LBlk-12P
+		.Type: Basic Wall: Wall-Ext_102Bwk-75Ins-100LBlk-12P
+		.Type_Id: Basic Wall: Wall-Ext_102Bwk-75Ins-100LBlk-12P
+		.id: 2351
+	.Phasing
+		.Phase_Created: New Construction
+		.id: 2356
+	.PredefinedType: NOTDEFINED
+	.Pset_WallCommon
+		.ExtendToStructure: True
+		.IsExternal: True
+		.LoadBearing: False
+		.Reference: Wall-Ext_102Bwk-75Ins-100LBlk-12P
+		.ThermalTransmittance: 0.24
+		.id: 1792
+	.Structural
+		.Enable_Analytical_Model: False
+		.Structural: False
+		.Structural_Usage: Non-bearing
+		.id: 1786
+	.Tag: 285395
+
+Node Type: IfcWallStandardCase
+Properties:
+	.BaseQuantities
+		.GrossFootprintArea: 0.42
+		.GrossSideArea: 10.4
+		.GrossVolume: 0.99
+		.Height: 2335.0
+		.Length: 5510.0
+		.Width: 95.0
+		.id: 4889
+	.Constraints
+		.Base_Constraint: Level: Ground Floor
+		.Base_Extension_Distance: 0.0
+		.Base_Offset: 0.0
+		.Base_is_Attached: False
+		.Location_Line: Wall Centerline
+		.Related_to_Mass: False
+		.Room_Bounding: True
+		.Top_Constraint: Level: Roof
+		.Top_Extension_Distance: 0.0
+		.Top_Offset: 0.0
+		.Top_is_Attached: True
+		.Unconnected_Height: 2500.0
+		.id: 4766
+	.Dimensions
+		.Area: 9.45
+		.Length: 4645.0
+		.Volume: 0.9
+		.id: 4906
+	.Name: Basic Wall:Wall-Partn_12P-70MStd-12P:285846
+	.ObjectType: Basic Wall:Wall-Partn_12P-70MStd-12P:45397
+	.Other
+		.Category: Walls
+		.Family: Basic Wall: Wall-Partn_12P-70MStd-12P
+		.Family_and_Type: Basic Wall: Wall-Partn_12P-70MStd-12P
+		.Type: Basic Wall: Wall-Partn_12P-70MStd-12P
+		.Type_Id: Basic Wall: Wall-Partn_12P-70MStd-12P
+		.id: 4781
+	.Phasing
+		.Phase_Created: New Construction
+		.id: 4790
+	.PredefinedType: NOTDEFINED
+	.Pset_WallCommon
+		.ExtendToStructure: True
+		.IsExternal: False
+		.LoadBearing: False
+		.Reference: Wall-Partn_12P-70MStd-12P
+		.ThermalTransmittance: 0.35
+		.id: 4930
+	.Structural
+		.Enable_Analytical_Model: False
+		.Structural: False
+		.Structural_Usage: Non-bearing
+		.id: 4924
+	.Tag: 285792
+
+Node Type: IfcWallType
+Properties:
+	.Analytical_Properties
+		.Absorptance: 0.7
+		.Heat_Transfer_Coefficient_(U): 0.35
+		.Roughness: 3
+		.Thermal_Resistance_(R): 4.24
+		.Thermal_mass: 26964.29
+		.id: 1399
+	.Construction
+		.Function: Exterior
+		.Width: 95.0
+		.Wrapping_at_Ends: None
+		.Wrapping_at_Inserts: Both
+		.id: 4806
+	.Graphics
+		.Coarse_Scale_Fill_Color: 12632256
+		.Coarse_Scale_Fill_Pattern: Solid fill
+		.id: 4810
+	.Identity_Data
+		.Assembly_Code: 
+		.Assembly_Description: 
+		.Keynote: 31120
+		.Type_Name: Wall-Partn_12P-70MStd-12P
+		.id: 4813
+	.Materials_and_Finishes
+		.Structural_Material: Metal Stud Layer
+		.id: 1422
+	.Name: Basic Wall:Wall-Ext_102Bwk-75Ins-100LBlk-12P
+	.Other
+		.Category: Walls
+		.Family_Name: Basic Wall
+		.id: 4819
+	.PredefinedType: NOTDEFINED
+	.Tag: 45397
+
+Node Type: IfcWindow
+Properties:
+	.BaseQuantities
+		.Area: 3.53
+		.Height: 1210.0
+		.Width: 1810.0
+		.id: 36130
+	.Constraints
+		.Level: Level: Ground Floor
+		.Sill_Height: 900.0
+		.id: 33419
+	.Dimensions
+		.Area: 3.53
+		.Volume: 0.09
+		.id: 33425
+	.Identity_Data
+		.Mark: 3
+		.id: 33561
+	.Name: Windows_Sgl_Plain:1810x1210mm:287567
+	.ObjectType: 1810x1210mm
+	.Other
+		.Category: Windows
+		.Family: Windows_Sgl_Plain: 1810x1210mm
+		.Family_and_Type: Windows_Sgl_Plain: 1810x1210mm
+		.Head_Height: 2110.0
+		.Host_Id: Basic Wall: Wall-Ext_102Bwk-75Ins-100LBlk-12P
+		.Type: Windows_Sgl_Plain: 1810x1210mm
+		.Type_Id: Windows_Sgl_Plain: 1810x1210mm
+		.id: 33640
+	.OverallHeight: 1210.0
+	.OverallWidth: 1810.0
+	.PartitioningType: NOTDEFINED
+	.Phasing
+		.Phase_Created: New Construction
+		.id: 33449
+	.PredefinedType: WINDOW
+	.Pset_ManufacturerTypeInformation
+		.Manufacturer: Revit
+		.id: 33598
+	.Pset_WindowCommon
+		.IsExternal: True
+		.Reference: 1810x1210mm
+		.ThermalTransmittance: 5.56
+		.id: 33521
+	.Tag: 286238
+
+Node Type: IfcWindowLiningProperties
+Properties:
+	.Name: Windows_Sgl_Plain:1810x1210mm:286105
+
+Node Type: IfcWindowType
+Properties:
+	.Analytical_Properties
+		.Analytic_Construction: Large single-glazed windows
+		.Heat_Transfer_Coefficient_(U): 5.56
+		.Solar_Heat_Gain_Coefficient: 0.86
+		.Thermal_Resistance_(R): 0.18
+		.Visual_Light_Transmittance: 0.9
+		.id: 33454
+	.Construction
+		.Wall_Closure: By host
+		.Wrap_Layers_(Ext)_from_Ext: 102.5
+		.Wrap_Layers_(Int)_from_Ext: 177.5
+		.id: 33461
+	.Dimensions
+		.Cavity_Closer_Depth: 85.0
+		.Cavity_Closer_Offset_from_Ext: 102.5
+		.Cavity_Closer_Width: 50.0
+		.Cill_Depth: 87.5
+		.FrameOffset_-_External: 50.0
+		.Frame_Depth: 65.0
+		.Glazing_Thickness: 24.0
+		.Height: 1210.0
+		.Rough_Height: 1210.0
+		.Rough_Width: 1810.0
+		.Width: 1810.0
+		.Window_Board_Extension: 25.0
+		.Window_Board_Projection: 25.0
+		.id: 33465
+	.Graphics
+		.Vis_-_Cavity_Closers: True
+		.id: 33480
+	.Identity_Data
+		.Assembly_Code: 
+		.Assembly_Description: 
+		.Keynote: L10
+		.Manufacturer: Revit
+		.OmniClass_Number: 
+		.OmniClass_Title: 
+		.Type_Mark: 49
+		.Type_Name: 1810x1210mm
+		.id: 33482
+	.Materials_and_Finishes
+		.Material_Frame: Window Frame
+		.Material_Glass: Glass
+		.Material_Trim: Window Frame
+		.id: 33488
+	.Name: 1810x1210mm
+	.Other
+		.Category: Windows
+		.Default_Head_Height: 2110.0
+		.Family_Name: Windows_Sgl_Plain
+		.id: 33493
+	.ParameterTakesPrecedence: False
+	.PartitioningType: NOTDEFINED
+	.PredefinedType: WINDOW
+	.Tag: 248058
+	.Windows_Sgl_Plain:1810x1210mm:286105
+		.id: 33321

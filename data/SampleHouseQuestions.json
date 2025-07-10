@@ -1,0 +1,62 @@
+[
+  {
+    "question": "How many doors exist in the building?",
+    "expected": "There are 3 doors.",
+    "code": "MATCH (n1:IfcDoor) RETURN COUNT(n) AS DoorCount",
+    "answer": "There are 3 doors in the building."
+  },
+  {
+    "question": "What is the volume of the roof space?",
+    "expected": "The gross volume of the roof space is 76.47 cubic meters.",
+    "code": "MATCH (n1:IfcSpace)-[r1:RelatedObjects]-[r2:RelatingPropertyDefinition]-[r3:IfcElementQuantity]-[r4:IfcQuantityVolume] WHERE n1.Name CONTAINS \"Roof\" AND n4.Name CONTAINS \"Volume\" RETURN n4.VolumeValue",
+    "answer": "The volume of the roof space is 76.46551559765."
+  },
+  {
+    "question": "How many storey exist in the building?",
+    "expected": "There are 2 storey in the building",
+    "code": "MATCH (n1:IfcBuildingStorey) RETURN COUNT(n) AS StoreyCount",
+    "answer": "The building has 2 storeys."
+  },
+  {
+    "question": "What is the gross floor area of the entrance hall?",
+    "expected": "The gross floor area of the entrance hall is 8.69 square meters.",
+    "code": "MATCH (n1:IfcSpace)-[r1:RelatedObjects]-[r2:RelatingPropertyDefinition]-[r3:IfcElementQuantity]-[r4:IfcQuantityArea] WHERE n1.Name CONTAINS \"Entrance hall\" AND n4.Name CONTAINS \"GrossFloorArea\" RETURN n4.AreaValue",
+    "answer": "The gross floor area of the entrance hall is 8.693506249999999."
+  },
+  {
+    "question": "What is the illuminance unit defined in the file?",
+    "expected": "The illuminance unit defined in the file is Lux.",
+    "code": "MATCH (n1:IfcSIUnit) WHERE n1.UnitType = \"ILLUMINANCEUNIT\" RETURN n1.Name '['n1.Name': 'LUX']'",
+    "answer": "The illuminance unit defined in the file is LUX."
+  },
+  {
+    "question": "Is there a Laundry in the building?",
+    "expected": "No there isn't any Laundry space in the building.",
+    "code": "MATCH (n1:IfcSpace) WHERE toLower(n1.Name) CONTAINS toLower(\"laundry\") RETURN COUNT(n1) > 0 AS IsLaundryPresent",
+    "answer": "There is no Laundry in the building."
+  },
+  {
+    "question": "What is the perimeter of the entrance hall?",
+    "expected": "The entrance hall has a perimeter of 12,810.",
+    "code": "MATCH (n1:IfcSpace)-[r1:RelatedObjects]-[r2:RelatingPropertyDefinition]-[r3:IfcElementQuantity]-[r4:IfcQuantityLength] WHERE toLower(n1.Name) CONTAINS toLower(\"entrance hall\") AND toLower(n4.Name) CONTAINS toLower(\"perimeter\") RETURN n4.LengthValue",
+    "answer": "The perimeter of the entrance hall is 12,810.0."
+  },
+  {
+    "question": "What is the building address?",
+    "expected": "The address is 'Westminster, London, UK'.",
+    "code": "MATCH (n1:IfcBuilding)-[r1:BuildingAddress]->(n2:IfcPostalAddress) RETURN n2.AddressLines, n2.Town, n2.Region, n2.PostalCode, n2.Country",
+    "answer": "Enter address here, Westminster, London, UK."
+  },
+  {
+    "question": "What is the unconnected height of the roof space?",
+    "expected": "The roof has an unconnected height of 1000 mm (1 meter).",
+    "code": "MATCH (n1:IfcSpace)-[r1:RelatedObjects]-[r2:IfcPropertySet]-[r3:IfcPropertySingleValue]-[r4:IfcReal] WHERE toLower(n1.Name) CONTAINS toLower(\"roof\") AND toLower(n3.Name) CONTAINS toLower(\"unconnected height\") RETURN n4.NominalValue AS RoofSpaceHeight",
+    "answer": "The unconnected height of the roof space is IfcLengthMeasure(0.) and IfcLengthMeasure(1000.)."
+  },
+  {
+    "question": "What is the name of the project?",
+    "expected": "The project name is 'Project Name'.",
+    "code": "MATCH (n1:IfcProject) RETURN n1.Name AS ProjectName",
+    "answer": "I don't know the answer."
+  }
+]

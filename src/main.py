@@ -16,6 +16,7 @@ import utils_visualize_graph
 
 from collections import defaultdict
 import random
+import json
 
 IFC_PATH = Path("data/SampleHouse4.ifc")
 # IFC_PATH = Path("data/SmallModelIfc2x3.ifc")
@@ -26,12 +27,8 @@ MERGED_PATH = OUTPUT_DIR / (datetime.now().strftime("%m%d_%H%M%S") + "_ifc.json"
 
 NODES_LIMIT = None  # None or integer to limit number of parsed host IFC entities in order to save memory
 MAX_PARSE_RECURSION_DEPTH = None  # None or integer to limit the related entities parsing recursion depth
-# TODO: add logic that if we meet at max depth a connecting entity - add one step down (?)
-# TODO: If IfcRel... also add related elements even if
 
-# This does not limits the type of children nodes parsed recursively, though, only "host" ones:
-
-# To obtain info about spaces:
+IS_FILTERED = False
 ALLOWED_IFC_TYPES = {
     # Core
     "IfcSpace",
@@ -89,9 +86,44 @@ logger = logging.getLogger(__name__)
 logging.basicConfig(level=logging.INFO, format="[%(levelname)s] %(message)s")
 
 
-def extract_graph_schema_with_examples(G: nx.Graph, max_examples=1) -> tuple[str, str]:
+def parse_ifc_relationships_schema(EDGES_PATH):
+    with open(EDGES_PATH, "r", encoding="utf-8") as f:
+        data = json.load(f)
+
+    rel_map = defaultdict(set)
+
+    for item in data:
+        if item.get("type") != "relationship":
+            continue
+
+        label = item.get("label")
+        props = item.get("properties", {})
+        start = props.get("start_entity_type")
+        end = props.get("target_entity_type")
+
+        if not all([label, start, end]):
+            continue
+
+        rel_map[label].add((start, end))
+
+    # Format output lines
+    rel_lines = []
+    for rel_type in sorted(rel_map):
+        rel_lines.append(f"Type: {rel_type}")
+        for start, end in sorted(rel_map[rel_type]):
+            rel_lines.append(f"  - (:{start})-[:{rel_type}]->(:{end})")
+        rel_lines.append("")  # Add a blank line after each group
+
+    # Write to file
+    rel_txt_path = str(OUTPUT_DIR / "ifc_relationships_schema_llm.txt")
+    with open(rel_txt_path, "w", encoding="utf-8") as f:
+        f.write("\n".join(rel_lines))
+
+    return rel_txt_path
+
+
+def parse_ifc_nodes_schema(G, max_examples=1):
     nodes_schema = defaultdict(lambda: defaultdict(lambda: defaultdict(set)))
-    edges_schema = defaultdict(lambda: {"properties": defaultdict(set), "source_target_types": set()})
     exclude_props = {"id", "GlobalId", "labels"}
 
     def _flatten_dict(d, parent_key='', sep='.'):
@@ -104,7 +136,7 @@ def extract_graph_schema_with_examples(G: nx.Graph, max_examples=1) -> tuple[str
                 items.append((new_key, v))
         return dict(items)
 
-    # Collect node data:
+    # Traverse graph nodes and collect schema info
     for _, data in G.nodes(data=True):
         label = data.get("labels", ["UNLABELED"])[0]
         flat_data = _flatten_dict(data)
@@ -118,31 +150,18 @@ def extract_graph_schema_with_examples(G: nx.Graph, max_examples=1) -> tuple[str
                     parent, child = prop, None
                 nodes_schema[label][parent][child].add(str(val))
 
-    # Collect edge data:
-    for src, tgt, data in G.edges(data=True):
-        label = data.get("label", ["UNLABELED"])
-        src_type = G.nodes[src].get("labels", ["UNKNOWN"])[0]
-        tgt_type = G.nodes[tgt].get("labels", ["UNKNOWN"])[0]
-        edges_schema[label]["source_target_types"].add((src_type, tgt_type))
-
-        for prop, val in data.items():
-            if prop not in {"label", "id"}:
-                edges_schema[label]["properties"][prop].add(str(val))
-
-    # Build node schema lines
+    # Build output lines
     node_lines = []
-    # node_lines.append("=== NODES SCHEMA ===")
     node_lines.append("Each node type includes properties hierarchy divided by '.' and sampled examples of each property values.\n")
-    node_lines.append("The graph is parsed from Revit using ifcopenshell.\n")
 
-    for label, parent_dict in nodes_schema.items():
+    for label, parent_dict in sorted(nodes_schema.items()):
         node_lines.append(f"Node Type: {label}")
-        node_lines.append(f"Properties:")
-        for parent, props in parent_dict.items():
+        node_lines.append("Properties:")
+        for parent, props in sorted(parent_dict.items()):
             keys = list(props.keys())
             if keys[0] is not None:
                 node_lines.append(f"\t.{parent}")
-                for child, vals in props.items():
+                for child, vals in sorted(props.items()):
                     examples = random.sample(list(vals), min(len(vals), max_examples))
                     clean_examples = str(examples).translate(str.maketrans('', '', "[]'"))
                     node_lines.append(f"\t\t.{child}: {clean_examples}")
@@ -152,26 +171,14 @@ def extract_graph_schema_with_examples(G: nx.Graph, max_examples=1) -> tuple[str
                 node_lines.append(f"\t.{parent}: {clean_examples}")
         node_lines.append("")
 
-    # Build relationship schema lines:
-    rel_lines = []
-    # rel_lines.append("=== RELATIONSHIPS SCHEMA ===")
-    for label, content in edges_schema.items():
-        rel_lines.append(f"Type: {label}")
-        for src_type, tgt_type in sorted(content["source_target_types"]):
-            rel_lines.append(f"  - (:{src_type})-[:{label}]->(:{tgt_type})")
-        rel_lines.append("")
-
-    # Write to files:
+    # Write to file
     node_txt_path = str(OUTPUT_DIR / "ifc_nodes_schema_llm.txt")
-    rel_txt_path = str(OUTPUT_DIR / "ifc_relationships_schema_llm.txt")
-
     with open(node_txt_path, "w", encoding="utf-8") as f:
         f.write("\n".join(node_lines))
 
-    with open(rel_txt_path, "w", encoding="utf-8") as f:
-        f.write("\n".join(rel_lines))
+    return node_txt_path
 
-    return node_txt_path, rel_txt_path
+
 
 
 def _is_entity_or_collection_of_entites(v):
@@ -211,13 +218,13 @@ def build_ifc_graph(ifc_file_path):
         else:
             return d
     
-    def _add_entity_to_graph(G, ifc_entity, depth=0):
+    def _add_entity_to_graph(G, ifc_entity, ifc_entity_id, depth=0):
         """
         Constructs a semantic graph from an IFC file using NetworkX.
 
-        The function parses a subset of IFC entities defined in `ALLOWED_IFC_TYPES` and recursively expands
-        each of them by traversing their referenced entities via IFC attributes. The resulting graph captures
-        both the hierarchical and referential structure of the model.
+        The function parses a subset of IFC entities defined in `ALLOWED_IFC_TYPES` if filtering is required
+        and recursively expands each of them by traversing their referenced entities via IFC attributes. 
+        The resulting graph captures both the hierarchical and referential structure of the model.
 
         Each node in the graph corresponds to an IFC entity, enriched with filtered scalar attributes and
         inherited property sets (psets). References to other IFC entities (e.g., ObjectPlacement, RelAggregates)
@@ -240,8 +247,10 @@ def build_ifc_graph(ifc_file_path):
                 edges represent typed semantic references derived from the IFC schema.
         """
 
-        ifc_entity_id = ifc_entity.id()
         ifc_entity_type = ifc_entity.is_a()
+
+        if ifc_entity_type == "IfcPropertySingleValue":
+            pass
 
         ifc_entity_info = ifc_entity.get_info(recursive=False)
         ifc_entity_psets = ifcopenshell.util.element.get_psets(ifc_entity, should_inherit=False)
@@ -260,37 +269,33 @@ def build_ifc_graph(ifc_file_path):
             node_labels.append(properties_filtered.pop("type"))
 
         properties_filtered["labels"] = node_labels
-        # To inspect what we add as a node to G:
-        # import json
-        # print(json.dumps(properties_filtered, indent=4, ensure_ascii=False))
-
         properties_filtered = _replace_spaces_in_keys(properties_filtered)  # to ensure correct syntax in Cypher queries
 
-        G.add_node(ifc_entity.id(), **properties_filtered)
+        G.add_node(ifc_entity_id, **properties_filtered)
         parsed_ifc_entities_types_and_ids.add((ifc_entity_id, ifc_entity_type))
 
         # RECURSIVELY append child ifc_entities the current ifc_entity refers to.
-        # Then wire current host ifc_entity with its relatives,i.e. unfold the trees
+        # Then wire current host ifc_entity with its relatives, i.e. unfold the trees
         # rooted in the current host ifc_entity.
         relatives = _get_related_entities(ifc_entity)
         if relatives:
             depth += 1  # children recursion parse depth counter
             if MAX_PARSE_RECURSION_DEPTH is None or depth <= MAX_PARSE_RECURSION_DEPTH:
                 for property_name, related_ifc_entities in relatives.items():
-                    for relative_ifc_entity in related_ifc_entities:
-                        relative_ifc_entity_id = relative_ifc_entity.id()
-                        relative_ifc_entity_type = relative_ifc_entity.is_a()
-                        if (relative_ifc_entity_id not in recursively_visited_ifc_ids  # to avoid endless recursion
-                            and relative_ifc_entity_type in ALLOWED_IFC_TYPES):
-                            G.add_edge(
-                                ifc_entity_id,
-                                relative_ifc_entity_id,
-                                id=str(hash((ifc_entity_id, relative_ifc_entity_id, property_name))),
+                    for child in related_ifc_entities:
+                        child_id = child.id()
+                        if child_id == 0: child_id = id(child)
+                        if child_id not in recursively_visited_ifc_ids:  # to avoid endless recursion
+                            G.add_edge(ifc_entity_id, child_id,
+                                id=str(hash((ifc_entity_id, child_id, property_name))),
                                 label=property_name.upper(),
-                                properties={},
-                            )  # NOTE: edge properties may be assigned too
-                            G = _add_entity_to_graph(G, relative_ifc_entity, depth)
-                            recursively_visited_ifc_ids.add(relative_ifc_entity_id)
+                                properties={
+                                    "start_entity_type": ifc_entity_type, 
+                                    "target_entity_type": child.is_a()
+                                    },
+                            )  
+                            G = _add_entity_to_graph(G, child, child_id, depth)
+                            recursively_visited_ifc_ids.add(child_id)
         return G
 
     # Initialize:
@@ -308,12 +313,16 @@ def build_ifc_graph(ifc_file_path):
     logger.info(f"IFC graph is being parsed...")
     for ifc_entity in model:
         # Pre-process (e.g. filter):
-        if ifc_entity.is_a() not in ALLOWED_IFC_TYPES:
-            continue
+        if (ifc_entity.is_a() not in ALLOWED_IFC_TYPES) and IS_FILTERED:
+            continue  # skip
+        ifc_entity_id = ifc_entity.id()
+        if ifc_entity_id == 0:
+            ifc_entity_id = id(ifc_entity)
 
         # Add the host IFC entity and its relatives (depending of the MAX_PARSE_RECURSION_DEPTH value)
-        if ifc_entity.id() not in parsed_ifc_entities_types_and_ids:
-            G = _add_entity_to_graph(G, ifc_entity)
+        # if ifc_entity.id() not in parsed_ifc_entities_types_and_ids:
+        #     G = _add_entity_to_graph(G, ifc_entity)
+        G = _add_entity_to_graph(G, ifc_entity, ifc_entity_id)  # if we try to add to G already existing node - nothing will happen, no duplication
 
         # Post-process:
         # TODO: may add post-filtering by IFC type ("wrong" ones could be recursively parsed children)
@@ -324,33 +333,34 @@ def build_ifc_graph(ifc_file_path):
 
     return G
 
+def is_fully_connected(G):
+    return nx.is_connected(G) and not any(degree == 0 for node, degree in G.degree())
 
 def main():
     logger.info(f"Loading IFC file: {IFC_PATH}")
-
     G = build_ifc_graph(IFC_PATH)
     logger.info(f"IFC graph is built with {G.number_of_nodes()} nodes and {G.number_of_edges()} edges")
-    # logger.info(f"IFC graph has {len(list(nx.isolates(G)))} isolated node(s)")
     isolated_nodes = list(nx.isolates(G))
     isolated_labels = {
         G.nodes[n].get("labels", ["UNLABELED"])[0] for n in isolated_nodes
     }
     logger.info(f"Isolated nodes ({len(isolated_nodes)}), unique labels: {isolated_labels}")
-
-    # Save for graph DBMS to import from CSV:
-    # export_nodes_to_csv(G, "out/1/nodes.csv")
-    # export_edges_to_csv(G, "out/1/edges.csv")
+    num_clusters = nx.number_connected_components(G)
+    logger.info(f"Number of clusters: {num_clusters}")
 
     # Save for graph DBMS to import from JSON:
     utils_json.export_nodes_to_json(G, NODES_PATH)
     utils_json.export_edges_to_json(G, EDGES_PATH)
     utils_json.merge_ifc_json(NODES_PATH, EDGES_PATH, MERGED_PATH)  # to be exported to the graph DB
 
-    schema_txt_path = extract_graph_schema_with_examples(G)
-    logger.info(f"LLM-friendly schema saved at: {schema_txt_path}")
+    edges_schema_txt_path = parse_ifc_relationships_schema(EDGES_PATH)
+    nodes_schema_txt_path = parse_ifc_nodes_schema(G)
+    # schema_txt_path = extract_graph_schema_with_examples(G)
+    logger.info(f"LLM-friendly edges schema saved at: {edges_schema_txt_path}")
+    logger.info(f"LLM-friendly nodes schema saved at: {nodes_schema_txt_path}")
 
     # Visualize graph if graph is small:
-    if G.number_of_nodes() < 200:
+    if G.number_of_nodes() < 500:
         utils_visualize_graph.visualize_graph_pyvis(G, OUTPUT_DIR / "ifc_graph.html")
 
 
