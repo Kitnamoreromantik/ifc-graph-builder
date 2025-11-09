@@ -1,12 +1,12 @@
-"""
+r"""
 To run:
 uv run ui_app.py
 
 To build executable for Win (in Win dev machine):
 
-Install all the needed dependencies
-1. python -m pip install -r requirements.txt
-2. Found ifc4.exp schema and put to C:\Users\<username>\AppData\Local\Programs\Python\Python312\Lib\site-packages\ifcopenshell\express
+1. Install all the needed dependencies:
+python -m pip install -r requirements.txt
+2. Found ifc4.exp schema and put to C:\Users\demo-airi\AppData\Local\Programs\Python\Python312\Lib\site-packages\ifcopenshell\express
 3. Run in powershell (terminal):
 pyinstaller --onefile --windowed `
   --name "IFC2Graph" `
@@ -16,24 +16,22 @@ pyinstaller --onefile --windowed `
   --hidden-import ifcopenshell.util.element `
   --add-data "assets;assets" `
   --add-data "allowed_ifc_types.json;." `
-  --add-data "C:\Users\<username>\AppData\Local\Programs\Python\Python312\Lib\site-packages\ifcopenshell\express;ifcopenshell/express" `
-  --add-data "C:\Users\<username>\AppData\Local\Programs\Python\Python312\Lib\site-packages\pyvis\templates;pyvis/templates" `
+  --add-data "C:\Users\demo-airi\AppData\Local\Programs\Python\Python312\Lib\site-packages\ifcopenshell\express;ifcopenshell/express" `
+  --add-data "C:\Users\demo-airi\AppData\Local\Programs\Python\Python312\Lib\site-packages\pyvis\templates;pyvis/templates" `
   ui_app.py
 4. Find .exe in dist folder
 """
 
-import tkinter as tk
+import ttkbootstrap as ttk
+from ttkbootstrap.constants import *
 from tkinter import filedialog, messagebox, Toplevel
-import threading
-import logging
 from pathlib import Path
-import subprocess
-import sys
-import json
 import threading
 import logging
-import tkinter as tk
-from tkinter import filedialog, messagebox, Toplevel
+import json
+import platform
+import sys
+import subprocess
 
 # Import converter entry point directly
 from src.main import run as run_ifc_converter
@@ -46,66 +44,32 @@ ALLOWED_IFC_FILE = Path("allowed_ifc_types.json")
 
 logging.basicConfig(level=logging.INFO, format="[%(levelname)s] %(message)s")
 
-
 # =============================
 # IFC GROUPS
 # =============================
 IFC_GROUPS = {
     "Пространственная структура": [
-        "IfcProject",
-        "IfcSite",
-        "IfcBuilding",
-        "IfcBuildingStorey",
-        "IfcSpace",
-        "IfcZone",
-        "IfcRelAggregates",
-        "IfcRelContainedInSpatialStructure",
-        "IfcRelSpaceBoundary",
+        "IfcProject", "IfcSite", "IfcBuilding", "IfcBuildingStorey", "IfcSpace",
+        "IfcZone", "IfcRelAggregates", "IfcRelContainedInSpatialStructure", "IfcRelSpaceBoundary",
     ],
     "Архитектурные и конструктивные элементы": [
-        "IfcWall",
-        "IfcWallStandardCase",
-        "IfcSlab",
-        "IfcRoof",
-        "IfcDoor",
-        "IfcWindow",
-        "IfcColumn",
-        "IfcBeam",
-        "IfcStair",
-        "IfcRailing",
-        "IfcOpeningElement",
-        "IfcCovering",
-        "IfcBuildingElementProxy",
-        "IfcFurnishingElement",
-        "IfcSystemFurnitureElement",
-        "IfcDistributionElement",
-        "IfcFlowTerminal",
+        "IfcWall", "IfcWallStandardCase", "IfcSlab", "IfcRoof", "IfcDoor", "IfcWindow",
+        "IfcColumn", "IfcBeam", "IfcStair", "IfcRailing", "IfcOpeningElement",
+        "IfcCovering", "IfcBuildingElementProxy", "IfcFurnishingElement",
+        "IfcSystemFurnitureElement", "IfcDistributionElement", "IfcFlowTerminal",
         "IfcBuildingElement",
     ],
     "Количество и свойства": [
-        "IfcElementQuantity",
-        "IfcQuantityArea",
-        "IfcQuantityVolume",
-        "IfcQuantityLength",
-        "IfcRelDefinesByProperties",
-        "IfcRelDefinesByType",
+        "IfcElementQuantity", "IfcQuantityArea", "IfcQuantityVolume", "IfcQuantityLength",
+        "IfcRelDefinesByProperties", "IfcRelDefinesByType",
     ],
     "Материалы и классификации": [
-        "IfcMaterial",
-        "IfcMaterialLayer",
-        "IfcMaterialLayerSet",
-        "IfcMaterialConstituentSet",
-        "IfcRelAssociatesMaterial",
-        "IfcRelAssociatesClassification",
-        "IfcClassificationReference",
+        "IfcMaterial", "IfcMaterialLayer", "IfcMaterialLayerSet", "IfcMaterialConstituentSet",
+        "IfcRelAssociatesMaterial", "IfcRelAssociatesClassification", "IfcClassificationReference",
     ],
     "Положение и геометрия": [
-        "IfcProductDefinitionShape",
-        "IfcShapeRepresentation",
-        "IfcLocalPlacement",
-        "IfcAxis2Placement3D",
-        "IfcDirection",
-        "IfcCartesianPoint",
+        "IfcProductDefinitionShape", "IfcShapeRepresentation", "IfcLocalPlacement",
+        "IfcAxis2Placement3D", "IfcDirection", "IfcCartesianPoint",
     ],
 }
 
@@ -115,67 +79,35 @@ IFC_ENTITIES = [e for group in IFC_GROUPS.values() for e in group]
 # =============================
 # Main window initialization
 # =============================
-root = tk.Tk()
+root = ttk.Window(themename="flatly")  # modern Bootstrap-like theme
+root.title("IFC → JSON")
+root.geometry("640x320")
+root.resizable(False, False)
 
-# Icon setup:
-#-------------------------------------------
-import platform
-import tkinter as tk
-from pathlib import Path
-
+# --- Icon setup ---
 ICON_DIR = Path(__file__).parent / "assets"
 icon_path_ico = ICON_DIR / "app_icon.ico"
-icon_path_icns = ICON_DIR / "app_icon.icns"
 icon_path_png = ICON_DIR / "app_icon.png"
-
 system_name = platform.system()
 
 try:
     if system_name == "Windows" and icon_path_ico.exists():
         root.iconbitmap(default=str(icon_path_ico))
-
-    elif system_name == "Darwin":  # macOS
-        # Tkinter cannot load .icns — use .png instead
-        if icon_path_png.exists():
-            root.iconphoto(True, tk.PhotoImage(file=str(icon_path_png)))
-
-        # # Optional: set Dock icon via AppKit if pyobjc available
-        # try:
-        #     import AppKit
-        #     if icon_path_icns.exists():
-        #         app = AppKit.NSApplication.sharedApplication()
-        #         app.setApplicationIconImage_(
-        #             AppKit.NSImage.alloc().initByReferencingFile_(str(icon_path_icns))
-        #         )
-        # except Exception as e:
-        #     print(f"⚠️ Dock icon not set: {e}")
-
-    else:
-        # Linux or fallback: try PNG
-        if icon_path_png.exists():
-            root.iconphoto(True, tk.PhotoImage(file=str(icon_path_png)))
-
+    elif icon_path_png.exists():
+        root.iconphoto(True, ttk.PhotoImage(file=str(icon_path_png)))
 except Exception as e:
     print(f"⚠️ Could not set app icon: {e}")
 
-
-root.title("IFC → JSON")
-root.geometry("630x280")
-root.resizable(False, False)
-
-# Now root exists — safe to create BooleanVars
-selected_entities = {e: tk.BooleanVar(master=root, value=True) for e in IFC_ENTITIES}
-
-# Global variable for output directory
+# Variables
+selected_entities = {e: ttk.BooleanVar(value=True) for e in IFC_ENTITIES}
 output_dir_path = None
+recursion_depth_var = ttk.StringVar(value="1")
 
 # =============================
 # Helper Functions
 # =============================
 def notify_ui(fn, *args, **kwargs):
-    """Safely trigger UI updates from a background thread."""
     root.after(0, lambda: fn(*args, **kwargs))
-
 
 def run_conversion(ifc_path):
     try:
@@ -185,150 +117,126 @@ def run_conversion(ifc_path):
 
         depth_value = recursion_depth_var.get().strip()
         depth = None if depth_value.lower() == "none" else int(depth_value)
-
-        # run pipeline inside the same process (thread-safe as you already use a thread)
         run_ifc_converter(Path(ifc_path), Path(output_dir_path) if output_dir_path else None, depth)
 
         notify_ui(messagebox.showinfo, "Success", f"Конвертация завершена:\n{ifc_path}")
-        notify_ui(status_label.config, text="Готово ✅", fg="green")
+        notify_ui(status_label.config, text="Готово ✅", foreground="green")
     except Exception as e:
         logging.exception(e)
         notify_ui(messagebox.showerror, "Error", str(e))
-        notify_ui(status_label.config, text="Ошибка ❌", fg="red")
+        notify_ui(status_label.config, text="Ошибка ❌", foreground="red")
     finally:
-        notify_ui(start_button.config, state=tk.NORMAL)
-
+        notify_ui(start_button.config, state=NORMAL)
 
 def select_file():
-    """Select IFC file."""
-    file_path = filedialog.askopenfilename(
-        title="Выбрать IFC файл",
-        filetypes=[("IFC files", "*.ifc"), ("All files", "*.*")],
-    )
+    file_path = filedialog.askopenfilename(title="Выбрать IFC файл", filetypes=[("IFC files", "*.ifc"), ("All files", "*.*")])
     if file_path:
-        status_label.config(text=f"Файл выбран: {file_path}", fg="green")
-        # path_label.config(text=file_path, fg="green")
-        start_button.config(state=tk.NORMAL)
+        status_label.config(text=f"Файл выбран: {file_path}", foreground="green")
+        start_button.config(state=NORMAL)
         start_button.configure(command=lambda: start_conversion(file_path))
 
-
 def select_output_dir():
-    """Select output directory for conversion results."""
     global output_dir_path
     output_dir = filedialog.askdirectory(title="Выбрать папку для сохранения результатов")
     if output_dir:
         output_dir_path = output_dir
-        output_label.config(text=f"Папка вывода: {output_dir}", fg="green")
-
+        output_label.config(text=f"Папка вывода: {output_dir}", foreground="green")
 
 def start_conversion(ifc_path):
-    """Start conversion in background."""
-    start_button.config(state=tk.DISABLED)
-    status_label.config(text="В процессе...", fg="orange")
+    start_button.config(state=DISABLED)
+    status_label.config(text="В процессе...", foreground="#E67E22")
     threading.Thread(target=run_conversion, args=(ifc_path,), daemon=True).start()
 
 # =============================
 # IFC Entity Selection Window
 # =============================
 def open_ifc_selector():
-    win = Toplevel(root)
+    win = ttk.Toplevel(root)
     win.title("Выбор сущностей для включения в граф")
-    win.geometry("400x650")
+    win.geometry("420x620")
     win.resizable(False, True)
 
-    frame = tk.Frame(win)
+    frame = ttk.Frame(win, padding=10)
     frame.pack(fill="both", expand=True)
-    canvas = tk.Canvas(frame)
-    canvas.pack(side="left", fill="both", expand=True)
-    scrollbar = tk.Scrollbar(frame, orient="vertical", command=canvas.yview)
-    scrollbar.pack(side="right", fill="y")
-    scroll = tk.Frame(canvas)
+
+    canvas = ttk.Canvas(frame)
+    scrollbar = ttk.Scrollbar(frame, orient="vertical", command=canvas.yview)
+    scroll = ttk.Frame(canvas)
     scroll.bind("<Configure>", lambda e: canvas.configure(scrollregion=canvas.bbox("all")))
     canvas.create_window((0, 0), window=scroll, anchor="nw")
     canvas.configure(yscrollcommand=scrollbar.set)
+    canvas.pack(side="left", fill="both", expand=True)
+    scrollbar.pack(side="right", fill="y")
 
-    # Grouped checkboxes
     for group_name, entities in IFC_GROUPS.items():
-        tk.Label(scroll, text=group_name, font=("Segoe UI", 10, "bold"), anchor="w").pack(
-            fill="x", padx=8, pady=(10, 3)
-        )
+        ttk.Label(scroll, text=group_name, font=("Segoe UI", 10, "bold")).pack(fill="x", pady=(8, 2))
         for ent in entities:
-            tk.Checkbutton(scroll, text=ent, variable=selected_entities[ent], anchor="w").pack(
-                fill="x", padx=20
-            )
+            ttk.Checkbutton(scroll, text=ent, variable=selected_entities[ent], bootstyle="round-toggle").pack(anchor="w", padx=18)
 
-    # Control buttons
-    btns = tk.Frame(win)
-    btns.pack(pady=10)
+    btn_frame = ttk.Frame(win, padding=5)
+    btn_frame.pack(pady=(10, 4))  # smaller bottom padding
 
-    def select_all():
-        for v in selected_entities.values():
-            v.set(True)
+    ttk.Button(
+        btn_frame,
+        text="Выбрать все",
+        bootstyle="success-outline",
+        command=lambda: [v.set(True) for v in selected_entities.values()]
+    ).pack(side="left", padx=5)
 
-    def deselect_all():
-        for v in selected_entities.values():
-            v.set(False)
+    ttk.Button(
+        btn_frame,
+        text="Снять все",
+        bootstyle="secondary-outline",
+        command=lambda: [v.set(False) for v in selected_entities.values()]
+    ).pack(side="left", padx=5)
 
-    tk.Button(btns, text="Выбрать все", command=select_all).pack(side="left", padx=5)
-    tk.Button(btns, text="Снять все", command=deselect_all).pack(side="left", padx=5)
+    # ↓ slightly raised and same green tone
+    ttk.Button(
+        btn_frame,
+        text="Сохранить выбор",
+        bootstyle="success",     # green solid style
+        command=lambda: save_selection(win)
+    ).pack(side="left", padx=10)
 
-    def save_selection():
+    def save_selection(win):
         chosen = [e for e, v in selected_entities.items() if v.get()]
         with open(ALLOWED_IFC_FILE, "w", encoding="utf-8") as f:
             json.dump(sorted(chosen), f, indent=2, ensure_ascii=False)
-        messagebox.showinfo(
-            "Сохранено",
-            f"Выбрано {len(chosen)} типов IFC-сущностей",
-        )
+        messagebox.showinfo("Сохранено", f"Выбрано {len(chosen)} типов IFC-сущностей")
         win.destroy()
 
-    tk.Button(win, text="Сохранить выбор", command=save_selection).pack(pady=10)
-
 # =============================
-#          Main GUI
+# Main GUI Layout
 # =============================
-menubar = tk.Menu(root)
-settings_menu = tk.Menu(menubar, tearoff=0)
+menubar = ttk.Menu(root)
+settings_menu = ttk.Menu(menubar, tearoff=0)
 settings_menu.add_command(label="Выбор IFC сущностей...", command=open_ifc_selector)
 menubar.add_cascade(label="Настройки", menu=settings_menu)
 root.config(menu=menubar)
 
-tk.Label(
-    root,
-    text="Конвертация IFC файла в JSON для графовой БД и схемы IFC-графа",
-).pack(pady=5)
+ttk.Label(root, text="Конвертация IFC файла в JSON для графовой БД и схемы IFC-графа", font=("Segoe UI", 10, "bold")).pack(pady=6)
 
-select_button = tk.Button(root, text="Выбрать IFC файл", command=select_file)
+select_button = ttk.Button(root, text="Выбрать IFC файл", bootstyle="primary", command=select_file)
 select_button.pack(pady=5)
 
-status_label = tk.Label(root, text="Файл не выбран", fg="gray")
+status_label = ttk.Label(root, text="Файл не выбран", foreground="gray")
 status_label.pack(pady=5)
 
-# path_label = tk.Label(
-#     root, text="", fg="gray", wraplength=500, justify="center", anchor="center"
-# )
-# path_label.pack(padx=10, pady=5, fill="x")
-
-output_button = tk.Button(root, text="Выбрать папку вывода", command=select_output_dir)
+output_button = ttk.Button(root, text="Выбрать папку вывода", bootstyle="info", command=select_output_dir)
 output_button.pack(pady=5)
 
-output_label = tk.Label(root, text="Папка вывода не выбрана", fg="gray")
+output_label = ttk.Label(root, text="Папка вывода не выбрана", foreground="gray")
 output_label.pack(pady=2)
 
-# =============================
-# Recursion depth control
-# =============================
-depth_label = tk.Label(root, text="Макс. глубина поиска при парсинге графа:")
+depth_label = ttk.Label(root, text="Макс. глубина поиска при парсинге графа:")
 depth_label.pack(pady=(10, 2))
 
-recursion_depth_var = tk.StringVar(value="1")  # use StringVar to allow 'None'
-depth_spin = tk.Spinbox(root, from_=0, to=10, width=3, textvariable=recursion_depth_var)
-depth_spin.pack()
+depth_spin = ttk.Spinbox(root, from_=0, to=10, width=5, textvariable=recursion_depth_var, bootstyle="info")
+depth_spin.pack(pady=(0, 5))
 
-tk.Label(root, text="Введите целое число или 'None' (без кавычек) для бесконечной глубины.", fg="gray", font=("Segoe UI", 8)).pack()
+ttk.Label(root, text="Введите целое число или 'None' (без кавычек) для бесконечной глубины.", font=("Segoe UI", 8), foreground="gray").pack(pady=(0, 4))
 
-
-start_button = tk.Button(root, text="Начать конвертацию", state=tk.DISABLED)
+start_button = ttk.Button(root, text="Начать конвертацию", state=DISABLED, bootstyle="success")
 start_button.pack(pady=5)
 
 root.mainloop()

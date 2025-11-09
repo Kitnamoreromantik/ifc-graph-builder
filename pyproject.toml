@@ -10,4 +10,5 @@ dependencies = [
     "networkx>=3.5",
     "pyinstaller>=6.16.0",
     "pyvis>=0.3.2",
+    "ttkbootstrap>=1.18.1",
 ]
