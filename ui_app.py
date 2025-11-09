@@ -2,15 +2,24 @@
 To run:
 uv run ui_app.py
 
-To build executable:
+To build executable for Win (in Win dev machine):
 
-pyinstaller --onefile --windowed \
-  --name "IFC2Graph" \
-  --icon "assets/app_icon.icns" \
-  --add-data "assets:assets" \
-  --add-data "allowed_ifc_types.json:." \
+Install all the needed dependencies
+1. python -m pip install -r requirements.txt
+2. Found ifc4.exp schema and put to C:\Users\<username>\AppData\Local\Programs\Python\Python312\Lib\site-packages\ifcopenshell\express
+3. Run in powershell (terminal):
+pyinstaller --onefile --windowed `
+  --name "IFC2Graph" `
+  --icon "assets\app_icon.ico" `
+  --hidden-import networkx `
+  --hidden-import ifcopenshell `
+  --hidden-import ifcopenshell.util.element `
+  --add-data "assets;assets" `
+  --add-data "allowed_ifc_types.json;." `
+  --add-data "C:\Users\<username>\AppData\Local\Programs\Python\Python312\Lib\site-packages\ifcopenshell\express;ifcopenshell/express" `
+  --add-data "C:\Users\<username>\AppData\Local\Programs\Python\Python312\Lib\site-packages\pyvis\templates;pyvis/templates" `
   ui_app.py
-
+4. Find .exe in dist folder
 """
 
 import tkinter as tk
@@ -21,6 +30,13 @@ from pathlib import Path
 import subprocess
 import sys
 import json
+import threading
+import logging
+import tkinter as tk
+from tkinter import filedialog, messagebox, Toplevel
+
+# Import converter entry point directly
+from src.main import run as run_ifc_converter
 
 # =============================
 # Paths & Logging
@@ -144,7 +160,7 @@ except Exception as e:
 
 
 root.title("IFC → JSON")
-root.geometry("680x300")
+root.geometry("630x280")
 root.resizable(False, False)
 
 # Now root exists — safe to create BooleanVars
@@ -162,36 +178,21 @@ def notify_ui(fn, *args, **kwargs):
 
 
 def run_conversion(ifc_path):
-    """Run the main converter in background."""
     try:
         chosen = [e for e, v in selected_entities.items() if v.get()]
         with open(ALLOWED_IFC_FILE, "w", encoding="utf-8") as f:
             json.dump(sorted(chosen), f, indent=2, ensure_ascii=False)
 
-        # Build command with optional output dir
-        cmd = [sys.executable, str(MAIN_SCRIPT), str(ifc_path)]
-
-        # Add output dir if selected
-        if output_dir_path:
-            cmd.append(output_dir_path)
-
-        # Add recursion depth as argument
         depth_value = recursion_depth_var.get().strip()
-        if depth_value.lower() == "none":
-            cmd.append("None")
-        else:
-            cmd.append(depth_value)
-            
-        # -----------------------------
-        subprocess.run(cmd, check=True)
-        # -----------------------------
+        depth = None if depth_value.lower() == "none" else int(depth_value)
+
+        # run pipeline inside the same process (thread-safe as you already use a thread)
+        run_ifc_converter(Path(ifc_path), Path(output_dir_path) if output_dir_path else None, depth)
 
         notify_ui(messagebox.showinfo, "Success", f"Конвертация завершена:\n{ifc_path}")
         notify_ui(status_label.config, text="Готово ✅", fg="green")
-    except subprocess.CalledProcessError as e:
-        notify_ui(messagebox.showerror, "Error", f"❌ Ошибка конвертации\n{e}")
-        notify_ui(status_label.config, text="Ошибка ❌", fg="red")
     except Exception as e:
+        logging.exception(e)
         notify_ui(messagebox.showerror, "Error", str(e))
         notify_ui(status_label.config, text="Ошибка ❌", fg="red")
     finally:
@@ -284,7 +285,7 @@ def open_ifc_selector():
     tk.Button(win, text="Сохранить выбор", command=save_selection).pack(pady=10)
 
 # =============================
-# Main GUI
+#          Main GUI
 # =============================
 menubar = tk.Menu(root)
 settings_menu = tk.Menu(menubar, tearoff=0)
@@ -294,7 +295,7 @@ root.config(menu=menubar)
 
 tk.Label(
     root,
-    text="Конвертация .IFC файла в JSON для графовой БД и схемы IFC-графа",
+    text="Конвертация IFC файла в JSON для графовой БД и схемы IFC-графа",
 ).pack(pady=5)
 
 select_button = tk.Button(root, text="Выбрать IFC файл", command=select_file)

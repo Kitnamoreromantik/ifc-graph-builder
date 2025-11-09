@@ -208,3 +208,6 @@ marimo/_lsp/
 __marimo__/
 data/out/.DS_Store
 .DS_Store
+
+/data/out3
+/data/out2
