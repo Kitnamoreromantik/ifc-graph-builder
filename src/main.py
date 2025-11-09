@@ -249,6 +249,39 @@ def main():
     if G.number_of_nodes() < 500:
         utils_visualize_graph.visualize_graph_pyvis(G, OUTPUT_DIR / "ifc_graph.html")
 
+    max_show = 5  # number of IFC types to show
+    allowed_sorted = sorted(ALLOWED_IFC_TYPES)
+    shown = allowed_sorted[:max_show]
+    remaining = len(allowed_sorted) - len(shown)
+    
+    # --- Save summary report ---
+    summary_txt = (
+        f"IFC file: {IFC_PATH}\n"
+        f"Filtered: {len(ALLOWED_IFC_TYPES)} anchor types selected:\n"
+        f"{chr(10).join('   • ' + t for t in shown)}"
+        f"{chr(10)}{'   …and ' + str(remaining) + ' more (see allowed_ifc_types.json)' if remaining > 0 else ''}\n\n"
+        f"Nodes: {G.number_of_nodes()}\n"
+        f"Edges: {G.number_of_edges()}\n"
+        f"Isolated nodes: {len(isolated_nodes)}: {sorted(list(isolated_labels))[:7]}...\n"
+        f"Number of clusters: {num_clusters}\n\n"
+        f"Output files:\n"
+        f" • Nodes → {NODES_PATH}\n"
+        f" • Edges → {EDGES_PATH}\n"
+        f" • Merged → {MERGED_PATH}\n"
+        f" • Schemas for LLM:\n"
+        f"     Edges → {edges_schema_txt_path}\n"
+        f"     Nodes → {nodes_schema_txt_path}\n"
+        "This report in output dir: conversion_summary.txt"
+    )
+
+    summary_path = OUTPUT_DIR / "conversion_summary.txt"
+    with open(summary_path, "w", encoding="utf-8") as f:
+        f.write(summary_txt)
+
+    logger.info(f"Summary saved to: {summary_path}")
+
+    return summary_txt
+
 
 # -------------------------------------------------------
 # Public API for GUI
@@ -260,7 +293,7 @@ def run(ifc_path: Path, output_dir: Path | None = None, depth: int | None = 1):
     OUTPUT_DIR = Path(output_dir) if output_dir else Path("data/out")
     OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
     MAX_PARSE_RECURSION_DEPTH = depth
-    main()
+    return main()
 
 
 # -------------------------------------------------------

@@ -1,7 +1,6 @@
 r"""
 To run:
 uv run ui_app.py
-
 To build executable for Win (in Win dev machine):
 
 1. Install all the needed dependencies:
@@ -24,14 +23,13 @@ pyinstaller --onefile --windowed `
 
 import ttkbootstrap as ttk
 from ttkbootstrap.constants import *
+from ttkbootstrap.dialogs import Messagebox
 from tkinter import filedialog, messagebox, Toplevel
 from pathlib import Path
 import threading
 import logging
 import json
 import platform
-import sys
-import subprocess
 
 # Import converter entry point directly
 from src.main import run as run_ifc_converter
@@ -81,7 +79,7 @@ IFC_ENTITIES = [e for group in IFC_GROUPS.values() for e in group]
 # =============================
 root = ttk.Window(themename="flatly")  # modern Bootstrap-like theme
 root.title("IFC → JSON")
-root.geometry("640x320")
+root.geometry("655x307")
 root.resizable(False, False)
 
 # --- Icon setup ---
@@ -117,9 +115,26 @@ def run_conversion(ifc_path):
 
         depth_value = recursion_depth_var.get().strip()
         depth = None if depth_value.lower() == "none" else int(depth_value)
-        run_ifc_converter(Path(ifc_path), Path(output_dir_path) if output_dir_path else None, depth)
+        summary = run_ifc_converter(Path(ifc_path), Path(output_dir_path) if output_dir_path else None, depth)
 
-        notify_ui(messagebox.showinfo, "Success", f"Конвертация завершена:\n{ifc_path}")
+        # Show log info in popup (shortened)
+        # short_summary = "\n".join(summary.splitlines()[:10])  # first few lines only
+        short_summary = summary
+        # notify_ui(
+        #     messagebox.showinfo,
+        #     "Success",
+        #     f"Конвертация завершена!\n\n{short_summary}\n\nПолный отчёт: conversion_summary.txt"
+        # )
+
+        notify_ui(
+            lambda: Messagebox.show_info(
+                message=summary,
+                title="Success",
+                alert=True,
+                width=700
+            )
+        )
+
         notify_ui(status_label.config, text="Готово ✅", foreground="green")
     except Exception as e:
         logging.exception(e)
@@ -212,6 +227,40 @@ menubar = ttk.Menu(root)
 settings_menu = ttk.Menu(menubar, tearoff=0)
 settings_menu.add_command(label="Выбор IFC сущностей...", command=open_ifc_selector)
 menubar.add_cascade(label="Настройки", menu=settings_menu)
+help_menu = ttk.Menu(menubar, tearoff=0)
+
+def show_instructions():
+    instructions = (
+        "1. Нажмите «Выбрать IFC файл» и укажите исходный файл *.ifc (IFC4)\n"
+        "2. Укажите папку вывода результатов\n"
+        "3. При необходимости откройте «Настройки» → «Выбор IFC сущностей» \n(Для фильтрации ненужных типов. Список предварительный.)\n"
+        "4. Установите глубину поиска n (в граф будут включены соседи сущностей n-го порядка)\n"
+        "5. Нажмите «Начать конвертацию» и дождитесь завершения\n\n"
+        "Результаты, которые сохранятся в выбранной целевой папке:\n"
+        "   • conversion_summary.txt — статистика конвертации.\n"
+        "   • nodes.json — список узлов IFC-графа\n"
+        "   • edges.json — список связей между узлами\n"
+        "   • graph_ifc.json — объединенный граф (nodes + edges)\n"
+        "   • ifc_graph.html — HTML-визуализация графа (для визуальной инспекции)\n"
+        "   • ifc_nodes_schema_llm.txt — структура свойств узлов (для LLM-анализа)\n"
+        "   • ifc_relationships_schema_llm.txt — структура отношений (для LLM-анализа)\n\n"
+        " Если в графе более 500 узлов, визуализация ifc_graph.html не создается\n"
+        " graph_ifc.json — предназначен для загрузки в Memgraph/Neo4j и дальнейшего анализа\n"
+        " В качестве тестовых данных можно использовать SampleHouse4.ifc файл (одноэтажный дом)"
+    )
+
+    # Use ttkbootstrap Messagebox (auto-themed)
+    from ttkbootstrap.dialogs import Messagebox
+    Messagebox.show_info(
+        title="Инструкция",
+        message=instructions,
+        width=700,
+        alert=False
+    )
+
+help_menu.add_command(label="Показать инструкцию", command=show_instructions)
+menubar.add_cascade(label="Инструкция", menu=help_menu)
+
 root.config(menu=menubar)
 
 ttk.Label(root, text="Конвертация IFC файла в JSON для графовой БД и схемы IFC-графа", font=("Segoe UI", 10, "bold")).pack(pady=6)
