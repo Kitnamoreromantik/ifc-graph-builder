@@ -1,0 +1,13 @@
+[project]
+name = "ifc-graph-builder"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "ifcopenshell>=0.8.3.post2",
+    "matplotlib>=3.10.7",
+    "networkx>=3.5",
+    "pyinstaller>=6.16.0",
+    "pyvis>=0.3.2",
+]

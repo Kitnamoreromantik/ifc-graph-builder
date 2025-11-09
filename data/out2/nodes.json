@@ -1,0 +1,359 @@
+[
+    {
+        "id": 2327,
+        "labels": [
+            "IfcWall"
+        ],
+        "type": "node",
+        "properties": {
+            "GlobalId": "3cUkl32yn9qRSPvBJVyWy4",
+            "Name": "Basic Wall:Wall-Ext_102Bwk-75Ins-100LBlk-12P:285459",
+            "ObjectType": "Basic Wall:Wall-Ext_102Bwk-75Ins-100LBlk-12P:45419",
+            "Tag": "285459",
+            "PredefinedType": "NOTDEFINED",
+            "Constraints": {
+                "Base_Offset": 0.0,
+                "Base_Constraint": "Level: Ground Floor",
+                "Base_Extension_Distance": 0.0,
+                "Base_is_Attached": false,
+                "Location_Line": "Wall Centerline",
+                "Related_to_Mass": false,
+                "Room_Bounding": true,
+                "Top_Extension_Distance": 0.0,
+                "Top_is_Attached": true,
+                "Top_Offset": 0.0,
+                "Unconnected_Height": 8000.0,
+                "id": 2336
+            },
+            "Dimensions": {
+                "Area": 17.9584901917951,
+                "Length": 9100.0,
+                "Volume": 5.23393063112682,
+                "id": 2343
+            },
+            "Other": {
+                "Category": "Walls",
+                "Family": "Basic Wall: Wall-Ext_102Bwk-75Ins-100LBlk-12P",
+                "Family_and_Type": "Basic Wall: Wall-Ext_102Bwk-75Ins-100LBlk-12P",
+                "Type": "Basic Wall: Wall-Ext_102Bwk-75Ins-100LBlk-12P",
+                "Type_Id": "Basic Wall: Wall-Ext_102Bwk-75Ins-100LBlk-12P",
+                "id": 2351
+            },
+            "Phasing": {
+                "Phase_Created": "New Construction",
+                "id": 2356
+            },
+            "Structural": {
+                "Enable_Analytical_Model": false,
+                "Structural": false,
+                "Structural_Usage": "Non-bearing",
+                "id": 2361
+            },
+            "Pset_WallCommon": {
+                "Reference": "Wall-Ext_102Bwk-75Ins-100LBlk-12P",
+                "LoadBearing": false,
+                "ExtendToStructure": true,
+                "IsExternal": true,
+                "ThermalTransmittance": 0.235926059936681,
+                "id": 2367
+            }
+        }
+    },
+    {
+        "id": 42,
+        "labels": [
+            "IfcOwnerHistory"
+        ],
+        "type": "node",
+        "properties": {
+            "ChangeAction": "NOCHANGE",
+            "CreationDate": 1418982422
+        }
+    },
+    {
+        "id": 39,
+        "labels": [
+            "IfcPersonAndOrganization"
+        ],
+        "type": "node",
+        "properties": {}
+    },
+    {
+        "id": 5,
+        "labels": [
+            "IfcApplication"
+        ],
+        "type": "node",
+        "properties": {
+            "Version": "2015",
+            "ApplicationFullName": "Autodesk Revit 2015 (ENU)",
+            "ApplicationIdentifier": "Revit"
+        }
+    },
+    {
+        "id": 1801,
+        "labels": [
+            "IfcLocalPlacement"
+        ],
+        "type": "node",
+        "properties": {}
+    },
+    {
+        "id": 129,
+        "labels": [
+            "IfcLocalPlacement"
+        ],
+        "type": "node",
+        "properties": {}
+    },
+    {
+        "id": 1800,
+        "labels": [
+            "IfcAxis2Placement3D"
+        ],
+        "type": "node",
+        "properties": {}
+    },
+    {
+        "id": 2323,
+        "labels": [
+            "IfcProductDefinitionShape"
+        ],
+        "type": "node",
+        "properties": {}
+    },
+    {
+        "id": 1806,
+        "labels": [
+            "IfcShapeRepresentation"
+        ],
+        "type": "node",
+        "properties": {
+            "RepresentationIdentifier": "Axis",
+            "RepresentationType": "Curve2D"
+        }
+    },
+    {
+        "id": 2321,
+        "labels": [
+            "IfcShapeRepresentation"
+        ],
+        "type": "node",
+        "properties": {
+            "RepresentationIdentifier": "Body",
+            "RepresentationType": "Brep"
+        }
+    },
+    {
+        "id": 1752,
+        "labels": [
+            "IfcWall"
+        ],
+        "type": "node",
+        "properties": {
+            "GlobalId": "3cUkl32yn9qRSPvBJVyWx4",
+            "Name": "Basic Wall:Wall-Ext_102Bwk-75Ins-100LBlk-12P:285395",
+            "ObjectType": "Basic Wall:Wall-Ext_102Bwk-75Ins-100LBlk-12P:45419",
+            "Tag": "285395",
+            "PredefinedType": "NOTDEFINED",
+            "Constraints": {
+                "Base_Offset": 0.0,
+                "Base_Constraint": "Level: Ground Floor",
+                "Base_Extension_Distance": 0.0,
+                "Base_is_Attached": false,
+                "Location_Line": "Wall Centerline",
+                "Related_to_Mass": false,
+                "Room_Bounding": true,
+                "Top_Extension_Distance": 0.0,
+                "Top_is_Attached": true,
+                "Top_Offset": 0.0,
+                "Unconnected_Height": 8000.0,
+                "id": 1761
+            },
+            "Dimensions": {
+                "Area": 17.9995085686486,
+                "Length": 5800.0,
+                "Volume": 5.11547042910549,
+                "id": 1768
+            },
+            "Other": {
+                "Category": "Walls",
+                "Family": "Basic Wall: Wall-Ext_102Bwk-75Ins-100LBlk-12P",
+                "Family_and_Type": "Basic Wall: Wall-Ext_102Bwk-75Ins-100LBlk-12P",
+                "Type": "Basic Wall: Wall-Ext_102Bwk-75Ins-100LBlk-12P",
+                "Type_Id": "Basic Wall: Wall-Ext_102Bwk-75Ins-100LBlk-12P",
+                "id": 1776
+            },
+            "Phasing": {
+                "Phase_Created": "New Construction",
+                "id": 1781
+            },
+            "Structural": {
+                "Enable_Analytical_Model": false,
+                "Structural": false,
+                "Structural_Usage": "Non-bearing",
+                "id": 1786
+            },
+            "Pset_WallCommon": {
+                "Reference": "Wall-Ext_102Bwk-75Ins-100LBlk-12P",
+                "LoadBearing": false,
+                "ExtendToStructure": true,
+                "IsExternal": true,
+                "ThermalTransmittance": 0.235926059936681,
+                "id": 1792
+            }
+        }
+    },
+    {
+        "id": 1456,
+        "labels": [
+            "IfcLocalPlacement"
+        ],
+        "type": "node",
+        "properties": {}
+    },
+    {
+        "id": 1455,
+        "labels": [
+            "IfcAxis2Placement3D"
+        ],
+        "type": "node",
+        "properties": {}
+    },
+    {
+        "id": 1748,
+        "labels": [
+            "IfcProductDefinitionShape"
+        ],
+        "type": "node",
+        "properties": {}
+    },
+    {
+        "id": 1461,
+        "labels": [
+            "IfcShapeRepresentation"
+        ],
+        "type": "node",
+        "properties": {
+            "RepresentationIdentifier": "Axis",
+            "RepresentationType": "Curve2D"
+        }
+    },
+    {
+        "id": 1746,
+        "labels": [
+            "IfcShapeRepresentation"
+        ],
+        "type": "node",
+        "properties": {
+            "RepresentationIdentifier": "Body",
+            "RepresentationType": "Brep"
+        }
+    },
+    {
+        "id": 1229,
+        "labels": [
+            "IfcWall"
+        ],
+        "type": "node",
+        "properties": {
+            "GlobalId": "3cUkl32yn9qRSPvBJVyWw5",
+            "Name": "Basic Wall:Wall-Ext_102Bwk-75Ins-100LBlk-12P:285330",
+            "ObjectType": "Basic Wall:Wall-Ext_102Bwk-75Ins-100LBlk-12P:45419",
+            "Tag": "285330",
+            "PredefinedType": "NOTDEFINED",
+            "Constraints": {
+                "Base_Offset": 0.0,
+                "Base_Constraint": "Level: Ground Floor",
+                "Base_Extension_Distance": 0.0,
+                "Base_is_Attached": false,
+                "Location_Line": "Wall Centerline",
+                "Related_to_Mass": false,
+                "Room_Bounding": true,
+                "Top_Extension_Distance": 0.0,
+                "Top_is_Attached": true,
+                "Top_Offset": 0.0,
+                "Unconnected_Height": 8000.0,
+                "id": 1351
+            },
+            "Dimensions": {
+                "Area": 26.4828947113889,
+                "Length": 14000.0,
+                "Volume": 7.69014560122734,
+                "id": 1367
+            },
+            "Other": {
+                "Category": "Walls",
+                "Family": "Basic Wall: Wall-Ext_102Bwk-75Ins-100LBlk-12P",
+                "Family_and_Type": "Basic Wall: Wall-Ext_102Bwk-75Ins-100LBlk-12P",
+                "Type": "Basic Wall: Wall-Ext_102Bwk-75Ins-100LBlk-12P",
+                "Type_Id": "Basic Wall: Wall-Ext_102Bwk-75Ins-100LBlk-12P",
+                "id": 1375
+            },
+            "Phasing": {
+                "Phase_Created": "New Construction",
+                "id": 1385
+            },
+            "Structural": {
+                "Enable_Analytical_Model": false,
+                "Structural": false,
+                "Structural_Usage": "Non-bearing",
+                "id": 1391
+            },
+            "Pset_WallCommon": {
+                "Reference": "Wall-Ext_102Bwk-75Ins-100LBlk-12P",
+                "LoadBearing": false,
+                "ExtendToStructure": true,
+                "IsExternal": true,
+                "ThermalTransmittance": 0.235926059936681,
+                "id": 1440
+            }
+        }
+    },
+    {
+        "id": 621,
+        "labels": [
+            "IfcLocalPlacement"
+        ],
+        "type": "node",
+        "properties": {}
+    },
+    {
+        "id": 620,
+        "labels": [
+            "IfcAxis2Placement3D"
+        ],
+        "type": "node",
+        "properties": {}
+    },
+    {
+        "id": 1225,
+        "labels": [
+            "IfcProductDefinitionShape"
+        ],
+        "type": "node",
+        "properties": {}
+    },
+    {
+        "id": 626,
+        "labels": [
+            "IfcShapeRepresentation"
+        ],
+        "type": "node",
+        "properties": {
+            "RepresentationIdentifier": "Axis",
+            "RepresentationType": "Curve2D"
+        }
+    },
+    {
+        "id": 1223,
+        "labels": [
+            "IfcShapeRepresentation"
+        ],
+        "type": "node",
+        "properties": {
+            "RepresentationIdentifier": "Body",
+            "RepresentationType": "Brep"
+        }
+    }
+]

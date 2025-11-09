@@ -1,0 +1,255 @@
+[
+    {
+        "start": 2327,
+        "end": 42,
+        "id": 5877033721704973438,
+        "label": "OWNERHISTORY",
+        "type": "relationship",
+        "properties": {
+            "start_entity_type": "IfcWall",
+            "target_entity_type": "IfcOwnerHistory"
+        }
+    },
+    {
+        "start": 2327,
+        "end": 1801,
+        "id": 1147402008697859768,
+        "label": "OBJECTPLACEMENT",
+        "type": "relationship",
+        "properties": {
+            "start_entity_type": "IfcWall",
+            "target_entity_type": "IfcLocalPlacement"
+        }
+    },
+    {
+        "start": 2327,
+        "end": 2323,
+        "id": 9054524460673915582,
+        "label": "REPRESENTATION",
+        "type": "relationship",
+        "properties": {
+            "start_entity_type": "IfcWall",
+            "target_entity_type": "IfcProductDefinitionShape"
+        }
+    },
+    {
+        "start": 42,
+        "end": 39,
+        "id": 318791013265789352,
+        "label": "OWNINGUSER",
+        "type": "relationship",
+        "properties": {
+            "start_entity_type": "IfcOwnerHistory",
+            "target_entity_type": "IfcPersonAndOrganization"
+        }
+    },
+    {
+        "start": 42,
+        "end": 5,
+        "id": 8382451912262734230,
+        "label": "OWNINGAPPLICATION",
+        "type": "relationship",
+        "properties": {
+            "start_entity_type": "IfcOwnerHistory",
+            "target_entity_type": "IfcApplication"
+        }
+    },
+    {
+        "start": 42,
+        "end": 1752,
+        "id": 103023140213863240,
+        "label": "OWNERHISTORY",
+        "type": "relationship",
+        "properties": {
+            "start_entity_type": "IfcWall",
+            "target_entity_type": "IfcOwnerHistory"
+        }
+    },
+    {
+        "start": 42,
+        "end": 1229,
+        "id": 1232677963256658419,
+        "label": "OWNERHISTORY",
+        "type": "relationship",
+        "properties": {
+            "start_entity_type": "IfcWall",
+            "target_entity_type": "IfcOwnerHistory"
+        }
+    },
+    {
+        "start": 1801,
+        "end": 129,
+        "id": 3931867369336627383,
+        "label": "PLACEMENTRELTO",
+        "type": "relationship",
+        "properties": {
+            "start_entity_type": "IfcLocalPlacement",
+            "target_entity_type": "IfcLocalPlacement"
+        }
+    },
+    {
+        "start": 1801,
+        "end": 1800,
+        "id": 3141658193044538225,
+        "label": "RELATIVEPLACEMENT",
+        "type": "relationship",
+        "properties": {
+            "start_entity_type": "IfcLocalPlacement",
+            "target_entity_type": "IfcAxis2Placement3D"
+        }
+    },
+    {
+        "start": 129,
+        "end": 1456,
+        "id": 4329486980717263193,
+        "label": "PLACEMENTRELTO",
+        "type": "relationship",
+        "properties": {
+            "start_entity_type": "IfcLocalPlacement",
+            "target_entity_type": "IfcLocalPlacement"
+        }
+    },
+    {
+        "start": 129,
+        "end": 621,
+        "id": 6405647004209175308,
+        "label": "PLACEMENTRELTO",
+        "type": "relationship",
+        "properties": {
+            "start_entity_type": "IfcLocalPlacement",
+            "target_entity_type": "IfcLocalPlacement"
+        }
+    },
+    {
+        "start": 2323,
+        "end": 1806,
+        "id": 4912295320844514029,
+        "label": "REPRESENTATIONS",
+        "type": "relationship",
+        "properties": {
+            "start_entity_type": "IfcProductDefinitionShape",
+            "target_entity_type": "IfcShapeRepresentation"
+        }
+    },
+    {
+        "start": 2323,
+        "end": 2321,
+        "id": 3428749019153362177,
+        "label": "REPRESENTATIONS",
+        "type": "relationship",
+        "properties": {
+            "start_entity_type": "IfcProductDefinitionShape",
+            "target_entity_type": "IfcShapeRepresentation"
+        }
+    },
+    {
+        "start": 1752,
+        "end": 1456,
+        "id": 7760001930055847797,
+        "label": "OBJECTPLACEMENT",
+        "type": "relationship",
+        "properties": {
+            "start_entity_type": "IfcWall",
+            "target_entity_type": "IfcLocalPlacement"
+        }
+    },
+    {
+        "start": 1752,
+        "end": 1748,
+        "id": 8572262565696498006,
+        "label": "REPRESENTATION",
+        "type": "relationship",
+        "properties": {
+            "start_entity_type": "IfcWall",
+            "target_entity_type": "IfcProductDefinitionShape"
+        }
+    },
+    {
+        "start": 1456,
+        "end": 1455,
+        "id": 3431302193426848089,
+        "label": "RELATIVEPLACEMENT",
+        "type": "relationship",
+        "properties": {
+            "start_entity_type": "IfcLocalPlacement",
+            "target_entity_type": "IfcAxis2Placement3D"
+        }
+    },
+    {
+        "start": 1748,
+        "end": 1461,
+        "id": 2614397442714020373,
+        "label": "REPRESENTATIONS",
+        "type": "relationship",
+        "properties": {
+            "start_entity_type": "IfcProductDefinitionShape",
+            "target_entity_type": "IfcShapeRepresentation"
+        }
+    },
+    {
+        "start": 1748,
+        "end": 1746,
+        "id": 71159083613250364,
+        "label": "REPRESENTATIONS",
+        "type": "relationship",
+        "properties": {
+            "start_entity_type": "IfcProductDefinitionShape",
+            "target_entity_type": "IfcShapeRepresentation"
+        }
+    },
+    {
+        "start": 1229,
+        "end": 621,
+        "id": 2642047207259831612,
+        "label": "OBJECTPLACEMENT",
+        "type": "relationship",
+        "properties": {
+            "start_entity_type": "IfcWall",
+            "target_entity_type": "IfcLocalPlacement"
+        }
+    },
+    {
+        "start": 1229,
+        "end": 1225,
+        "id": 7415604315630143585,
+        "label": "REPRESENTATION",
+        "type": "relationship",
+        "properties": {
+            "start_entity_type": "IfcWall",
+            "target_entity_type": "IfcProductDefinitionShape"
+        }
+    },
+    {
+        "start": 621,
+        "end": 620,
+        "id": 47629209631347784,
+        "label": "RELATIVEPLACEMENT",
+        "type": "relationship",
+        "properties": {
+            "start_entity_type": "IfcLocalPlacement",
+            "target_entity_type": "IfcAxis2Placement3D"
+        }
+    },
+    {
+        "start": 1225,
+        "end": 626,
+        "id": 5831772618926429283,
+        "label": "REPRESENTATIONS",
+        "type": "relationship",
+        "properties": {
+            "start_entity_type": "IfcProductDefinitionShape",
+            "target_entity_type": "IfcShapeRepresentation"
+        }
+    },
+    {
+        "start": 1225,
+        "end": 1223,
+        "id": 3386091251592047700,
+        "label": "REPRESENTATIONS",
+        "type": "relationship",
+        "properties": {
+            "start_entity_type": "IfcProductDefinitionShape",
+            "target_entity_type": "IfcShapeRepresentation"
+        }
+    }
+]

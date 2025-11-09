@@ -17,70 +17,43 @@ import utils_visualize_graph
 from collections import defaultdict
 import random
 import json
+import sys
 
-IFC_PATH = Path("data/SampleHouse4.ifc")
+# --- CLI arguments from GUI ---
+if len(sys.argv) > 1:
+    IFC_PATH = Path(sys.argv[1])
+    OUTPUT_DIR = Path(sys.argv[2]) if len(sys.argv) > 2 else Path("data/out")
+    if len(sys.argv) > 3:
+        arg_depth = sys.argv[3]
+        MAX_PARSE_RECURSION_DEPTH = None if arg_depth.lower() == "none" else int(arg_depth)
+    else:
+        MAX_PARSE_RECURSION_DEPTH = 1
+else:
+    IFC_PATH = Path("data/SampleHouse4.ifc")
+    OUTPUT_DIR = Path("data/out")
+    MAX_PARSE_RECURSION_DEPTH = 1
+
+   
+ALLOWED_TYPES_PATH = Path("allowed_ifc_types.json")
+if ALLOWED_TYPES_PATH.exists():
+    with open(ALLOWED_TYPES_PATH, "r", encoding="utf-8") as f:
+        ALLOWED_IFC_TYPES = set(json.load(f))
+    IS_FILTERED = True
+else:
+    IS_FILTERED = False
+    logging.warning("⚠️ allowed_ifc_types.json not found — parsing all entities.")
+
+# IFC_PATH = Path("data/SampleHouse4.ifc")
 # IFC_PATH = Path("data/SmallModelIfc2x3.ifc")
-OUTPUT_DIR = Path("data/out") / datetime.now().strftime("%Y%m%d_%H%M%S")
+# OUTPUT_DIR = Path("data/out") / datetime.now().strftime("%Y%m%d_%H%M%S")
 NODES_PATH = OUTPUT_DIR / "nodes.json"
 EDGES_PATH = OUTPUT_DIR / "edges.json"
-MERGED_PATH = OUTPUT_DIR / (datetime.now().strftime("%m%d_%H%M%S") + "_ifc.json")  # to distinguis different json files on memgraph
+MERGED_PATH = OUTPUT_DIR / "graph_ifc.json"  # to distinguis different json files on memgraph
 
 NODES_LIMIT = None  # None or integer to limit number of parsed host IFC entities in order to save memory
-MAX_PARSE_RECURSION_DEPTH = None  # None or integer to limit the related entities parsing recursion depth
+# MAX_PARSE_RECURSION_DEPTH = 1  # None or integer to limit the related entities parsing recursion depth
 
-IS_FILTERED = False
-ALLOWED_IFC_TYPES = {
-    # Core
-    "IfcSpace",
-
-    # Geometry and Placement
-    # "IfcLocalPlacement",
-    # "IfcAxis2Placement3D",
-    # "IfcDirection",
-    # "IfcCartesianPoint",
-    # "IfcProductDefinitionShape",
-    # "IfcShapeRepresentation",
-
-    # Property Sets and Quantities
-
-    # These psets can be ignored since we call ifcopenshell.util.element.get_psets():
-    # "IfcPropertySet",
-    # "IfcPropertySingleValue",
-    # "IfcRelDefinesByProperties",
-
-    "IfcElementQuantity",
-    "IfcQuantityArea",
-    "IfcQuantityVolume",
-    "IfcQuantityLength",
-    
-    # Contained Elements
-    "IfcFurnishingElement",
-    "IfcSystemFurnitureElement",
-    "IfcDistributionElement",
-    "IfcCovering",
-
-    # Spatial Hierarchy
-    "IfcBuildingStorey",
-    "IfcZone",
-    "IfcRelAggregates",
-    "IfcRelContainedInSpatialStructure",
-
-    # Boundaries and Openings
-    "IfcRelSpaceBoundary",
-    "IfcWall",
-    "IfcWallStandardCase",
-    "IfcDoor",
-    "IfcWindow",
-    "IfcOpeningElement",
-
-    # Classification and Typing
-    "IfcRelAssociatesClassification",
-    "IfcClassificationReference",
-    "IfcRelDefinesByType"
-}
-# TODO: Add MVD (?) to smartly parse a projection of the IFC schema 
-# related to the current task for more reasonable filtering.
-# Maybe in the future, give a LLM-coder the ability to decide about filtering parameters.
+# IS_FILTERED = False
 
 logger = logging.getLogger(__name__)
 logging.basicConfig(level=logging.INFO, format="[%(levelname)s] %(message)s")
@@ -177,8 +150,6 @@ def parse_ifc_nodes_schema(G, max_examples=1):
         f.write("\n".join(node_lines))
 
     return node_txt_path
-
-
 
 
 def _is_entity_or_collection_of_entites(v):
@@ -338,6 +309,10 @@ def is_fully_connected(G):
 
 def main():
     logger.info(f"Loading IFC file: {IFC_PATH}")
+    if IS_FILTERED:
+        logger.info(f"Filtering enabled — {len(ALLOWED_IFC_TYPES)} IFC types loaded from allowed_ifc_types.json")
+    else:
+        logger.info("Filtering disabled — all IFC entities will be parsed")
     G = build_ifc_graph(IFC_PATH)
     logger.info(f"IFC graph is built with {G.number_of_nodes()} nodes and {G.number_of_edges()} edges")
     isolated_nodes = list(nx.isolates(G))

@@ -1,0 +1,127 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        
+            <script src="lib/bindings/utils.js"></script>
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/vis-network/9.1.2/dist/dist/vis-network.min.css" integrity="sha512-WgxfT5LWjfszlPHXRmBWHkV2eceiWTOBvrKCNbdgDYTHrT2AeLCGbF4sZlZw3UMN3WtL0tGUoIAKsu8mllg/XA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/vis-network/9.1.2/dist/vis-network.min.js" integrity="sha512-LnvoEWDFrqGHlHmDD2101OrLcbsfkrzoSpvtSQtxK3RMnRV0eOkhhBN2dXHKRrUU8p2DGRTk35n4O8nWSVe1mQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+            
+        
+<center>
+<h1></h1>
+</center>
+
+<!-- <link rel="stylesheet" href="../node_modules/vis/dist/vis.min.css" type="text/css" />
+<script type="text/javascript" src="../node_modules/vis/dist/vis.js"> </script>-->
+        <link
+          href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css"
+          rel="stylesheet"
+          integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6"
+          crossorigin="anonymous"
+        />
+        <script
+          src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
+          integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
+          crossorigin="anonymous"
+        ></script>
+
+
+        <center>
+          <h1></h1>
+        </center>
+        <style type="text/css">
+
+             #mynetwork {
+                 width: 100%;
+                 height: 800px;
+                 background-color: #ffffff;
+                 border: 1px solid lightgray;
+                 position: relative;
+                 float: left;
+             }
+
+             
+
+             
+
+             
+        </style>
+    </head>
+
+
+    <body>
+        <div class="card" style="width: 100%">
+            
+            
+            <div id="mynetwork" class="card-body"></div>
+        </div>
+
+        
+        
+
+        <script type="text/javascript">
+
+              // initialize global variables.
+              var edges;
+              var nodes;
+              var allNodes;
+              var allEdges;
+              var nodeColors;
+              var originalNodes;
+              var network;
+              var container;
+              var options, data;
+              var filter = {
+                  item : '',
+                  property : '',
+                  value : []
+              };
+
+              
+
+              
+
+              // This method is responsible for drawing the graph, returns the drawn network
+              function drawGraph() {
+                  var container = document.getElementById('mynetwork');
+
+                  
+
+                  // parsing and collecting nodes and edges from the python
+                  nodes = new vis.DataSet([{"color": "#1f77b4", "font": {"multi": true, "size": 10}, "id": 2327, "label": "#2327\nIfcWall", "shape": "dot", "size": 10, "title": "GlobalId: 3cUkl32yn9qRSPvBJVyWy4\nName: Basic Wall:Wall-Ext_102Bwk-75Ins-100LBlk-12P:285459\nObjectType: Basic Wall:Wall-Ext_102Bwk-75Ins-100LBlk-12P:45419\nTag: 285459\nPredefinedType: NOTDEFINED\nConstraints: {\u0027Base_Offset\u0027: 0.0, \u0027Base_Constraint\u0027: \u0027Level: Ground Floor\u0027, \u0027Base_Extension_Distance\u0027: 0.0, \u0027Base_is_Attached\u0027: False, \u0027Location_Line\u0027: \u0027Wall Centerline\u0027, \u0027Related_to_Mass\u0027: False, \u0027Room_Bounding\u0027: True, \u0027Top_Extension_Distance\u0027: 0.0, \u0027Top_is_Attached\u0027: True, \u0027Top_Offset\u0027: 0.0, \u0027Unconnected_Height\u0027: 8000.0, \u0027id\u0027: 2336}\nDimensions: {\u0027Area\u0027: 17.9584901917951, \u0027Length\u0027: 9100.0, \u0027Volume\u0027: 5.23393063112682, \u0027id\u0027: 2343}\nOther: {\u0027Category\u0027: \u0027Walls\u0027, \u0027Family\u0027: \u0027Basic Wall: Wall-Ext_102Bwk-75Ins-100LBlk-12P\u0027, \u0027Family_and_Type\u0027: \u0027Basic Wall: Wall-Ext_102Bwk-75Ins-100LBlk-12P\u0027, \u0027Type\u0027: \u0027Basic Wall: Wall-Ext_102Bwk-75Ins-100LBlk-12P\u0027, \u0027Type_Id\u0027: \u0027Basic Wall: Wall-Ext_102Bwk-75Ins-100LBlk-12P\u0027, \u0027id\u0027: 2351}\nPhasing: {\u0027Phase_Created\u0027: \u0027New Construction\u0027, \u0027id\u0027: 2356}\nStructural: {\u0027Enable_Analytical_Model\u0027: False, \u0027Structural\u0027: False, \u0027Structural_Usage\u0027: \u0027Non-bearing\u0027, \u0027id\u0027: 2361}\nPset_WallCommon: {\u0027Reference\u0027: \u0027Wall-Ext_102Bwk-75Ins-100LBlk-12P\u0027, \u0027LoadBearing\u0027: False, \u0027ExtendToStructure\u0027: True, \u0027IsExternal\u0027: True, \u0027ThermalTransmittance\u0027: 0.235926059936681, \u0027id\u0027: 2367}\nlabels: [\u0027IfcWall\u0027]"}, {"color": "#ff7f0e", "font": {"multi": true, "size": 10}, "id": 42, "label": "#42\nIfcOwnerHistory", "shape": "dot", "size": 10, "title": "ChangeAction: NOCHANGE\nCreationDate: 1418982422\nlabels: [\u0027IfcOwnerHistory\u0027]"}, {"color": "#2ca02c", "font": {"multi": true, "size": 10}, "id": 39, "label": "#39\nIfcPersonAndOrganization", "shape": "dot", "size": 10, "title": "labels: [\u0027IfcPersonAndOrganization\u0027]"}, {"color": "#d62728", "font": {"multi": true, "size": 10}, "id": 5, "label": "#5\nIfcApplication", "shape": "dot", "size": 10, "title": "Version: 2015\nApplicationFullName: Autodesk Revit 2015 (ENU)\nApplicationIdentifier: Revit\nlabels: [\u0027IfcApplication\u0027]"}, {"color": "#9467bd", "font": {"multi": true, "size": 10}, "id": 1801, "label": "#1801\nIfcLocalPlacement", "shape": "dot", "size": 10, "title": "labels: [\u0027IfcLocalPlacement\u0027]"}, {"color": "#9467bd", "font": {"multi": true, "size": 10}, "id": 129, "label": "#129\nIfcLocalPlacement", "shape": "dot", "size": 10, "title": "labels: [\u0027IfcLocalPlacement\u0027]"}, {"color": "#8c564b", "font": {"multi": true, "size": 10}, "id": 1800, "label": "#1800\nIfcAxis2Placement3D", "shape": "dot", "size": 10, "title": "labels: [\u0027IfcAxis2Placement3D\u0027]"}, {"color": "#e377c2", "font": {"multi": true, "size": 10}, "id": 2323, "label": "#2323\nIfcProductDefinitionShape", "shape": "dot", "size": 10, "title": "labels: [\u0027IfcProductDefinitionShape\u0027]"}, {"color": "#7f7f7f", "font": {"multi": true, "size": 10}, "id": 1806, "label": "#1806\nIfcShapeRepresentation", "shape": "dot", "size": 10, "title": "RepresentationIdentifier: Axis\nRepresentationType: Curve2D\nlabels: [\u0027IfcShapeRepresentation\u0027]"}, {"color": "#7f7f7f", "font": {"multi": true, "size": 10}, "id": 2321, "label": "#2321\nIfcShapeRepresentation", "shape": "dot", "size": 10, "title": "RepresentationIdentifier: Body\nRepresentationType: Brep\nlabels: [\u0027IfcShapeRepresentation\u0027]"}, {"color": "#1f77b4", "font": {"multi": true, "size": 10}, "id": 1752, "label": "#1752\nIfcWall", "shape": "dot", "size": 10, "title": "GlobalId: 3cUkl32yn9qRSPvBJVyWx4\nName: Basic Wall:Wall-Ext_102Bwk-75Ins-100LBlk-12P:285395\nObjectType: Basic Wall:Wall-Ext_102Bwk-75Ins-100LBlk-12P:45419\nTag: 285395\nPredefinedType: NOTDEFINED\nConstraints: {\u0027Base_Offset\u0027: 0.0, \u0027Base_Constraint\u0027: \u0027Level: Ground Floor\u0027, \u0027Base_Extension_Distance\u0027: 0.0, \u0027Base_is_Attached\u0027: False, \u0027Location_Line\u0027: \u0027Wall Centerline\u0027, \u0027Related_to_Mass\u0027: False, \u0027Room_Bounding\u0027: True, \u0027Top_Extension_Distance\u0027: 0.0, \u0027Top_is_Attached\u0027: True, \u0027Top_Offset\u0027: 0.0, \u0027Unconnected_Height\u0027: 8000.0, \u0027id\u0027: 1761}\nDimensions: {\u0027Area\u0027: 17.9995085686486, \u0027Length\u0027: 5800.0, \u0027Volume\u0027: 5.11547042910549, \u0027id\u0027: 1768}\nOther: {\u0027Category\u0027: \u0027Walls\u0027, \u0027Family\u0027: \u0027Basic Wall: Wall-Ext_102Bwk-75Ins-100LBlk-12P\u0027, \u0027Family_and_Type\u0027: \u0027Basic Wall: Wall-Ext_102Bwk-75Ins-100LBlk-12P\u0027, \u0027Type\u0027: \u0027Basic Wall: Wall-Ext_102Bwk-75Ins-100LBlk-12P\u0027, \u0027Type_Id\u0027: \u0027Basic Wall: Wall-Ext_102Bwk-75Ins-100LBlk-12P\u0027, \u0027id\u0027: 1776}\nPhasing: {\u0027Phase_Created\u0027: \u0027New Construction\u0027, \u0027id\u0027: 1781}\nStructural: {\u0027Enable_Analytical_Model\u0027: False, \u0027Structural\u0027: False, \u0027Structural_Usage\u0027: \u0027Non-bearing\u0027, \u0027id\u0027: 1786}\nPset_WallCommon: {\u0027Reference\u0027: \u0027Wall-Ext_102Bwk-75Ins-100LBlk-12P\u0027, \u0027LoadBearing\u0027: False, \u0027ExtendToStructure\u0027: True, \u0027IsExternal\u0027: True, \u0027ThermalTransmittance\u0027: 0.235926059936681, \u0027id\u0027: 1792}\nlabels: [\u0027IfcWall\u0027]"}, {"color": "#9467bd", "font": {"multi": true, "size": 10}, "id": 1456, "label": "#1456\nIfcLocalPlacement", "shape": "dot", "size": 10, "title": "labels: [\u0027IfcLocalPlacement\u0027]"}, {"color": "#8c564b", "font": {"multi": true, "size": 10}, "id": 1455, "label": "#1455\nIfcAxis2Placement3D", "shape": "dot", "size": 10, "title": "labels: [\u0027IfcAxis2Placement3D\u0027]"}, {"color": "#e377c2", "font": {"multi": true, "size": 10}, "id": 1748, "label": "#1748\nIfcProductDefinitionShape", "shape": "dot", "size": 10, "title": "labels: [\u0027IfcProductDefinitionShape\u0027]"}, {"color": "#7f7f7f", "font": {"multi": true, "size": 10}, "id": 1461, "label": "#1461\nIfcShapeRepresentation", "shape": "dot", "size": 10, "title": "RepresentationIdentifier: Axis\nRepresentationType: Curve2D\nlabels: [\u0027IfcShapeRepresentation\u0027]"}, {"color": "#7f7f7f", "font": {"multi": true, "size": 10}, "id": 1746, "label": "#1746\nIfcShapeRepresentation", "shape": "dot", "size": 10, "title": "RepresentationIdentifier: Body\nRepresentationType: Brep\nlabels: [\u0027IfcShapeRepresentation\u0027]"}, {"color": "#1f77b4", "font": {"multi": true, "size": 10}, "id": 1229, "label": "#1229\nIfcWall", "shape": "dot", "size": 10, "title": "GlobalId: 3cUkl32yn9qRSPvBJVyWw5\nName: Basic Wall:Wall-Ext_102Bwk-75Ins-100LBlk-12P:285330\nObjectType: Basic Wall:Wall-Ext_102Bwk-75Ins-100LBlk-12P:45419\nTag: 285330\nPredefinedType: NOTDEFINED\nConstraints: {\u0027Base_Offset\u0027: 0.0, \u0027Base_Constraint\u0027: \u0027Level: Ground Floor\u0027, \u0027Base_Extension_Distance\u0027: 0.0, \u0027Base_is_Attached\u0027: False, \u0027Location_Line\u0027: \u0027Wall Centerline\u0027, \u0027Related_to_Mass\u0027: False, \u0027Room_Bounding\u0027: True, \u0027Top_Extension_Distance\u0027: 0.0, \u0027Top_is_Attached\u0027: True, \u0027Top_Offset\u0027: 0.0, \u0027Unconnected_Height\u0027: 8000.0, \u0027id\u0027: 1351}\nDimensions: {\u0027Area\u0027: 26.4828947113889, \u0027Length\u0027: 14000.0, \u0027Volume\u0027: 7.69014560122734, \u0027id\u0027: 1367}\nOther: {\u0027Category\u0027: \u0027Walls\u0027, \u0027Family\u0027: \u0027Basic Wall: Wall-Ext_102Bwk-75Ins-100LBlk-12P\u0027, \u0027Family_and_Type\u0027: \u0027Basic Wall: Wall-Ext_102Bwk-75Ins-100LBlk-12P\u0027, \u0027Type\u0027: \u0027Basic Wall: Wall-Ext_102Bwk-75Ins-100LBlk-12P\u0027, \u0027Type_Id\u0027: \u0027Basic Wall: Wall-Ext_102Bwk-75Ins-100LBlk-12P\u0027, \u0027id\u0027: 1375}\nPhasing: {\u0027Phase_Created\u0027: \u0027New Construction\u0027, \u0027id\u0027: 1385}\nStructural: {\u0027Enable_Analytical_Model\u0027: False, \u0027Structural\u0027: False, \u0027Structural_Usage\u0027: \u0027Non-bearing\u0027, \u0027id\u0027: 1391}\nPset_WallCommon: {\u0027Reference\u0027: \u0027Wall-Ext_102Bwk-75Ins-100LBlk-12P\u0027, \u0027LoadBearing\u0027: False, \u0027ExtendToStructure\u0027: True, \u0027IsExternal\u0027: True, \u0027ThermalTransmittance\u0027: 0.235926059936681, \u0027id\u0027: 1440}\nlabels: [\u0027IfcWall\u0027]"}, {"color": "#9467bd", "font": {"multi": true, "size": 10}, "id": 621, "label": "#621\nIfcLocalPlacement", "shape": "dot", "size": 10, "title": "labels: [\u0027IfcLocalPlacement\u0027]"}, {"color": "#8c564b", "font": {"multi": true, "size": 10}, "id": 620, "label": "#620\nIfcAxis2Placement3D", "shape": "dot", "size": 10, "title": "labels: [\u0027IfcAxis2Placement3D\u0027]"}, {"color": "#e377c2", "font": {"multi": true, "size": 10}, "id": 1225, "label": "#1225\nIfcProductDefinitionShape", "shape": "dot", "size": 10, "title": "labels: [\u0027IfcProductDefinitionShape\u0027]"}, {"color": "#7f7f7f", "font": {"multi": true, "size": 10}, "id": 626, "label": "#626\nIfcShapeRepresentation", "shape": "dot", "size": 10, "title": "RepresentationIdentifier: Axis\nRepresentationType: Curve2D\nlabels: [\u0027IfcShapeRepresentation\u0027]"}, {"color": "#7f7f7f", "font": {"multi": true, "size": 10}, "id": 1223, "label": "#1223\nIfcShapeRepresentation", "shape": "dot", "size": 10, "title": "RepresentationIdentifier: Body\nRepresentationType: Brep\nlabels: [\u0027IfcShapeRepresentation\u0027]"}]);
+                  edges = new vis.DataSet([{"from": 2327, "label": "OWNERHISTORY", "title": "OWNERHISTORY", "to": 42}, {"from": 2327, "label": "OBJECTPLACEMENT", "title": "OBJECTPLACEMENT", "to": 1801}, {"from": 2327, "label": "REPRESENTATION", "title": "REPRESENTATION", "to": 2323}, {"from": 42, "label": "OWNINGUSER", "title": "OWNINGUSER", "to": 39}, {"from": 42, "label": "OWNINGAPPLICATION", "title": "OWNINGAPPLICATION", "to": 5}, {"from": 42, "label": "OWNERHISTORY", "title": "OWNERHISTORY", "to": 1752}, {"from": 42, "label": "OWNERHISTORY", "title": "OWNERHISTORY", "to": 1229}, {"from": 1801, "label": "PLACEMENTRELTO", "title": "PLACEMENTRELTO", "to": 129}, {"from": 1801, "label": "RELATIVEPLACEMENT", "title": "RELATIVEPLACEMENT", "to": 1800}, {"from": 129, "label": "PLACEMENTRELTO", "title": "PLACEMENTRELTO", "to": 1456}, {"from": 129, "label": "PLACEMENTRELTO", "title": "PLACEMENTRELTO", "to": 621}, {"from": 2323, "label": "REPRESENTATIONS", "title": "REPRESENTATIONS", "to": 1806}, {"from": 2323, "label": "REPRESENTATIONS", "title": "REPRESENTATIONS", "to": 2321}, {"from": 1752, "label": "OBJECTPLACEMENT", "title": "OBJECTPLACEMENT", "to": 1456}, {"from": 1752, "label": "REPRESENTATION", "title": "REPRESENTATION", "to": 1748}, {"from": 1456, "label": "RELATIVEPLACEMENT", "title": "RELATIVEPLACEMENT", "to": 1455}, {"from": 1748, "label": "REPRESENTATIONS", "title": "REPRESENTATIONS", "to": 1461}, {"from": 1748, "label": "REPRESENTATIONS", "title": "REPRESENTATIONS", "to": 1746}, {"from": 1229, "label": "OBJECTPLACEMENT", "title": "OBJECTPLACEMENT", "to": 621}, {"from": 1229, "label": "REPRESENTATION", "title": "REPRESENTATION", "to": 1225}, {"from": 621, "label": "RELATIVEPLACEMENT", "title": "RELATIVEPLACEMENT", "to": 620}, {"from": 1225, "label": "REPRESENTATIONS", "title": "REPRESENTATIONS", "to": 626}, {"from": 1225, "label": "REPRESENTATIONS", "title": "REPRESENTATIONS", "to": 1223}]);
+
+                  nodeColors = {};
+                  allNodes = nodes.get({ returnType: "Object" });
+                  for (nodeId in allNodes) {
+                    nodeColors[nodeId] = allNodes[nodeId].color;
+                  }
+                  allEdges = edges.get({ returnType: "Object" });
+                  // adding nodes and edges to the graph
+                  data = {nodes: nodes, edges: edges};
+
+                  var options = {"layout": {"hierarchical": {"enabled": true, "direction": "LR", "sortMethod": "hubsize", "levelSeparation": 300, "nodeSpacing": 200}}, "physics": {"enabled": false}};
+
+                  
+
+
+                  
+
+                  network = new vis.Network(container, data, options);
+
+                  
+
+                  
+
+                  
+
+
+                  
+
+                  return network;
+
+              }
+              drawGraph();
+        </script>
+    </body>
+</html>

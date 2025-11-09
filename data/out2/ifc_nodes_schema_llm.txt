@@ -1,0 +1,64 @@
+Each node type includes properties hierarchy divided by '.' and sampled examples of each property values.
+
+Node Type: IfcApplication
+Properties:
+	.ApplicationFullName: Autodesk Revit 2015 (ENU)
+	.ApplicationIdentifier: Revit
+	.Version: 2015
+
+Node Type: IfcOwnerHistory
+Properties:
+	.ChangeAction: NOCHANGE
+	.CreationDate: 1418982422
+
+Node Type: IfcShapeRepresentation
+Properties:
+	.RepresentationIdentifier: Body
+	.RepresentationType: Brep
+
+Node Type: IfcWall
+Properties:
+	.Constraints
+		.Base_Constraint: Level: Ground Floor
+		.Base_Extension_Distance: 0.0
+		.Base_Offset: 0.0
+		.Base_is_Attached: False
+		.Location_Line: Wall Centerline
+		.Related_to_Mass: False
+		.Room_Bounding: True
+		.Top_Extension_Distance: 0.0
+		.Top_Offset: 0.0
+		.Top_is_Attached: True
+		.Unconnected_Height: 8000.0
+		.id: 1351
+	.Dimensions
+		.Area: 26.48
+		.Length: 14000.0
+		.Volume: 7.69
+		.id: 2343
+	.Name: Basic Wall:Wall-Ext_102Bwk-75Ins-100LBlk-12P:285459
+	.ObjectType: Basic Wall:Wall-Ext_102Bwk-75Ins-100LBlk-12P:45419
+	.Other
+		.Category: Walls
+		.Family: Basic Wall: Wall-Ext_102Bwk-75Ins-100LBlk-12P
+		.Family_and_Type: Basic Wall: Wall-Ext_102Bwk-75Ins-100LBlk-12P
+		.Type: Basic Wall: Wall-Ext_102Bwk-75Ins-100LBlk-12P
+		.Type_Id: Basic Wall: Wall-Ext_102Bwk-75Ins-100LBlk-12P
+		.id: 1776
+	.Phasing
+		.Phase_Created: New Construction
+		.id: 2356
+	.PredefinedType: NOTDEFINED
+	.Pset_WallCommon
+		.ExtendToStructure: True
+		.IsExternal: True
+		.LoadBearing: False
+		.Reference: Wall-Ext_102Bwk-75Ins-100LBlk-12P
+		.ThermalTransmittance: 0.24
+		.id: 1440
+	.Structural
+		.Enable_Analytical_Model: False
+		.Structural: False
+		.Structural_Usage: Non-bearing
+		.id: 2361
+	.Tag: 285330

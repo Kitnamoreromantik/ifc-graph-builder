@@ -1,0 +1,23 @@
+Type: OBJECTPLACEMENT
+  - (:IfcWall)-[:OBJECTPLACEMENT]->(:IfcLocalPlacement)
+
+Type: OWNERHISTORY
+  - (:IfcWall)-[:OWNERHISTORY]->(:IfcOwnerHistory)
+
+Type: OWNINGAPPLICATION
+  - (:IfcOwnerHistory)-[:OWNINGAPPLICATION]->(:IfcApplication)
+
+Type: OWNINGUSER
+  - (:IfcOwnerHistory)-[:OWNINGUSER]->(:IfcPersonAndOrganization)
+
+Type: PLACEMENTRELTO
+  - (:IfcLocalPlacement)-[:PLACEMENTRELTO]->(:IfcLocalPlacement)
+
+Type: RELATIVEPLACEMENT
+  - (:IfcLocalPlacement)-[:RELATIVEPLACEMENT]->(:IfcAxis2Placement3D)
+
+Type: REPRESENTATION
+  - (:IfcWall)-[:REPRESENTATION]->(:IfcProductDefinitionShape)
+
+Type: REPRESENTATIONS
+  - (:IfcProductDefinitionShape)-[:REPRESENTATIONS]->(:IfcShapeRepresentation)

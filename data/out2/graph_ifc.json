@@ -1,0 +1,612 @@
+[
+  {
+    "id": 2327,
+    "labels": [
+      "IfcWall"
+    ],
+    "type": "node",
+    "properties": {
+      "GlobalId": "3cUkl32yn9qRSPvBJVyWy4",
+      "Name": "Basic Wall:Wall-Ext_102Bwk-75Ins-100LBlk-12P:285459",
+      "ObjectType": "Basic Wall:Wall-Ext_102Bwk-75Ins-100LBlk-12P:45419",
+      "Tag": "285459",
+      "PredefinedType": "NOTDEFINED",
+      "Constraints": {
+        "Base_Offset": 0.0,
+        "Base_Constraint": "Level: Ground Floor",
+        "Base_Extension_Distance": 0.0,
+        "Base_is_Attached": false,
+        "Location_Line": "Wall Centerline",
+        "Related_to_Mass": false,
+        "Room_Bounding": true,
+        "Top_Extension_Distance": 0.0,
+        "Top_is_Attached": true,
+        "Top_Offset": 0.0,
+        "Unconnected_Height": 8000.0,
+        "id": 2336
+      },
+      "Dimensions": {
+        "Area": 17.9584901917951,
+        "Length": 9100.0,
+        "Volume": 5.23393063112682,
+        "id": 2343
+      },
+      "Other": {
+        "Category": "Walls",
+        "Family": "Basic Wall: Wall-Ext_102Bwk-75Ins-100LBlk-12P",
+        "Family_and_Type": "Basic Wall: Wall-Ext_102Bwk-75Ins-100LBlk-12P",
+        "Type": "Basic Wall: Wall-Ext_102Bwk-75Ins-100LBlk-12P",
+        "Type_Id": "Basic Wall: Wall-Ext_102Bwk-75Ins-100LBlk-12P",
+        "id": 2351
+      },
+      "Phasing": {
+        "Phase_Created": "New Construction",
+        "id": 2356
+      },
+      "Structural": {
+        "Enable_Analytical_Model": false,
+        "Structural": false,
+        "Structural_Usage": "Non-bearing",
+        "id": 2361
+      },
+      "Pset_WallCommon": {
+        "Reference": "Wall-Ext_102Bwk-75Ins-100LBlk-12P",
+        "LoadBearing": false,
+        "ExtendToStructure": true,
+        "IsExternal": true,
+        "ThermalTransmittance": 0.235926059936681,
+        "id": 2367
+      }
+    }
+  },
+  {
+    "id": 42,
+    "labels": [
+      "IfcOwnerHistory"
+    ],
+    "type": "node",
+    "properties": {
+      "ChangeAction": "NOCHANGE",
+      "CreationDate": 1418982422
+    }
+  },
+  {
+    "id": 39,
+    "labels": [
+      "IfcPersonAndOrganization"
+    ],
+    "type": "node",
+    "properties": {}
+  },
+  {
+    "id": 5,
+    "labels": [
+      "IfcApplication"
+    ],
+    "type": "node",
+    "properties": {
+      "Version": "2015",
+      "ApplicationFullName": "Autodesk Revit 2015 (ENU)",
+      "ApplicationIdentifier": "Revit"
+    }
+  },
+  {
+    "id": 1801,
+    "labels": [
+      "IfcLocalPlacement"
+    ],
+    "type": "node",
+    "properties": {}
+  },
+  {
+    "id": 129,
+    "labels": [
+      "IfcLocalPlacement"
+    ],
+    "type": "node",
+    "properties": {}
+  },
+  {
+    "id": 1800,
+    "labels": [
+      "IfcAxis2Placement3D"
+    ],
+    "type": "node",
+    "properties": {}
+  },
+  {
+    "id": 2323,
+    "labels": [
+      "IfcProductDefinitionShape"
+    ],
+    "type": "node",
+    "properties": {}
+  },
+  {
+    "id": 1806,
+    "labels": [
+      "IfcShapeRepresentation"
+    ],
+    "type": "node",
+    "properties": {
+      "RepresentationIdentifier": "Axis",
+      "RepresentationType": "Curve2D"
+    }
+  },
+  {
+    "id": 2321,
+    "labels": [
+      "IfcShapeRepresentation"
+    ],
+    "type": "node",
+    "properties": {
+      "RepresentationIdentifier": "Body",
+      "RepresentationType": "Brep"
+    }
+  },
+  {
+    "id": 1752,
+    "labels": [
+      "IfcWall"
+    ],
+    "type": "node",
+    "properties": {
+      "GlobalId": "3cUkl32yn9qRSPvBJVyWx4",
+      "Name": "Basic Wall:Wall-Ext_102Bwk-75Ins-100LBlk-12P:285395",
+      "ObjectType": "Basic Wall:Wall-Ext_102Bwk-75Ins-100LBlk-12P:45419",
+      "Tag": "285395",
+      "PredefinedType": "NOTDEFINED",
+      "Constraints": {
+        "Base_Offset": 0.0,
+        "Base_Constraint": "Level: Ground Floor",
+        "Base_Extension_Distance": 0.0,
+        "Base_is_Attached": false,
+        "Location_Line": "Wall Centerline",
+        "Related_to_Mass": false,
+        "Room_Bounding": true,
+        "Top_Extension_Distance": 0.0,
+        "Top_is_Attached": true,
+        "Top_Offset": 0.0,
+        "Unconnected_Height": 8000.0,
+        "id": 1761
+      },
+      "Dimensions": {
+        "Area": 17.9995085686486,
+        "Length": 5800.0,
+        "Volume": 5.11547042910549,
+        "id": 1768
+      },
+      "Other": {
+        "Category": "Walls",
+        "Family": "Basic Wall: Wall-Ext_102Bwk-75Ins-100LBlk-12P",
+        "Family_and_Type": "Basic Wall: Wall-Ext_102Bwk-75Ins-100LBlk-12P",
+        "Type": "Basic Wall: Wall-Ext_102Bwk-75Ins-100LBlk-12P",
+        "Type_Id": "Basic Wall: Wall-Ext_102Bwk-75Ins-100LBlk-12P",
+        "id": 1776
+      },
+      "Phasing": {
+        "Phase_Created": "New Construction",
+        "id": 1781
+      },
+      "Structural": {
+        "Enable_Analytical_Model": false,
+        "Structural": false,
+        "Structural_Usage": "Non-bearing",
+        "id": 1786
+      },
+      "Pset_WallCommon": {
+        "Reference": "Wall-Ext_102Bwk-75Ins-100LBlk-12P",
+        "LoadBearing": false,
+        "ExtendToStructure": true,
+        "IsExternal": true,
+        "ThermalTransmittance": 0.235926059936681,
+        "id": 1792
+      }
+    }
+  },
+  {
+    "id": 1456,
+    "labels": [
+      "IfcLocalPlacement"
+    ],
+    "type": "node",
+    "properties": {}
+  },
+  {
+    "id": 1455,
+    "labels": [
+      "IfcAxis2Placement3D"
+    ],
+    "type": "node",
+    "properties": {}
+  },
+  {
+    "id": 1748,
+    "labels": [
+      "IfcProductDefinitionShape"
+    ],
+    "type": "node",
+    "properties": {}
+  },
+  {
+    "id": 1461,
+    "labels": [
+      "IfcShapeRepresentation"
+    ],
+    "type": "node",
+    "properties": {
+      "RepresentationIdentifier": "Axis",
+      "RepresentationType": "Curve2D"
+    }
+  },
+  {
+    "id": 1746,
+    "labels": [
+      "IfcShapeRepresentation"
+    ],
+    "type": "node",
+    "properties": {
+      "RepresentationIdentifier": "Body",
+      "RepresentationType": "Brep"
+    }
+  },
+  {
+    "id": 1229,
+    "labels": [
+      "IfcWall"
+    ],
+    "type": "node",
+    "properties": {
+      "GlobalId": "3cUkl32yn9qRSPvBJVyWw5",
+      "Name": "Basic Wall:Wall-Ext_102Bwk-75Ins-100LBlk-12P:285330",
+      "ObjectType": "Basic Wall:Wall-Ext_102Bwk-75Ins-100LBlk-12P:45419",
+      "Tag": "285330",
+      "PredefinedType": "NOTDEFINED",
+      "Constraints": {
+        "Base_Offset": 0.0,
+        "Base_Constraint": "Level: Ground Floor",
+        "Base_Extension_Distance": 0.0,
+        "Base_is_Attached": false,
+        "Location_Line": "Wall Centerline",
+        "Related_to_Mass": false,
+        "Room_Bounding": true,
+        "Top_Extension_Distance": 0.0,
+        "Top_is_Attached": true,
+        "Top_Offset": 0.0,
+        "Unconnected_Height": 8000.0,
+        "id": 1351
+      },
+      "Dimensions": {
+        "Area": 26.4828947113889,
+        "Length": 14000.0,
+        "Volume": 7.69014560122734,
+        "id": 1367
+      },
+      "Other": {
+        "Category": "Walls",
+        "Family": "Basic Wall: Wall-Ext_102Bwk-75Ins-100LBlk-12P",
+        "Family_and_Type": "Basic Wall: Wall-Ext_102Bwk-75Ins-100LBlk-12P",
+        "Type": "Basic Wall: Wall-Ext_102Bwk-75Ins-100LBlk-12P",
+        "Type_Id": "Basic Wall: Wall-Ext_102Bwk-75Ins-100LBlk-12P",
+        "id": 1375
+      },
+      "Phasing": {
+        "Phase_Created": "New Construction",
+        "id": 1385
+      },
+      "Structural": {
+        "Enable_Analytical_Model": false,
+        "Structural": false,
+        "Structural_Usage": "Non-bearing",
+        "id": 1391
+      },
+      "Pset_WallCommon": {
+        "Reference": "Wall-Ext_102Bwk-75Ins-100LBlk-12P",
+        "LoadBearing": false,
+        "ExtendToStructure": true,
+        "IsExternal": true,
+        "ThermalTransmittance": 0.235926059936681,
+        "id": 1440
+      }
+    }
+  },
+  {
+    "id": 621,
+    "labels": [
+      "IfcLocalPlacement"
+    ],
+    "type": "node",
+    "properties": {}
+  },
+  {
+    "id": 620,
+    "labels": [
+      "IfcAxis2Placement3D"
+    ],
+    "type": "node",
+    "properties": {}
+  },
+  {
+    "id": 1225,
+    "labels": [
+      "IfcProductDefinitionShape"
+    ],
+    "type": "node",
+    "properties": {}
+  },
+  {
+    "id": 626,
+    "labels": [
+      "IfcShapeRepresentation"
+    ],
+    "type": "node",
+    "properties": {
+      "RepresentationIdentifier": "Axis",
+      "RepresentationType": "Curve2D"
+    }
+  },
+  {
+    "id": 1223,
+    "labels": [
+      "IfcShapeRepresentation"
+    ],
+    "type": "node",
+    "properties": {
+      "RepresentationIdentifier": "Body",
+      "RepresentationType": "Brep"
+    }
+  },
+  {
+    "start": 2327,
+    "end": 42,
+    "id": 5877033721704973438,
+    "label": "OWNERHISTORY",
+    "type": "relationship",
+    "properties": {
+      "start_entity_type": "IfcWall",
+      "target_entity_type": "IfcOwnerHistory"
+    }
+  },
+  {
+    "start": 2327,
+    "end": 1801,
+    "id": 1147402008697859768,
+    "label": "OBJECTPLACEMENT",
+    "type": "relationship",
+    "properties": {
+      "start_entity_type": "IfcWall",
+      "target_entity_type": "IfcLocalPlacement"
+    }
+  },
+  {
+    "start": 2327,
+    "end": 2323,
+    "id": 9054524460673915582,
+    "label": "REPRESENTATION",
+    "type": "relationship",
+    "properties": {
+      "start_entity_type": "IfcWall",
+      "target_entity_type": "IfcProductDefinitionShape"
+    }
+  },
+  {
+    "start": 42,
+    "end": 39,
+    "id": 318791013265789352,
+    "label": "OWNINGUSER",
+    "type": "relationship",
+    "properties": {
+      "start_entity_type": "IfcOwnerHistory",
+      "target_entity_type": "IfcPersonAndOrganization"
+    }
+  },
+  {
+    "start": 42,
+    "end": 5,
+    "id": 8382451912262734230,
+    "label": "OWNINGAPPLICATION",
+    "type": "relationship",
+    "properties": {
+      "start_entity_type": "IfcOwnerHistory",
+      "target_entity_type": "IfcApplication"
+    }
+  },
+  {
+    "start": 42,
+    "end": 1752,
+    "id": 103023140213863240,
+    "label": "OWNERHISTORY",
+    "type": "relationship",
+    "properties": {
+      "start_entity_type": "IfcWall",
+      "target_entity_type": "IfcOwnerHistory"
+    }
+  },
+  {
+    "start": 42,
+    "end": 1229,
+    "id": 1232677963256658419,
+    "label": "OWNERHISTORY",
+    "type": "relationship",
+    "properties": {
+      "start_entity_type": "IfcWall",
+      "target_entity_type": "IfcOwnerHistory"
+    }
+  },
+  {
+    "start": 1801,
+    "end": 129,
+    "id": 3931867369336627383,
+    "label": "PLACEMENTRELTO",
+    "type": "relationship",
+    "properties": {
+      "start_entity_type": "IfcLocalPlacement",
+      "target_entity_type": "IfcLocalPlacement"
+    }
+  },
+  {
+    "start": 1801,
+    "end": 1800,
+    "id": 3141658193044538225,
+    "label": "RELATIVEPLACEMENT",
+    "type": "relationship",
+    "properties": {
+      "start_entity_type": "IfcLocalPlacement",
+      "target_entity_type": "IfcAxis2Placement3D"
+    }
+  },
+  {
+    "start": 129,
+    "end": 1456,
+    "id": 4329486980717263193,
+    "label": "PLACEMENTRELTO",
+    "type": "relationship",
+    "properties": {
+      "start_entity_type": "IfcLocalPlacement",
+      "target_entity_type": "IfcLocalPlacement"
+    }
+  },
+  {
+    "start": 129,
+    "end": 621,
+    "id": 6405647004209175308,
+    "label": "PLACEMENTRELTO",
+    "type": "relationship",
+    "properties": {
+      "start_entity_type": "IfcLocalPlacement",
+      "target_entity_type": "IfcLocalPlacement"
+    }
+  },
+  {
+    "start": 2323,
+    "end": 1806,
+    "id": 4912295320844514029,
+    "label": "REPRESENTATIONS",
+    "type": "relationship",
+    "properties": {
+      "start_entity_type": "IfcProductDefinitionShape",
+      "target_entity_type": "IfcShapeRepresentation"
+    }
+  },
+  {
+    "start": 2323,
+    "end": 2321,
+    "id": 3428749019153362177,
+    "label": "REPRESENTATIONS",
+    "type": "relationship",
+    "properties": {
+      "start_entity_type": "IfcProductDefinitionShape",
+      "target_entity_type": "IfcShapeRepresentation"
+    }
+  },
+  {
+    "start": 1752,
+    "end": 1456,
+    "id": 7760001930055847797,
+    "label": "OBJECTPLACEMENT",
+    "type": "relationship",
+    "properties": {
+      "start_entity_type": "IfcWall",
+      "target_entity_type": "IfcLocalPlacement"
+    }
+  },
+  {
+    "start": 1752,
+    "end": 1748,
+    "id": 8572262565696498006,
+    "label": "REPRESENTATION",
+    "type": "relationship",
+    "properties": {
+      "start_entity_type": "IfcWall",
+      "target_entity_type": "IfcProductDefinitionShape"
+    }
+  },
+  {
+    "start": 1456,
+    "end": 1455,
+    "id": 3431302193426848089,
+    "label": "RELATIVEPLACEMENT",
+    "type": "relationship",
+    "properties": {
+      "start_entity_type": "IfcLocalPlacement",
+      "target_entity_type": "IfcAxis2Placement3D"
+    }
+  },
+  {
+    "start": 1748,
+    "end": 1461,
+    "id": 2614397442714020373,
+    "label": "REPRESENTATIONS",
+    "type": "relationship",
+    "properties": {
+      "start_entity_type": "IfcProductDefinitionShape",
+      "target_entity_type": "IfcShapeRepresentation"
+    }
+  },
+  {
+    "start": 1748,
+    "end": 1746,
+    "id": 71159083613250364,
+    "label": "REPRESENTATIONS",
+    "type": "relationship",
+    "properties": {
+      "start_entity_type": "IfcProductDefinitionShape",
+      "target_entity_type": "IfcShapeRepresentation"
+    }
+  },
+  {
+    "start": 1229,
+    "end": 621,
+    "id": 2642047207259831612,
+    "label": "OBJECTPLACEMENT",
+    "type": "relationship",
+    "properties": {
+      "start_entity_type": "IfcWall",
+      "target_entity_type": "IfcLocalPlacement"
+    }
+  },
+  {
+    "start": 1229,
+    "end": 1225,
+    "id": 7415604315630143585,
+    "label": "REPRESENTATION",
+    "type": "relationship",
+    "properties": {
+      "start_entity_type": "IfcWall",
+      "target_entity_type": "IfcProductDefinitionShape"
+    }
+  },
+  {
+    "start": 621,
+    "end": 620,
+    "id": 47629209631347784,
+    "label": "RELATIVEPLACEMENT",
+    "type": "relationship",
+    "properties": {
+      "start_entity_type": "IfcLocalPlacement",
+      "target_entity_type": "IfcAxis2Placement3D"
+    }
+  },
+  {
+    "start": 1225,
+    "end": 626,
+    "id": 5831772618926429283,
+    "label": "REPRESENTATIONS",
+    "type": "relationship",
+    "properties": {
+      "start_entity_type": "IfcProductDefinitionShape",
+      "target_entity_type": "IfcShapeRepresentation"
+    }
+  },
+  {
+    "start": 1225,
+    "end": 1223,
+    "id": 3386091251592047700,
+    "label": "REPRESENTATIONS",
+    "type": "relationship",
+    "properties": {
+      "start_entity_type": "IfcProductDefinitionShape",
+      "target_entity_type": "IfcShapeRepresentation"
+    }
+  }
+]

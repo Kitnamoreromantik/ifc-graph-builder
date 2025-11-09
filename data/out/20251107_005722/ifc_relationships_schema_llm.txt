@@ -1,0 +1,234 @@
+Type: APPLICATIONDEVELOPER
+  - (:IfcApplication)-[:APPLICATIONDEVELOPER]->(:IfcOrganization)
+
+Type: AXIS
+  - (:IfcAxis2Placement3D)-[:AXIS]->(:IfcDirection)
+
+Type: BASESURFACE
+  - (:IfcHalfSpaceSolid)-[:BASESURFACE]->(:IfcPlane)
+  - (:IfcPolygonalBoundedHalfSpace)-[:BASESURFACE]->(:IfcPlane)
+
+Type: BASISCURVE
+  - (:IfcTrimmedCurve)-[:BASISCURVE]->(:IfcCircle)
+
+Type: BOUND
+  - (:IfcFaceBound)-[:BOUND]->(:IfcPolyLoop)
+  - (:IfcFaceOuterBound)-[:BOUND]->(:IfcPolyLoop)
+
+Type: BOUNDS
+  - (:IfcFace)-[:BOUNDS]->(:IfcFaceBound)
+  - (:IfcFace)-[:BOUNDS]->(:IfcFaceOuterBound)
+
+Type: BUILDINGADDRESS
+  - (:IfcBuilding)-[:BUILDINGADDRESS]->(:IfcPostalAddress)
+
+Type: CFSFACES
+  - (:IfcClosedShell)-[:CFSFACES]->(:IfcFace)
+
+Type: CONTEXTOFITEMS
+  - (:IfcShapeRepresentation)-[:CONTEXTOFITEMS]->(:IfcGeometricRepresentationSubContext)
+
+Type: CONVERSIONFACTOR
+  - (:IfcConversionBasedUnit)-[:CONVERSIONFACTOR]->(:IfcMeasureWithUnit)
+
+Type: DIMENSIONS
+  - (:IfcConversionBasedUnit)-[:DIMENSIONS]->(:IfcDimensionalExponents)
+
+Type: ELEMENTS
+  - (:IfcDerivedUnit)-[:ELEMENTS]->(:IfcDerivedUnitElement)
+
+Type: EXTRUDEDDIRECTION
+  - (:IfcExtrudedAreaSolid)-[:EXTRUDEDDIRECTION]->(:IfcDirection)
+
+Type: FIRSTOPERAND
+  - (:IfcBooleanClippingResult)-[:FIRSTOPERAND]->(:IfcExtrudedAreaSolid)
+
+Type: ITEMS
+  - (:IfcShapeRepresentation)-[:ITEMS]->(:IfcBooleanClippingResult)
+  - (:IfcShapeRepresentation)-[:ITEMS]->(:IfcExtrudedAreaSolid)
+  - (:IfcShapeRepresentation)-[:ITEMS]->(:IfcFacetedBrep)
+  - (:IfcShapeRepresentation)-[:ITEMS]->(:IfcMappedItem)
+  - (:IfcShapeRepresentation)-[:ITEMS]->(:IfcPolyline)
+
+Type: LOCATION
+  - (:IfcAxis2Placement2D)-[:LOCATION]->(:IfcCartesianPoint)
+  - (:IfcAxis2Placement3D)-[:LOCATION]->(:IfcCartesianPoint)
+
+Type: MAPPEDREPRESENTATION
+  - (:IfcRepresentationMap)-[:MAPPEDREPRESENTATION]->(:IfcShapeRepresentation)
+
+Type: MAPPINGORIGIN
+  - (:IfcRepresentationMap)-[:MAPPINGORIGIN]->(:IfcAxis2Placement3D)
+
+Type: MAPPINGSOURCE
+  - (:IfcMappedItem)-[:MAPPINGSOURCE]->(:IfcRepresentationMap)
+
+Type: MAPPINGTARGET
+  - (:IfcMappedItem)-[:MAPPINGTARGET]->(:IfcCartesianTransformationOperator3D)
+
+Type: OBJECTPLACEMENT
+  - (:IfcBuilding)-[:OBJECTPLACEMENT]->(:IfcLocalPlacement)
+  - (:IfcBuildingStorey)-[:OBJECTPLACEMENT]->(:IfcLocalPlacement)
+  - (:IfcCovering)-[:OBJECTPLACEMENT]->(:IfcLocalPlacement)
+  - (:IfcCurtainWall)-[:OBJECTPLACEMENT]->(:IfcLocalPlacement)
+  - (:IfcDoor)-[:OBJECTPLACEMENT]->(:IfcLocalPlacement)
+  - (:IfcFurniture)-[:OBJECTPLACEMENT]->(:IfcLocalPlacement)
+  - (:IfcMember)-[:OBJECTPLACEMENT]->(:IfcLocalPlacement)
+  - (:IfcPlate)-[:OBJECTPLACEMENT]->(:IfcLocalPlacement)
+  - (:IfcRoof)-[:OBJECTPLACEMENT]->(:IfcLocalPlacement)
+  - (:IfcSite)-[:OBJECTPLACEMENT]->(:IfcLocalPlacement)
+  - (:IfcSlab)-[:OBJECTPLACEMENT]->(:IfcLocalPlacement)
+  - (:IfcSpace)-[:OBJECTPLACEMENT]->(:IfcLocalPlacement)
+  - (:IfcWall)-[:OBJECTPLACEMENT]->(:IfcLocalPlacement)
+  - (:IfcWallStandardCase)-[:OBJECTPLACEMENT]->(:IfcLocalPlacement)
+  - (:IfcWindow)-[:OBJECTPLACEMENT]->(:IfcLocalPlacement)
+
+Type: OUTER
+  - (:IfcFacetedBrep)-[:OUTER]->(:IfcClosedShell)
+
+Type: OUTERCURVE
+  - (:IfcArbitraryClosedProfileDef)-[:OUTERCURVE]->(:IfcCompositeCurve)
+  - (:IfcArbitraryClosedProfileDef)-[:OUTERCURVE]->(:IfcPolyline)
+
+Type: OWNERHISTORY
+  - (:IfcBuilding)-[:OWNERHISTORY]->(:IfcOwnerHistory)
+  - (:IfcBuildingStorey)-[:OWNERHISTORY]->(:IfcOwnerHistory)
+  - (:IfcProject)-[:OWNERHISTORY]->(:IfcOwnerHistory)
+  - (:IfcRelAggregates)-[:OWNERHISTORY]->(:IfcOwnerHistory)
+  - (:IfcRelContainedInSpatialStructure)-[:OWNERHISTORY]->(:IfcOwnerHistory)
+  - (:IfcSite)-[:OWNERHISTORY]->(:IfcOwnerHistory)
+  - (:IfcSpace)-[:OWNERHISTORY]->(:IfcOwnerHistory)
+
+Type: OWNINGAPPLICATION
+  - (:IfcOwnerHistory)-[:OWNINGAPPLICATION]->(:IfcApplication)
+
+Type: OWNINGUSER
+  - (:IfcOwnerHistory)-[:OWNINGUSER]->(:IfcPersonAndOrganization)
+
+Type: PARENTCONTEXT
+  - (:IfcGeometricRepresentationSubContext)-[:PARENTCONTEXT]->(:IfcGeometricRepresentationContext)
+
+Type: PARENTCURVE
+  - (:IfcCompositeCurveSegment)-[:PARENTCURVE]->(:IfcPolyline)
+  - (:IfcCompositeCurveSegment)-[:PARENTCURVE]->(:IfcTrimmedCurve)
+
+Type: PLACEMENTRELTO
+  - (:IfcLocalPlacement)-[:PLACEMENTRELTO]->(:IfcLocalPlacement)
+
+Type: POINTS
+  - (:IfcPolyline)-[:POINTS]->(:IfcCartesianPoint)
+
+Type: POLYGON
+  - (:IfcPolyLoop)-[:POLYGON]->(:IfcCartesianPoint)
+
+Type: POLYGONALBOUNDARY
+  - (:IfcPolygonalBoundedHalfSpace)-[:POLYGONALBOUNDARY]->(:IfcPolyline)
+
+Type: POSITION
+  - (:IfcCircle)-[:POSITION]->(:IfcAxis2Placement2D)
+  - (:IfcExtrudedAreaSolid)-[:POSITION]->(:IfcAxis2Placement3D)
+  - (:IfcPlane)-[:POSITION]->(:IfcAxis2Placement3D)
+  - (:IfcPolygonalBoundedHalfSpace)-[:POSITION]->(:IfcAxis2Placement3D)
+  - (:IfcRectangleProfileDef)-[:POSITION]->(:IfcAxis2Placement2D)
+
+Type: REFDIRECTION
+  - (:IfcAxis2Placement2D)-[:REFDIRECTION]->(:IfcDirection)
+  - (:IfcAxis2Placement3D)-[:REFDIRECTION]->(:IfcDirection)
+
+Type: RELATEDELEMENTS
+  - (:IfcRelContainedInSpatialStructure)-[:RELATEDELEMENTS]->(:IfcCovering)
+  - (:IfcRelContainedInSpatialStructure)-[:RELATEDELEMENTS]->(:IfcCurtainWall)
+  - (:IfcRelContainedInSpatialStructure)-[:RELATEDELEMENTS]->(:IfcDoor)
+  - (:IfcRelContainedInSpatialStructure)-[:RELATEDELEMENTS]->(:IfcFurniture)
+  - (:IfcRelContainedInSpatialStructure)-[:RELATEDELEMENTS]->(:IfcRoof)
+  - (:IfcRelContainedInSpatialStructure)-[:RELATEDELEMENTS]->(:IfcSlab)
+  - (:IfcRelContainedInSpatialStructure)-[:RELATEDELEMENTS]->(:IfcWall)
+  - (:IfcRelContainedInSpatialStructure)-[:RELATEDELEMENTS]->(:IfcWallStandardCase)
+  - (:IfcRelContainedInSpatialStructure)-[:RELATEDELEMENTS]->(:IfcWindow)
+
+Type: RELATEDOBJECTS
+  - (:IfcRelAggregates)-[:RELATEDOBJECTS]->(:IfcBuilding)
+  - (:IfcRelAggregates)-[:RELATEDOBJECTS]->(:IfcBuildingStorey)
+  - (:IfcRelAggregates)-[:RELATEDOBJECTS]->(:IfcMember)
+  - (:IfcRelAggregates)-[:RELATEDOBJECTS]->(:IfcPlate)
+  - (:IfcRelAggregates)-[:RELATEDOBJECTS]->(:IfcSite)
+  - (:IfcRelAggregates)-[:RELATEDOBJECTS]->(:IfcSpace)
+
+Type: RELATINGOBJECT
+  - (:IfcRelAggregates)-[:RELATINGOBJECT]->(:IfcBuilding)
+  - (:IfcRelAggregates)-[:RELATINGOBJECT]->(:IfcBuildingStorey)
+  - (:IfcRelAggregates)-[:RELATINGOBJECT]->(:IfcCurtainWall)
+  - (:IfcRelAggregates)-[:RELATINGOBJECT]->(:IfcProject)
+  - (:IfcRelAggregates)-[:RELATINGOBJECT]->(:IfcSite)
+
+Type: RELATINGSTRUCTURE
+  - (:IfcRelContainedInSpatialStructure)-[:RELATINGSTRUCTURE]->(:IfcBuildingStorey)
+  - (:IfcRelContainedInSpatialStructure)-[:RELATINGSTRUCTURE]->(:IfcSpace)
+
+Type: RELATIVEPLACEMENT
+  - (:IfcLocalPlacement)-[:RELATIVEPLACEMENT]->(:IfcAxis2Placement3D)
+
+Type: REPRESENTATION
+  - (:IfcCovering)-[:REPRESENTATION]->(:IfcProductDefinitionShape)
+  - (:IfcDoor)-[:REPRESENTATION]->(:IfcProductDefinitionShape)
+  - (:IfcFurniture)-[:REPRESENTATION]->(:IfcProductDefinitionShape)
+  - (:IfcMember)-[:REPRESENTATION]->(:IfcProductDefinitionShape)
+  - (:IfcPlate)-[:REPRESENTATION]->(:IfcProductDefinitionShape)
+  - (:IfcRoof)-[:REPRESENTATION]->(:IfcProductDefinitionShape)
+  - (:IfcSlab)-[:REPRESENTATION]->(:IfcProductDefinitionShape)
+  - (:IfcSpace)-[:REPRESENTATION]->(:IfcProductDefinitionShape)
+  - (:IfcWall)-[:REPRESENTATION]->(:IfcProductDefinitionShape)
+  - (:IfcWallStandardCase)-[:REPRESENTATION]->(:IfcProductDefinitionShape)
+  - (:IfcWindow)-[:REPRESENTATION]->(:IfcProductDefinitionShape)
+
+Type: REPRESENTATIONCONTEXTS
+  - (:IfcProject)-[:REPRESENTATIONCONTEXTS]->(:IfcGeometricRepresentationContext)
+
+Type: REPRESENTATIONS
+  - (:IfcProductDefinitionShape)-[:REPRESENTATIONS]->(:IfcShapeRepresentation)
+
+Type: SECONDOPERAND
+  - (:IfcBooleanClippingResult)-[:SECONDOPERAND]->(:IfcHalfSpaceSolid)
+  - (:IfcBooleanClippingResult)-[:SECONDOPERAND]->(:IfcPolygonalBoundedHalfSpace)
+
+Type: SEGMENTS
+  - (:IfcCompositeCurve)-[:SEGMENTS]->(:IfcCompositeCurveSegment)
+
+Type: SWEPTAREA
+  - (:IfcExtrudedAreaSolid)-[:SWEPTAREA]->(:IfcArbitraryClosedProfileDef)
+  - (:IfcExtrudedAreaSolid)-[:SWEPTAREA]->(:IfcRectangleProfileDef)
+
+Type: THEORGANIZATION
+  - (:IfcPersonAndOrganization)-[:THEORGANIZATION]->(:IfcOrganization)
+
+Type: THEPERSON
+  - (:IfcPersonAndOrganization)-[:THEPERSON]->(:IfcPerson)
+
+Type: TRIM1
+  - (:IfcTrimmedCurve)-[:TRIM1]->(:IfcParameterValue)
+
+Type: TRIM2
+  - (:IfcTrimmedCurve)-[:TRIM2]->(:IfcParameterValue)
+
+Type: TRUENORTH
+  - (:IfcGeometricRepresentationContext)-[:TRUENORTH]->(:IfcDirection)
+
+Type: UNIT
+  - (:IfcDerivedUnitElement)-[:UNIT]->(:IfcSIUnit)
+
+Type: UNITCOMPONENT
+  - (:IfcMeasureWithUnit)-[:UNITCOMPONENT]->(:IfcSIUnit)
+
+Type: UNITS
+  - (:IfcUnitAssignment)-[:UNITS]->(:IfcConversionBasedUnit)
+  - (:IfcUnitAssignment)-[:UNITS]->(:IfcDerivedUnit)
+  - (:IfcUnitAssignment)-[:UNITS]->(:IfcSIUnit)
+
+Type: UNITSINCONTEXT
+  - (:IfcProject)-[:UNITSINCONTEXT]->(:IfcUnitAssignment)
+
+Type: VALUECOMPONENT
+  - (:IfcMeasureWithUnit)-[:VALUECOMPONENT]->(:IfcRatioMeasure)
+
+Type: WORLDCOORDINATESYSTEM
+  - (:IfcGeometricRepresentationContext)-[:WORLDCOORDINATESYSTEM]->(:IfcAxis2Placement3D)
