@@ -5,6 +5,8 @@
 
 The parser transforms an IFC-file into a graph representation using `networkx`, with nodes corresponding to IFC entities and edges representing semantic relationships between them. The resulting graph is exported as JSON to subsequently import in graph database, and optionally visualized via `pyvis` (`html` file is generated).
 
+![alt text](image.png)
+
 ## Execution
 
 Run `python main.py`
