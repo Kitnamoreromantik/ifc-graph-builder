@@ -34,6 +34,8 @@ import platform
 # Import converter entry point directly
 from src.main import run as run_ifc_converter
 
+INTERFACE_LANG = "Eng" # "Rus"
+
 # =============================
 # Paths & Logging
 # =============================
@@ -45,31 +47,58 @@ logging.basicConfig(level=logging.INFO, format="[%(levelname)s] %(message)s")
 # =============================
 # IFC GROUPS
 # =============================
-IFC_GROUPS = {
-    "Пространственная структура": [
-        "IfcProject", "IfcSite", "IfcBuilding", "IfcBuildingStorey", "IfcSpace",
-        "IfcZone", "IfcRelAggregates", "IfcRelContainedInSpatialStructure", "IfcRelSpaceBoundary",
-    ],
-    "Архитектурные и конструктивные элементы": [
-        "IfcWall", "IfcWallStandardCase", "IfcSlab", "IfcRoof", "IfcDoor", "IfcWindow",
-        "IfcColumn", "IfcBeam", "IfcStair", "IfcRailing", "IfcOpeningElement",
-        "IfcCovering", "IfcBuildingElementProxy", "IfcFurnishingElement",
-        "IfcSystemFurnitureElement", "IfcDistributionElement", "IfcFlowTerminal",
-        "IfcBuildingElement",
-    ],
-    "Количество и свойства": [
-        "IfcElementQuantity", "IfcQuantityArea", "IfcQuantityVolume", "IfcQuantityLength",
-        "IfcRelDefinesByProperties", "IfcRelDefinesByType",
-    ],
-    "Материалы и классификации": [
-        "IfcMaterial", "IfcMaterialLayer", "IfcMaterialLayerSet", "IfcMaterialConstituentSet",
-        "IfcRelAssociatesMaterial", "IfcRelAssociatesClassification", "IfcClassificationReference",
-    ],
-    "Положение и геометрия": [
-        "IfcProductDefinitionShape", "IfcShapeRepresentation", "IfcLocalPlacement",
-        "IfcAxis2Placement3D", "IfcDirection", "IfcCartesianPoint",
-    ],
-}
+if INTERFACE_LANG == 'Eng':
+    IFC_GROUPS = {
+        "Spatial structures": [
+            "IfcProject", "IfcSite", "IfcBuilding", "IfcBuildingStorey", "IfcSpace",
+            "IfcZone", "IfcRelAggregates", "IfcRelContainedInSpatialStructure", "IfcRelSpaceBoundary",
+        ],
+        "Construction elements": [
+            "IfcWall", "IfcWallStandardCase", "IfcSlab", "IfcRoof", "IfcDoor", "IfcWindow",
+            "IfcColumn", "IfcBeam", "IfcStair", "IfcRailing", "IfcOpeningElement",
+            "IfcCovering", "IfcBuildingElementProxy", "IfcFurnishingElement",
+            "IfcSystemFurnitureElement", "IfcDistributionElement", "IfcFlowTerminal",
+            "IfcBuildingElement",
+        ],
+        "Quantity and properties": [
+            "IfcElementQuantity", "IfcQuantityArea", "IfcQuantityVolume", "IfcQuantityLength",
+            "IfcRelDefinesByProperties", "IfcRelDefinesByType",
+        ],
+        "Materials and classifications": [
+            "IfcMaterial", "IfcMaterialLayer", "IfcMaterialLayerSet", "IfcMaterialConstituentSet",
+            "IfcRelAssociatesMaterial", "IfcRelAssociatesClassification", "IfcClassificationReference",
+        ],
+        "Geometry": [
+            "IfcProductDefinitionShape", "IfcShapeRepresentation", "IfcLocalPlacement",
+            "IfcAxis2Placement3D", "IfcDirection", "IfcCartesianPoint",
+        ],
+    }
+else:
+        IFC_GROUPS = {
+        "Пространственная структура": [
+            "IfcProject", "IfcSite", "IfcBuilding", "IfcBuildingStorey", "IfcSpace",
+            "IfcZone", "IfcRelAggregates", "IfcRelContainedInSpatialStructure", "IfcRelSpaceBoundary",
+        ],
+        "Архитектурные и конструктивные элементы": [
+            "IfcWall", "IfcWallStandardCase", "IfcSlab", "IfcRoof", "IfcDoor", "IfcWindow",
+            "IfcColumn", "IfcBeam", "IfcStair", "IfcRailing", "IfcOpeningElement",
+            "IfcCovering", "IfcBuildingElementProxy", "IfcFurnishingElement",
+            "IfcSystemFurnitureElement", "IfcDistributionElement", "IfcFlowTerminal",
+            "IfcBuildingElement",
+        ],
+        "Количество и свойства": [
+            "IfcElementQuantity", "IfcQuantityArea", "IfcQuantityVolume", "IfcQuantityLength",
+            "IfcRelDefinesByProperties", "IfcRelDefinesByType",
+        ],
+        "Материалы и классификации": [
+            "IfcMaterial", "IfcMaterialLayer", "IfcMaterialLayerSet", "IfcMaterialConstituentSet",
+            "IfcRelAssociatesMaterial", "IfcRelAssociatesClassification", "IfcClassificationReference",
+        ],
+        "Положение и геометрия": [
+            "IfcProductDefinitionShape", "IfcShapeRepresentation", "IfcLocalPlacement",
+            "IfcAxis2Placement3D", "IfcDirection", "IfcCartesianPoint",
+        ],
+    }
 
 # Flatten list for global dictionary creation
 IFC_ENTITIES = [e for group in IFC_GROUPS.values() for e in group]
@@ -79,8 +108,8 @@ IFC_ENTITIES = [e for group in IFC_GROUPS.values() for e in group]
 # =============================
 root = ttk.Window(themename="flatly")  # modern Bootstrap-like theme
 root.title("IFC → JSON")
-root.geometry("655x307")
-root.resizable(False, False)
+root.geometry("900x500")
+root.resizable(True, True)
 
 # --- Icon setup ---
 ICON_DIR = Path(__file__).parent / "assets"
@@ -135,16 +164,16 @@ def run_conversion(ifc_path):
             )
         )
 
-        notify_ui(status_label.config, text="Готово ✅", foreground="green")
+        notify_ui(status_label.config, text="Готово ✅" if INTERFACE_LANG == "Rus" else "Ready ✅", foreground="green")
     except Exception as e:
         logging.exception(e)
         notify_ui(messagebox.showerror, "Error", str(e))
-        notify_ui(status_label.config, text="Ошибка ❌", foreground="red")
+        notify_ui(status_label.config, text="Ошибка ❌" if INTERFACE_LANG == "Rus" else "Error ❌", foreground="red")
     finally:
         notify_ui(start_button.config, state=NORMAL)
 
 def select_file():
-    file_path = filedialog.askopenfilename(title="Выбрать IFC файл", filetypes=[("IFC files", "*.ifc"), ("All files", "*.*")])
+    file_path = filedialog.askopenfilename(title="Выбрать IFC файл" if INTERFACE_LANG == "Rus" else "Select IFC file", filetypes=[("IFC files", "*.ifc"), ("All files", "*.*")])
     if file_path:
         status_label.config(text=f"Файл выбран: {file_path}", foreground="green")
         start_button.config(state=NORMAL)
@@ -152,14 +181,14 @@ def select_file():
 
 def select_output_dir():
     global output_dir_path
-    output_dir = filedialog.askdirectory(title="Выбрать папку для сохранения результатов")
+    output_dir = filedialog.askdirectory(title="Выбрать папку для сохранения результатов" if INTERFACE_LANG == "Rus" else "Select output folder")
     if output_dir:
         output_dir_path = output_dir
-        output_label.config(text=f"Папка вывода: {output_dir}", foreground="green")
+        output_label.config(text=f"Папка вывода: {output_dir}" if INTERFACE_LANG == "Rus" else f"Output folder: {output_dir}", foreground="green")
 
 def start_conversion(ifc_path):
     start_button.config(state=DISABLED)
-    status_label.config(text="В процессе...", foreground="#E67E22")
+    status_label.config(text="В процессе..." if INTERFACE_LANG == "Rus" else "In progress...", foreground="#E67E22")
     threading.Thread(target=run_conversion, args=(ifc_path,), daemon=True).start()
 
 # =============================
@@ -167,9 +196,12 @@ def start_conversion(ifc_path):
 # =============================
 def open_ifc_selector():
     win = ttk.Toplevel(root)
-    win.title("Выбор сущностей для включения в граф")
-    win.geometry("420x620")
-    win.resizable(False, True)
+    if INTERFACE_LANG == 'Rus':
+        win.title("Выбор сущностей для включения в граф")
+    else:
+        win.title("Select IFC entities to include into the graph")
+    win.geometry("550x950")
+    win.resizable(True, True)
 
     frame = ttk.Frame(win, padding=10)
     frame.pack(fill="both", expand=True)
@@ -193,14 +225,14 @@ def open_ifc_selector():
 
     ttk.Button(
         btn_frame,
-        text="Выбрать все",
+        text="Выбрать все" if INTERFACE_LANG == 'Rus' else "Select all",
         bootstyle="success-outline",
         command=lambda: [v.set(True) for v in selected_entities.values()]
     ).pack(side="left", padx=5)
 
     ttk.Button(
         btn_frame,
-        text="Снять все",
+        text="Снять все" if INTERFACE_LANG == 'Rus' else "Deselect all",
         bootstyle="secondary-outline",
         command=lambda: [v.set(False) for v in selected_entities.values()]
     ).pack(side="left", padx=5)
@@ -208,7 +240,7 @@ def open_ifc_selector():
     # ↓ slightly raised and same green tone
     ttk.Button(
         btn_frame,
-        text="Сохранить выбор",
+        text="Сохранить выбор" if INTERFACE_LANG == 'Rus' else "Save choice",
         bootstyle="success",     # green solid style
         command=lambda: save_selection(win)
     ).pack(side="left", padx=10)
@@ -217,7 +249,11 @@ def open_ifc_selector():
         chosen = [e for e, v in selected_entities.items() if v.get()]
         with open(ALLOWED_IFC_FILE, "w", encoding="utf-8") as f:
             json.dump(sorted(chosen), f, indent=2, ensure_ascii=False)
-        messagebox.showinfo("Сохранено", f"Выбрано {len(chosen)} типов IFC-сущностей")
+
+        if INTERFACE_LANG == 'Rus': 
+            messagebox.showinfo("Сохранено", f"Выбрано {len(chosen)} типов IFC-сущностей")
+        else:
+            messagebox.showinfo("Saved", f"Selected {len(chosen)} types of IFC-entities")
         win.destroy()
 
 # =============================
@@ -225,67 +261,88 @@ def open_ifc_selector():
 # =============================
 menubar = ttk.Menu(root)
 settings_menu = ttk.Menu(menubar, tearoff=0)
-settings_menu.add_command(label="Выбор IFC сущностей...", command=open_ifc_selector)
-menubar.add_cascade(label="Настройки", menu=settings_menu)
+settings_menu.add_command(label="Выбор IFC сущностей..." if INTERFACE_LANG == 'Rus' else "Select IFC entities...", command=open_ifc_selector)
+menubar.add_cascade(label="Настройки" if INTERFACE_LANG == 'Rus' else "Configs", menu=settings_menu)
 help_menu = ttk.Menu(menubar, tearoff=0)
 
 def show_instructions():
-    instructions = (
-        "1. Нажмите «Выбрать IFC файл» и укажите исходный файл *.ifc (IFC4)\n"
-        "2. Укажите папку вывода результатов\n"
-        "3. При необходимости откройте «Настройки» → «Выбор IFC сущностей» \n(Для фильтрации ненужных типов. Список предварительный.)\n"
-        "4. Установите глубину поиска n (в граф будут включены соседи сущностей n-го порядка)\n"
-        "5. Нажмите «Начать конвертацию» и дождитесь завершения\n\n"
-        "Результаты, которые сохранятся в выбранной целевой папке:\n"
-        "   • conversion_summary.txt — статистика конвертации.\n"
-        "   • nodes.json — список узлов IFC-графа\n"
-        "   • edges.json — список связей между узлами\n"
-        "   • graph_ifc.json — объединенный граф (nodes + edges)\n"
-        "   • ifc_graph.html — HTML-визуализация графа (для визуальной инспекции)\n"
-        "   • ifc_nodes_schema_llm.txt — структура свойств узлов (для LLM-анализа)\n"
-        "   • ifc_relationships_schema_llm.txt — структура отношений (для LLM-анализа)\n\n"
-        " Если в графе более 500 узлов, визуализация ifc_graph.html не создается\n"
-        " graph_ifc.json — предназначен для загрузки в Memgraph/Neo4j и дальнейшего анализа\n"
-        " В качестве тестовых данных можно использовать SampleHouse4.ifc файл (одноэтажный дом)"
+    if INTERFACE_LANG == 'Rus':
+        instructions = (
+            "1. Нажмите «Выбрать IFC файл» и укажите исходный файл *.ifc (IFC4)\n"
+            "2. Укажите папку вывода результатов\n"
+            "3. При необходимости откройте «Настройки» → «Выбор IFC сущностей» \n(Для фильтрации ненужных типов. Список предварительный.)\n"
+            "4. Установите глубину поиска n (в граф будут включены соседи сущностей n-го порядка)\n"
+            "5. Нажмите «Начать конвертацию» и дождитесь завершения\n\n"
+            "Результаты, которые сохранятся в выбранной целевой папке:\n"
+            "   • conversion_summary.txt — статистика конвертации.\n"
+            "   • nodes.json — список узлов IFC-графа\n"
+            "   • edges.json — список связей между узлами\n"
+            "   • graph_ifc.json — объединенный граф (nodes + edges)\n"
+            "   • ifc_graph.html — HTML-визуализация графа (для визуальной инспекции)\n"
+            "   • ifc_nodes_schema_llm.txt — структура свойств узлов (для LLM-анализа)\n"
+            "   • ifc_relationships_schema_llm.txt — структура отношений (для LLM-анализа)\n\n"
+            " Если в графе более 500 узлов, визуализация ifc_graph.html не создается\n"
+            " graph_ifc.json — предназначен для загрузки в Memgraph/Neo4j и дальнейшего анализа\n"
+            " В качестве тестовых данных можно использовать SampleHouse4.ifc файл (одноэтажный дом)"
+        )
+    else:
+        instructions = (
+        "1. Click “Select IFC file” and choose the source .ifc file (IFC4)\n"
+        "2. Specify the output folder\n"
+        "3. If needed, open “Settings” → “Select IFC entities”\n"
+        "   (for filtering unnecessary types. The list is preliminary.)\n"
+        "4. Set the search depth n (neighbors of n-th order will be included into the graph)\n"
+        "5. Click “Start conversion” and wait until it completes\n\n"
+        "The results saved into the selected output folder:\n"
+        "  • conversion_summary.txt — conversion statistics\n"
+        "  • nodes.json — list of IFC-graph nodes\n"
+        "  • edges.json — list of relationships between nodes\n"
+        "  • graph_ifc.json — combined graph (nodes + edges)\n"
+        "  • ifc_graph.html — HTML visualization of the graph (for inspection)\n"
+        "  • ifc_nodes_schema_llm.txt — node schema (for LLM analysis)\n"
+        "  • ifc_relationships_schema_llm.txt — relationship schema (for LLM analysis)\n\n"
+        "If the graph contains more than 500 nodes, ifc_graph.html is not generated\n"
+        "graph_ifc.json is intended for loading into Memgraph/Neo4j for further analysis\n"
+        "As sample data, you may use SampleHouse4.ifc (single-story house)\n"
     )
 
     # Use ttkbootstrap Messagebox (auto-themed)
     from ttkbootstrap.dialogs import Messagebox
     Messagebox.show_info(
-        title="Инструкция",
+        title="Инструкция" if INTERFACE_LANG == 'Rus' else "Instructions",
         message=instructions,
-        width=700,
+        width=900,
         alert=False
     )
 
-help_menu.add_command(label="Показать инструкцию", command=show_instructions)
-menubar.add_cascade(label="Инструкция", menu=help_menu)
+help_menu.add_command(label="Показать инструкцию" if INTERFACE_LANG == 'Rus' else "Show instructions", command=show_instructions)
+menubar.add_cascade(label="Инструкция"  if INTERFACE_LANG == 'Rus' else "Instructions", menu=help_menu)
 
 root.config(menu=menubar)
 
-ttk.Label(root, text="Конвертация IFC файла в JSON для графовой БД и схемы IFC-графа", font=("Segoe UI", 10, "bold")).pack(pady=6)
+ttk.Label(root, text="Конвертация IFC файла в JSON для графовой БД и схемы IFC-графа" if INTERFACE_LANG == 'Rus' else "Converting IFC to JSON for Graph DBs (Memgraph/Neo4j)", font=("Segoe UI", 10, "bold")).pack(pady=6)
 
-select_button = ttk.Button(root, text="Выбрать IFC файл", bootstyle="primary", command=select_file)
+select_button = ttk.Button(root, text="Выбрать IFC файл" if INTERFACE_LANG == 'Rus' else "Select IFC file", bootstyle="primary", command=select_file)
 select_button.pack(pady=5)
 
-status_label = ttk.Label(root, text="Файл не выбран", foreground="gray")
+status_label = ttk.Label(root, text="Файл не выбран" if INTERFACE_LANG == 'Rus' else "File is not selected", foreground="gray")
 status_label.pack(pady=5)
 
-output_button = ttk.Button(root, text="Выбрать папку вывода", bootstyle="info", command=select_output_dir)
+output_button = ttk.Button(root, text="Выбрать папку вывода" if INTERFACE_LANG == 'Rus' else "Select output folder", bootstyle="info", command=select_output_dir)
 output_button.pack(pady=5)
 
-output_label = ttk.Label(root, text="Папка вывода не выбрана", foreground="gray")
+output_label = ttk.Label(root, text="Папка вывода не выбрана" if INTERFACE_LANG == 'Rus' else "Output folder is not selected", foreground="gray")
 output_label.pack(pady=2)
 
-depth_label = ttk.Label(root, text="Макс. глубина поиска при парсинге графа:")
+depth_label = ttk.Label(root, text="Макс. глубина поиска при парсинге графа:" if INTERFACE_LANG == 'Rus' else "Max IFC parsing depth:")
 depth_label.pack(pady=(10, 2))
 
 depth_spin = ttk.Spinbox(root, from_=0, to=10, width=5, textvariable=recursion_depth_var, bootstyle="info")
 depth_spin.pack(pady=(0, 5))
 
-ttk.Label(root, text="Введите целое число или 'None' (без кавычек) для бесконечной глубины.", font=("Segoe UI", 8), foreground="gray").pack(pady=(0, 4))
+ttk.Label(root, text="Введите целое число или 'None' (без кавычек) для бесконечной глубины." if INTERFACE_LANG == 'Rus' else "Input integer or 'None' for infinite depth.", font=("Segoe UI", 8), foreground="gray").pack(pady=(0, 4))
 
-start_button = ttk.Button(root, text="Начать конвертацию", state=DISABLED, bootstyle="success")
+start_button = ttk.Button(root, text="Начать конвертацию" if INTERFACE_LANG == 'Rus' else "Start convertation", state=DISABLED, bootstyle="success")
 start_button.pack(pady=5)
 
 root.mainloop()

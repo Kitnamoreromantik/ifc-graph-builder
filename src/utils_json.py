@@ -40,7 +40,7 @@ def export_edges_to_json(G: nx.Graph, output_path: Path):
         )
 
     with output_path.open("w", encoding="utf-8") as f:
-        json.dump(edge_list, f, indent=4, ensure_ascii=False)
+        json.dump(edge_list, f, indent=4, ensure_ascii=True)
 
     logger.info(f"Edges exported to: {output_path}")
 
@@ -75,7 +75,7 @@ def export_nodes_to_json(G: nx.Graph, output_path: Path):
         )
 
     with output_path.open("w", encoding="utf-8") as f:
-        json.dump(node_list, f, indent=4, ensure_ascii=False)
+        json.dump(node_list, f, indent=4, ensure_ascii=True)
 
     logger.info(f"Nodes exported to: {output_path}")
 
@@ -100,6 +100,6 @@ def merge_ifc_json(nodes_path: Path, edges_path: Path, output_path: Path):
     merged = nodes + edges
 
     with output_path.open("w", encoding="utf-8") as f:
-        json.dump(merged, f, ensure_ascii=False, indent=2)
+        json.dump(merged, f, ensure_ascii=True, indent=2)
 
     logger.info(f"Merged {len(nodes)} nodes and {len(edges)} edges into {output_path}")

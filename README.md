@@ -1,5 +1,4 @@
-
-# Overview
+# IFC to JSON parser-converter for Neo4j or Memgraph graph databases
 
 `src/main.py`
 
@@ -12,6 +11,22 @@ The parser transforms an IFC-file into a graph representation using `networkx`, 
 Run `python main.py`
 
 This will parse the file located at `data/file.ifc` and store all outputs in a timestamped folder within `data/out/`. These include the resulting graph in JSON format (3 files for nodes, edges, and both), as well as an HTML visualization for exploratory analysis of parsed data.
+
+## .exe building
+Run in terminal:
+``` sh
+pyinstaller --onefile --windowed `
+  --name "IFC2Graph" `
+  --icon "assets\app_icon.ico" `
+  --hidden-import networkx `
+  --hidden-import ifcopenshell `
+  --hidden-import ifcopenshell.util.element `
+  --add-data "assets;assets" `
+  --add-data "allowed_ifc_types.json;." `
+  --add-data "C:\Users\demo-airi\AppData\Local\Programs\Python\Python312\Lib\site-packages\ifcopenshell\express;ifcopenshell/express" `
+  --add-data "C:\Users\demo-airi\AppData\Local\Programs\Python\Python312\Lib\site-packages\pyvis\templates;pyvis/templates" `
+  ui_app.py
+```
 
 
 ### Input
